@@ -1,0 +1,390 @@
+#!/usr/bin/env tclsh
+set gitkpath [exec which gitk]
+if {![file exists $gitkpath]} {
+    catch {
+	set gitkpath [exec cygpath --windows $gitkpath]
+    }
+}
+source $gitkpath
+
+set lastms [clock clicks -milliseconds]
+proc log {text {end \n}} {
+    global lastms
+    global debugtext
+
+    set curms [clock clicks -milliseconds]
+    set diff [expr { $curms - $lastms }]
+    if {$end != ""} {
+	set end " ($diff ms) $end"
+    }
+    append debugtext $text $end
+    update
+
+    set lastms $curms
+}
+
+# addtocflist: Replace gitk's original
+rename addtocflist orig_addtocflist
+proc addtocflist {ids} {
+    global latest_imgpath latest_dirs
+
+    create_ui
+    orig_addtocflist $ids
+    update
+
+    nowbusy gitk-cl
+    set dirs [put_src_files]
+    set dir1 [lindex $dirs 0]
+    set dir2 [lindex $dirs 1]
+    set dir3 [lindex $dirs 2]
+    set imgpath $dir3/classes
+    set rangespath $dir3/ranges
+    set latest_dirs $dirs
+    set latest_imgpath $imgpath
+
+    global async_callback_queue
+    set async_callback_queue {}
+    lappend async_callback_queue [concat "generate_ctags" $dir1]
+    lappend async_callback_queue [concat "generate_ctags" $dir2]
+    lappend async_callback_queue [concat "generate_gv" $dir1 $dir2 $imgpath $rangespath no]
+    lappend async_callback_queue [concat "generate_img" $dir1 $dir2 $imgpath]
+    lappend async_callback_queue [concat "load_img" $imgpath]
+
+    generate_diff_ranges $rangespath
+}
+
+# clear_ctext: Replace gitk's original
+rename clear_ctext orig_clear_ctext
+proc clear_ctext {{first 1.0}} {
+    orig_clear_ctext $first
+    clear_previous_image
+    clear_debugtext
+}
+
+proc create_ui {} {
+    global NS ctxbut
+    global imap
+    global brightdiagram
+
+    if {[info exists brightdiagram]} {
+	return
+    }
+
+    set brightdiagram [${NS}::frame .bright.diagram]
+    set img [label .bright.diagram.img]
+    pack $img -anchor nw
+    pack forget .bright.cfiles
+    pack .bright.diagram -side right -fill both -expand 1
+    pack .bright.cfiles -side left -fill y -expand 0
+
+    bind .bright.diagram.img <ButtonRelease> {
+	dict for {id val} $imap {
+	    dict with val {
+		if {%x >= $left && %x <= $right && %y >= $top && %y <= $bottom} {
+		    {*}$evalable
+		}
+	    }
+	}
+    }
+
+    set diagram_menu .diagramctxmenu
+    makemenu $diagram_menu {
+        {mc "Open full-size PNG" command {create_and_open_png_full_size}}
+        {mc "Copy path: PNG" command {copy_path_png}}
+        {mc "Copy path: old code directory" command {copy_path_dir 0}}
+        {mc "Copy path: new code directory" command {copy_path_dir 1}}
+        {mc "Copy path: output directory" command {copy_path_dir 2}}
+        {mc "Show debug info" command {show_debug_info}}
+    }
+    $diagram_menu configure -tearoff 0
+
+    bind .bright.diagram $ctxbut {pop_diagram_menu %W %X %Y %x %y}
+    bind .bright.diagram.img $ctxbut {pop_diagram_menu %W %X %Y %x %y}
+}
+
+proc pop_diagram_menu {w X Y x y} {
+    tk_popup .diagramctxmenu $X $Y
+}
+
+proc clear_previous_image {} {
+    global imap
+
+    if {[info exists imap]} {
+	diagram_img blank
+    }
+}
+
+proc clear_debugtext {} {
+    global debugtext
+
+    set debugtext ""
+}
+
+proc put_src_files {} {
+    global nullid nullid2
+    global flist_menu_file diffids
+    global parentlist selectedline
+
+    # See gitk's external_diff
+    if {[llength $diffids] == 1} {
+	set diffidto [lindex $diffids 0]
+	if {$diffidto eq $nullid} {
+	    set diffidfrom $nullid2
+	} elseif {$diffidto eq $nullid2} {
+	    set diffidfrom "HEAD"
+	} else {
+	    set diffidfrom [lindex $parentlist $selectedline 0]
+	}
+    } else {
+	set diffidfrom [lindex $diffids 0]
+	set diffidto [lindex $diffids 1]
+    }
+
+    set difffromdir [gitknewtmpdir]
+    set difftodir [gitknewtmpdir]
+    set imgdir [gitknewtmpdir]
+
+    put_files $diffidfrom $difffromdir
+    put_files $diffidto $difftodir
+
+    return [list $difffromdir $difftodir $imgdir]
+}
+
+proc put_files {diffid dir} {
+    global worktree treediffs diffids
+    global nullid nullid2
+
+    if {$diffid eq {}} {
+	return
+    }
+    if {$diffid eq $nullid} {
+	# Copy from the working directory
+	foreach filename $treediffs($diffids) {
+	    set destfile [file join $dir $filename]
+	    set sourcefile $worktree/$filename
+	    if {[file exists $sourcefile]} {
+		if {![file exists [file dirname $destfile]]} {
+		    file mkdir [file dirname $destfile]
+		}
+		file copy -- $sourcefile $destfile
+	    }
+	}
+	return
+    }
+    if {$diffid eq $nullid2} {
+	# Copy from the index
+	set cmd "git -C $worktree checkout-index -q --prefix=$dir/ -- $treediffs($diffids)"
+	exec_sync $cmd
+	return
+    }
+
+    # Ignore files that don't exist in this version, otherwise git archive will fail
+    set cmd "git -C $worktree ls-tree --name-only --full-tree -r $diffid -- $treediffs($diffids) | tr '\\n' ' '"
+    set files [exec_sync $cmd] 
+    if {$files ne {}} {
+	# Copy from commit
+	set cmd "git -C $worktree archive $diffid $files | tar xC $dir"
+	exec_sync $cmd
+    }
+}
+
+proc generate_diff_ranges {outputpath} {
+    global ignorespace
+    global limitdiffs vfilelimit curview
+    global diffids
+
+    set diffcmd [diffcmd $diffids "-p --submodule --no-commit-id -U0 --no-prefix"]
+    if {$ignorespace} {
+        append diffcmd " -w"
+    }
+    if {$limitdiffs && $vfilelimit($curview) ne {}} {
+        set diffcmd [concat $diffcmd -- $vfilelimit($curview)]
+    }
+
+    set diffcmd [string trimleft $diffcmd "| "]
+    set cmd [list | sh -c "$diffcmd | grep '^+++\\|^@@' | tee $outputpath"]
+    exec_async $cmd
+}
+
+proc generate_ctags {srcdir} {
+    # Use sh -c to prevent tab conversion
+    set cmd [list | sh -c "ctags --sort=no --extras=+r -Rxf $srcdir/tags --tag-relative=always --_xformat='%{input}	%{roles}	%{kind}	%{name}	%{typeref}	%{scope}	%{access}	%{implementation}	%{inherits}	%{language}	%{line}	%{end}' $srcdir"]
+    exec_async $cmd
+}
+
+proc generate_gv {tags1 tags2 imgpath rangespath full_size} {
+    if {$full_size eq yes} {
+	set width 10000
+	set height 10000
+    } else {
+	set width [expr {round(([winfo width .bright.diagram]+[winfo width .bright.cfiles])*0.85)}]
+	set height [winfo height .bright.diagram]
+    }
+    set cmd [list | classdiff $tags1 $tags2 --width $width --height $height -o $imgpath.gv -r $rangespath]
+    exec_async $cmd
+}
+
+proc generate_img {tags1 tags2 imgpath} {
+    set cmd [list | fdp -Tpng -o $imgpath.png -Timap_np -o $imgpath.imap_np $imgpath.gv]
+    exec_async $cmd
+}
+
+proc load_img {imgpath} {
+    global imap
+
+    image create photo diagram_img -file "$imgpath.png"
+    .bright.diagram.img configure -image diagram_img
+
+    set imap [dict create]
+    set file [open "$imgpath.imap_np"]
+    while {[gets $file line] > -1} {
+	if {[regexp "^rect gitk:(.*) (\\d+),(\\d+) (\\d+),(\\d+)$" $line match evalable left top right bottom]} {
+	    dict set imap $match left $left
+	    dict set imap $match top $top
+	    dict set imap $match right $right
+	    dict set imap $match bottom $bottom
+	    dict set imap $match evalable $evalable
+	}
+    }
+    close $file
+    notbusy gitk-cl
+}
+
+proc exec_sync {cmd} {
+    log "$cmd..." ""
+    if {[catch {
+	set val [exec sh -c $cmd]
+    } err]} {
+	log "error\n $err"
+	return -code error $err
+    }
+    log "done"
+    return $val
+}
+
+proc exec_async {cmd} {
+    global latest_fd
+
+    log "$cmd..." ""
+    set latest_fd [open $cmd r]
+    fconfigure $latest_fd -blocking 0
+    filerun $latest_fd [list poll_async $latest_fd]
+}
+
+proc poll_async {fd} {
+    global latest_fd
+    global async_callback_queue
+
+    while {[gets $fd line] >= 0} { 
+	# Ignore stdout. Diff ranges are printed there, but we get them with tee.
+    }
+    if {[eof $fd]} {
+	fconfigure $fd -blocking 1
+	if {[catch {close $fd} err options]} {
+	    set status 0
+	    if {[lindex [dict get $options -errorcode] 0] eq "CHILDSTATUS"} {
+		set status [lindex [dict get $options -errorcode] 2]
+		append err " (exit code $status)"
+	    } 
+	    notbusy gitk-cl
+	    log "error\n $err"
+	    error_popup $err
+	    if {$status != 0} {
+		return 0
+	    }
+	} else {
+	    log "done"
+	}
+	if {$latest_fd eq $fd} {
+	    set callback [queue_next async_callback_queue]
+	    if {$callback ne {}} {
+		{*}$callback
+	    }
+	}
+	return 0
+    }
+    return 1
+}
+
+proc queue_next {name} {
+    # https://wiki.tcl-lang.org/page/Stacks+and+queues
+    upvar 1 $name queue
+    set res [lindex $queue 0]
+    set queue [lreplace $queue [set queue 0] 0]
+    set res
+}
+
+proc create_and_open_png_full_size {} {
+    global latest_dirs
+
+    nowbusy gitk-cl
+    set dir1 [lindex $latest_dirs 0]
+    set dir2 [lindex $latest_dirs 1]
+    set dir3 [lindex $latest_dirs 2]
+    set imgpath $dir3/classes_full_size
+    set rangespath $dir3/ranges
+
+    global async_callback_queue
+    set async_callback_queue {}
+    lappend async_callback_queue [concat "generate_img" $dir1 $dir2 $imgpath]
+    lappend async_callback_queue [concat "launch_file_viewer" $imgpath.png]
+
+    generate_gv $dir1 $dir2 $imgpath $rangespath yes
+}
+
+proc copy_path_png {} {
+    global latest_imgpath
+
+    clipboard clear
+    clipboard append [file normalize $latest_imgpath.png]
+}
+
+proc copy_path_dir {index} {
+    global latest_dirs
+
+    clipboard clear
+    clipboard append [file normalize [lindex $latest_dirs $index]]
+}
+
+proc launch_file_viewer {path} {
+    # https://wiki.tcl-lang.org/page/Invoking+browsers
+    if {[catch {
+	set programs {xdg-open open start firefox}
+	foreach program $programs {
+	    if {$program eq "start"} {
+		set cmd [list {*}[auto_execok start] {}]
+	    } else {
+		set cmd [auto_execok $program]
+	    }
+	    if {[string length $cmd]} {
+		break
+	    }
+	}
+	exec {*}$cmd $path &
+	notbusy gitk-cl
+    } err]} {
+	notbusy gitk-cl
+	error_popup $err
+    }
+}
+
+proc show_debug_info {} {
+    global debugtext
+
+    if {[
+	confirm_popup "$debugtext\n\nCopy to clipboard?"
+    ]} {
+	clipboard clear
+	clipboard append $debugtext
+    }
+}
+
+proc search_next {search_term} {
+    # Called by evalable
+    global searchstring
+
+    set searchstring $search_term
+    dosearch
+}
+
+# vim: ft=tcl ts=8 sts=4 sw=4
