@@ -1,0 +1,129 @@
+digraph cl {
+    size="104.16666666666667,104.16666666666667";
+    ratio=collapse;
+    outputorder=edgesfirst;
+    maxiter=600;
+    splines=compound;
+    node [shape=none margin=0 style=filled fillcolor="#fff3d0"
+        fontname="Roboto, Verdana, Arial" fontsize=11];
+    edge [arrowhead=open]
+subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java</td></tr></table>>;
+    style=invis;
+    label="";
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SubclassBytecodeGenerator}" sides="b"><font point-size="18"><b>SubclassBytecodeGenerator</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {CODEGEN_PACKAGE}">-CODEGEN_PACKAGE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {MOCKITO_MODULE}">-MOCKITO_MODULE</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {GET_MODULE}">-GET_MODULE</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {IS_OPEN}">-IS_OPEN</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {IS_EXPORTED}">-IS_EXPORTED</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {CAN_READ}">-CAN_READ</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {ADD_EXPORTS}">-ADD_EXPORTS</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {ADD_READ}">-ADD_READ</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {ADD_OPENS}">-ADD_OPENS</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {GET_UNNAMED_MODULE}">-GET_UNNAMED_MODULE</td></tr>
+<tr><td border="0" align="left">...</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SubclassBytecodeGenerator}">#SubclassBytecodeGenerator()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {mockClass}">+mockClass()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {addReadEdgeByProbe}">-addReadEdgeByProbe()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {addExportEdgeByProbe}">-addExportEdgeByProbe()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {loadModuleProble}">-loadModuleProble()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {isGroovyMethod}">-isGroovyMethod()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {nameFor}">-nameFor()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {isComingFromJDK}">-isComingFromJDK()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {isComingFromSealedPackage}">-isComingFromSealedPackage()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {assertModuleAccessability}">-assertModuleAccessability()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+}
+subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java</td></tr></table>>;
+    style=invis;
+    label="";
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java_SubclassInjectionLoader [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SubclassInjectionLoader}" sides="b"><font point-size="18"><b>SubclassInjectionLoader</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ERROR_MESSAGE}">-ERROR_MESSAGE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {loader}">-loader</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SubclassInjectionLoader}">~SubclassInjectionLoader()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {tryLookup}">-tryLookup()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {isDisrespectingOpenness}">+isDisrespectingOpenness()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
+}
+subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java</td></tr></table>>;
+    style=invis;
+    label="";
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SubclassLoader}" sides="b"><font point-size="11">&lt;&lt;interface&gt;&gt;<br/></font><font point-size="18"><b>SubclassLoader</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {isDisrespectingOpenness}">+isDisrespectingOpenness()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
+}
+subgraph cluster_subprojects_android_src_main_java_org_mockito_android_internal_creation_AndroidLoadingStrategy_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java}">subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java</td></tr></table>>;
+    style=invis;
+    label="";
+subprojects_android_src_main_java_org_mockito_android_internal_creation_AndroidLoadingStrategy_java_AndroidLoadingStrategy [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {AndroidLoadingStrategy}" sides="b"><font point-size="18"><b>AndroidLoadingStrategy</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {isDisrespectingOpenness}">+isDisrespectingOpenness()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
+}
+subgraph cluster_subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleModule_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java}">subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java</td></tr></table>>;
+    style=invis;
+    label="";
+subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleModule_java_CanLoadWithSimpleModule [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {CanLoadWithSimpleModule}" sides="b"><font point-size="18"><b>CanLoadWithSimpleModule</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {can_define_class_in_open_reading_module}">+can_define_class_in_open_reading_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {can_define_class_in_open_reading_private_module}">+can_define_class_in_open_reading_private_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {can_define_class_in_open_non_reading_module}">+can_define_class_in_open_non_reading_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {can_define_class_in_open_non_reading_non_exporting_module}">+can_define_class_in_open_non_reading_non_exporting_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {can_define_class_in_closed_module}">+can_define_class_in_closed_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {cannot_define_class_in_non_opened_non_exported_module}">+cannot_define_class_in_non_opened_non_exported_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {modularJar}">-modularJar()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {type}">-type()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {moduleInfo}">-moduleInfo()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {layer}">-layer()</td></tr></table>>  fillcolor="#ffaaaa"]
+}
+subgraph cluster_subprojects_module_test_src_test_java_org_mockito_moduletest_ModuleHandlingTest_java {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java}">subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java</td></tr></table>>;
+    style=invis;
+    label="";
+subprojects_module_test_src_test_java_org_mockito_moduletest_ModuleHandlingTest_java_ModuleHandlingTest [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {ModuleHandlingTest}" sides="b"><font point-size="18"><b>ModuleHandlingTest</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {can_define_class_in_open_reading_module}">+can_define_class_in_open_reading_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {can_define_class_in_open_reading_private_module}">+can_define_class_in_open_reading_private_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {can_define_class_in_open_non_reading_module}">+can_define_class_in_open_non_reading_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {can_define_class_in_open_non_reading_non_exporting_module}">+can_define_class_in_open_non_reading_non_exporting_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {can_define_class_in_closed_module}">+can_define_class_in_closed_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {cannot_define_class_in_non_opened_non_exported_module}">+cannot_define_class_in_non_opened_non_exported_module()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {modularJar}">-modularJar()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {type}">-type()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {moduleInfo}">-moduleInfo()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {layer}">-layer()</td></tr></table>>  fillcolor="#aaffaa"]
+}
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader []
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java_SubclassInjectionLoader []
+    edge [arrowhead=empty];
+    edge [style=dashed];
+src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java_SubclassInjectionLoader -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader []
+subprojects_android_src_main_java_org_mockito_android_internal_creation_AndroidLoadingStrategy_java_AndroidLoadingStrategy -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader []
+}
+

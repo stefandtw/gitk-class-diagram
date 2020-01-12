@@ -1,0 +1,35 @@
++++ docs/source/release-notes/3.7.2.rst
+@@ -1 +1 @@
++++ docs/source/release-notes/3.7.3.rst
+@@ -0,0 +1,43 @@
++++ docs/source/release-notes/index.rst
+@@ -11,0 +12 @@ with the newest releases first.
++++ src/flake8/__init__.py
+@@ -18 +18 @@ LOG.addHandler(logging.NullHandler())
++++ src/flake8/main/application.py
+@@ -8 +7,0 @@ from typing import List, Optional, Sequence  # noqa: F401 (until flake8 3.7)
+@@ -21 +20 @@ from flake8.plugins import manager as plugin_manager
+@@ -22,0 +22,2 @@ if TYPE_CHECKING:
++++ src/flake8/plugins/manager.py
+@@ -258,0 +259,6 @@ class PluginManager(object):  # pylint: disable=too-few-public-methods
++++ src/flake8/style_guide.py
+@@ -340 +340 @@ class StyleGuideManager(object):
+@@ -439 +439,3 @@ class StyleGuide(object):
+@@ -446 +448 @@ class StyleGuide(object):
+@@ -462 +464,3 @@ class StyleGuide(object):
++++ src/flake8/utils.py
+@@ -13,2 +13 @@ from typing import List, Pattern, Sequence  # noqa: F401 (until flake8 3,7)
+@@ -16 +15,3 @@ from typing import Union  # noqa: F401 (until flake8 3.7)
+@@ -112,0 +114,15 @@ def parse_files_to_codes_mapping(value):  # noqa: C901
+@@ -126 +142 @@ def parse_files_to_codes_mapping(value):  # noqa: C901
+@@ -139 +155 @@ def parse_files_to_codes_mapping(value):  # noqa: C901
++++ tests/integration/test_main.py
+@@ -9 +9 @@ def test_diff_option(tmpdir, capsys):
+@@ -43,0 +44,44 @@ index d64ac39..7d943de 100644
++++ tests/unit/test_style_guide.py
+@@ -6,0 +7 @@ import pytest
+@@ -27,2 +28,5 @@ def test_handle_error_does_not_raise_type_errors():
+@@ -63,3 +67,5 @@ def test_style_guide_applies_to(style_guide_file, filename, expected):
++++ tests/unit/test_utils.py
+@@ -6,0 +7 @@ import pytest
+@@ -114 +115 @@ def test_invalid_file_list(value):

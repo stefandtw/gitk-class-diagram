@@ -1,0 +1,327 @@
+digraph cl {
+    size="104.16666666666667,104.16666666666667";
+    ratio=collapse;
+    outputorder=edgesfirst;
+    maxiter=600;
+    splines=compound;
+    node [shape=none margin=0 style=filled fillcolor="#fff3d0"
+        fontname="Roboto, Verdana, Arial" fontsize=11];
+    edge [arrowhead=open]
+subgraph cluster_docs_source_release_notes_______rst {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {docs/source/release-notes/3.7.2.rst}">docs/source/release-notes/3.7.2.rst</td></tr></table>>;
+    style=invis;
+    label="";
+docs_source_release_notes_______rst [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {docs/source/release-notes/3.7.2.rst}" sides="b"><font point-size="11"><sup>docs/source/release-notes/</sup><br/></font><font point-size="18"><b>3.7.2.rst</b></font></td></tr>
+<tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {3.7.1 -- 2019-01-30}">3.7.1 -- 2019-01-30</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {3.7.2 -- 2019-01-30}">3.7.2 -- 2019-01-30</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Bugs Fixed}">Bugs Fixed</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+subgraph cluster_docs_source_release_notes_______rst {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {docs/source/release-notes/3.7.3.rst}">docs/source/release-notes/3.7.3.rst</td></tr></table>>;
+    style=invis;
+    label="";
+docs_source_release_notes_______rst [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {docs/source/release-notes/3.7.3.rst}" sides="b"><font point-size="11"><sup>docs/source/release-notes/</sup><br/></font><font point-size="18"><b>3.7.3.rst</b></font></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {3.7.3 -- 2019-01-30}">3.7.3 -- 2019-01-30</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {Bugs Fixed}">Bugs Fixed</td></tr>
+<tr><td sides="b"></td></tr></table>>  fillcolor="#aaffaa"]
+}
+subgraph cluster_docs_source_release_notes_index_rst {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {docs/source/release-notes/index.rst}">docs/source/release-notes/index.rst</td></tr></table>>;
+    style=invis;
+    label="";
+docs_source_release_notes_index_rst [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {docs/source/release-notes/index.rst}" sides="b"><font point-size="11"><sup>docs/source/release-notes/</sup><br/></font><font point-size="18"><b>index.rst</b></font></td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {3.x Release Series}">3.x Release Series</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {2.x Release Series}">2.x Release Series</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {1.x Release Series}">1.x Release Series</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {0.x Release Series}">0.x Release Series</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+subgraph cluster_src_flake____init___py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/flake8/__init__.py}">src/flake8/__init__.py</td></tr></table>>;
+    style=invis;
+    label="";
+src_flake____init___py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {src/flake8/__init__.py}" sides="b"><font point-size="11"><sup>src/flake8/</sup><br/></font><font point-size="18"><b>__init__.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOG}">+LOG</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {__version__}">#__version__</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__version_info__}">#__version_info__</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_EXTRA_VERBOSE}">#_EXTRA_VERBOSE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_VERBOSITY_TO_LOG_LEVEL}">#_VERBOSITY_TO_LOG_LEVEL</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOG_FORMAT}">+LOG_FORMAT</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {configure_logging}">+configure_logging()</td></tr></table>> ]
+}
+subgraph cluster_src_flake__main_application_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/flake8/main/application.py}">src/flake8/main/application.py</td></tr></table>>;
+src_flake__main_application_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {src/flake8/main/application.py}" sides="b"><font point-size="11"><sup>src/flake8/main/</sup><br/></font><font point-size="18"><b>application.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOG}">+LOG</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+src_flake__main_application_py_Application [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Application}" sides="b"><font point-size="18"><b>Application</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parse_preliminary_options_and_args}">+parse_preliminary_options_and_args()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {exit}">+exit()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {make_config_finder}">+make_config_finder()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {find_plugins}">+find_plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {register_plugin_options}">+register_plugin_options()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parse_configuration_and_cli}">+parse_configuration_and_cli()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {formatter_for}">+formatter_for()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {make_formatter}">+make_formatter()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {make_guide}">+make_guide()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+}
+subgraph cluster_src_flake__plugins_manager_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/flake8/plugins/manager.py}">src/flake8/plugins/manager.py</td></tr></table>>;
+src_flake__plugins_manager_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {src/flake8/plugins/manager.py}" sides="b"><font point-size="11"><sup>src/flake8/plugins/</sup><br/></font><font point-size="18"><b>manager.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOG}">+LOG</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__all__}">#__all__</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {NO_GROUP_FOUND}">+NO_GROUP_FOUND</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {version_for}">+version_for()</td></tr></table>> ]
+src_flake__plugins_manager_py_Plugin [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Plugin}" sides="b"><font point-size="18"><b>Plugin</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__repr__}">+__repr__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {to_dictionary}">+to_dictionary()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {is_in_a_group}">+is_in_a_group()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {group}">+group()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parameters}">+parameters()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parameter_names}">+parameter_names()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {plugin}">+plugin()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {version}">+version()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {plugin_name}">+plugin_name()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+src_flake__plugins_manager_py_PluginManager [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {PluginManager}" sides="b"><font point-size="18"><b>PluginManager</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_load_local_plugins}">#_load_local_plugins()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {_load_entrypoint_plugins}">#_load_entrypoint_plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_load_plugin_from_entrypoint}">#_load_plugin_from_entrypoint()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {map}">+map()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {versions}">+versions()</td></tr></table>> ]
+src_flake__plugins_manager_py_PluginTypeManager [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {PluginTypeManager}" sides="b"><font point-size="18"><b>PluginTypeManager</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {namespace}">+namespace</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__contains__}">+__contains__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__getitem__}">+__getitem__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {get}">+get()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {names}">+names()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {plugins}">+plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_generate_call_function}">#_generate_call_function()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {load_plugins}">+load_plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {register_plugin_versions}">+register_plugin_versions()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {register_options}">+register_options()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+src_flake__plugins_manager_py_Checkers [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Checkers}" sides="b"><font point-size="18"><b>Checkers</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {namespace}">+namespace</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {checks_expecting}">+checks_expecting()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {to_dictionary}">+to_dictionary()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {register_options}">+register_options()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ast_plugins}">+ast_plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {logical_line_plugins}">+logical_line_plugins()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {physical_line_plugins}">+physical_line_plugins()</td></tr></table>> ]
+src_flake__plugins_manager_py_ReportFormatters [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {ReportFormatters}" sides="b"><font point-size="18"><b>ReportFormatters</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {namespace}">+namespace</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+subgraph cluster_src_flake__style_guide_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/flake8/style_guide.py}">src/flake8/style_guide.py</td></tr></table>>;
+src_flake__style_guide_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {src/flake8/style_guide.py}" sides="b"><font point-size="11"><sup>src/flake8/</sup><br/></font><font point-size="18"><b>style_guide.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__all__}">#__all__</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOG}">+LOG</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_Violation}">#_Violation</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {lru_cache}">+lru_cache()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {find_noqa}">+find_noqa()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {find_more_specific}">+find_more_specific()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {find_first_match}">+find_first_match()</td></tr></table>> ]
+src_flake__style_guide_py_Selected [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Selected}" sides="b"><font point-size="18"><b>Selected</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Explicitly}">+Explicitly</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Implicitly}">+Implicitly</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+src_flake__style_guide_py_Ignored [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Ignored}" sides="b"><font point-size="18"><b>Ignored</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Explicitly}">+Explicitly</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Implicitly}">+Implicitly</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+src_flake__style_guide_py_Decision [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Decision}" sides="b"><font point-size="18"><b>Decision</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Ignored}">+Ignored</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Selected}">+Selected</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+src_flake__style_guide_py_Violation [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {Violation}" sides="b"><font point-size="18"><b>Violation</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {is_inline_ignored}">+is_inline_ignored()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {is_in}">+is_in()</td></tr></table>> ]
+src_flake__style_guide_py_DecisionEngine [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {DecisionEngine}" sides="b"><font point-size="18"><b>DecisionEngine</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_in_all_selected}">#_in_all_selected()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_in_extended_selected}">#_in_extended_selected()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {was_selected}">+was_selected()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {was_ignored}">+was_ignored()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {more_specific_decision_for}">+more_specific_decision_for()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {make_decision}">+make_decision()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {decision_for}">+decision_for()</td></tr></table>> ]
+src_flake__style_guide_py_StyleGuideManager [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {StyleGuideManager}" sides="b"><font point-size="18"><b>StyleGuideManager</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {populate_style_guides_with}">+populate_style_guides_with()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {style_guide_for}">+style_guide_for()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {processing_file}">+processing_file()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {handle_error}">+handle_error()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {add_diff_ranges}">+add_diff_ranges()</td></tr></table>> ]
+src_flake__style_guide_py_StyleGuide [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {StyleGuide}" sides="b"><font point-size="18"><b>StyleGuide</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {__init__}">+__init__()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {__repr__}">+__repr__()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {copy}">+copy()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {processing_file}">+processing_file()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {applies_to}">+applies_to()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {should_report_error}">+should_report_error()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {handle_error}">+handle_error()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {add_diff_ranges}">+add_diff_ranges()</td></tr></table>> ]
+}
+subgraph cluster_src_flake__utils_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/flake8/utils.py}">src/flake8/utils.py</td></tr></table>>;
+    style=invis;
+    label="";
+src_flake__utils_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {src/flake8/utils.py}" sides="b"><font point-size="11"><sup>src/flake8/</sup><br/></font><font point-size="18"><b>utils.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {DIFF_HUNK_REGEXP}">+DIFF_HUNK_REGEXP</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {COMMA_SEPARATED_LIST_RE}">+COMMA_SEPARATED_LIST_RE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {LOCAL_PLUGIN_LIST_RE}">+LOCAL_PLUGIN_LIST_RE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_Token}">#_Token</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_CODE}">#_CODE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_FILE}">#_FILE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_COLON}">#_COLON</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_COMMA}">#_COMMA</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_WS}">#_WS</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {_EOF}">#_EOF</td></tr>
+<tr><td border="0" align="left">...</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {fnmatch}">+fnmatch()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parse_comma_separated_list}">+parse_comma_separated_list()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {parse_files_to_codes_mapping}">+parse_files_to_codes_mapping()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {normalize_paths}">+normalize_paths()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {normalize_path}">+normalize_path()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {stdin_get_value}">+stdin_get_value()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {parse_unified_diff}">+parse_unified_diff()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {is_windows}">+is_windows()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {can_run_multiprocessing_on_windows}">+can_run_multiprocessing_on_windows()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {is_using_stdin}">+is_using_stdin()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+}
+subgraph cluster_tests_integration_test_main_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {tests/integration/test_main.py}">tests/integration/test_main.py</td></tr></table>>;
+    style=invis;
+    label="";
+tests_integration_test_main_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {tests/integration/test_main.py}" sides="b"><font point-size="11"><sup>tests/integration/</sup><br/></font><font point-size="18"><b>test_main.py</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {test_diff_option}">+test_diff_option()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {test_statistics_option}">+test_statistics_option()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {test_malformed_per_file_ignores_error}">+test_malformed_per_file_ignores_error()</td></tr></table>> ]
+}
+subgraph cluster_tests_unit_test_style_guide_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {tests/unit/test_style_guide.py}">tests/unit/test_style_guide.py</td></tr></table>>;
+    style=invis;
+    label="";
+tests_unit_test_style_guide_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {tests/unit/test_style_guide.py}" sides="b"><font point-size="11"><sup>tests/unit/</sup><br/></font><font point-size="18"><b>test_style_guide.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {PER_FILE_IGNORES_UNPARSED}">+PER_FILE_IGNORES_UNPARSED</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {create_options}">+create_options()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {test_handle_error_does_not_raise_type_errors}">+test_handle_error_does_not_raise_type_errors()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_style_guide_manager}">+test_style_guide_manager()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {test_style_guide_applies_to}">+test_style_guide_applies_to()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_style_guide_manager_pre_file_ignores_parsing}">+test_style_guide_manager_pre_file_ignores_parsing()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_style_guide_manager_pre_file_ignores}">+test_style_guide_manager_pre_file_ignores()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_style_guide_manager_style_guide_for}">+test_style_guide_manager_style_guide_for()</td></tr></table>> ]
+}
+subgraph cluster_tests_unit_test_utils_py {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {tests/unit/test_utils.py}">tests/unit/test_utils.py</td></tr></table>>;
+    style=invis;
+    label="";
+tests_unit_test_utils_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {tests/unit/test_utils.py}" sides="b"><font point-size="11"><sup>tests/unit/</sup><br/></font><font point-size="18"><b>test_utils.py</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {RELATIVE_PATHS}">+RELATIVE_PATHS</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SINGLE_FILE_DIFF}">+SINGLE_FILE_DIFF</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SINGLE_FILE_INFO}">+SINGLE_FILE_INFO</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {TWO_FILE_DIFF}">+TWO_FILE_DIFF</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {TWO_FILE_INFO}">+TWO_FILE_INFO</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {MULTI_FILE_DIFF}">+MULTI_FILE_DIFF</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {MULTI_FILE_INFO}">+MULTI_FILE_INFO</td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_parse_comma_separated_list}">+test_parse_comma_separated_list()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_parse_files_to_codes_mapping}">+test_parse_files_to_codes_mapping()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {test_invalid_file_list}">+test_invalid_file_list()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_normalize_path}">+test_normalize_path()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_normalize_paths}">+test_normalize_paths()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_is_windows_checks_for_nt}">+test_is_windows_checks_for_nt()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_fnmatch}">+test_fnmatch()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_fnmatch_returns_the_default_with_empty_default}">+test_fnmatch_returns_the_default_with_empty_default()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_filenames_from_a_directory}">+test_filenames_from_a_directory()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {test_filenames_from_a_directory_with_a_predicate}">+test_filenames_from_a_directory_with_a_predicate()</td></tr>
+<tr><td border="0" align="left">...</td></tr></table>> ]
+}
+src_flake__main_application_py_Application -> src_flake__plugins_manager_py_Checkers []
+src_flake__main_application_py_Application -> src_flake__plugins_manager_py_ReportFormatters []
+src_flake__main_application_py_Application -> src_flake__style_guide_py_StyleGuideManager []
+src_flake__main_application_py_Application -> src_flake__style_guide_py_StyleGuide []
+src_flake__plugins_manager_py_PluginTypeManager -> src_flake__plugins_manager_py_Plugin []
+src_flake__plugins_manager_py_PluginTypeManager -> src_flake__plugins_manager_py_PluginManager []
+src_flake__style_guide_py_StyleGuide -> src_flake__style_guide_py_Violation []
+src_flake__style_guide_py_StyleGuide -> src_flake__style_guide_py_DecisionEngine []
+src_flake__utils_py -> src_flake__plugins_manager_py_Plugin []
+tests_integration_test_main_py -> src_flake__main_application_py_Application []
+tests_unit_test_style_guide_py -> src_flake__style_guide_py_StyleGuide []
+tests_unit_test_style_guide_py -> src_flake__style_guide_py_StyleGuideManager []
+tests_unit_test_utils_py -> src_flake__plugins_manager_py_Plugin []
+    edge [arrowhead=empty];
+src_flake__plugins_manager_py_Checkers -> src_flake__plugins_manager_py_PluginTypeManager []
+src_flake__plugins_manager_py_ReportFormatters -> src_flake__plugins_manager_py_PluginTypeManager []
+}
+

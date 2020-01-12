@@ -1,0 +1,1183 @@
+docs/source/release-notes/3.7.2.rst	def	chapter	3.7.1 -- 2019-01-30	-		-	-	-	ReStructuredText	1	36
+docs/source/release-notes/3.7.2.rst	def	section	Bugs Fixed	-	3.7.1 -- 2019-01-30	-	-	-	ReStructuredText	6	36
+docs/source/release-notes/3.7.2.rst	def	target	3.7.2 milestone	-	Bugs Fixed	-	-	-	ReStructuredText	19	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab#490	-	Bugs Fixed	-	-	-	ReStructuredText	23	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab#491	-	Bugs Fixed	-	-	-	ReStructuredText	25	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab#497	-	Bugs Fixed	-	-	-	ReStructuredText	27	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab!292	-	Bugs Fixed	-	-	-	ReStructuredText	31	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab!275	-	Bugs Fixed	-	-	-	ReStructuredText	33	
+docs/source/release-notes/3.7.2.rst	def	target	GitLab!293	-	Bugs Fixed	-	-	-	ReStructuredText	35	
+docs/source/release-notes/index.rst	def	chapter	3.x Release Series	-		-	-	-	ReStructuredText	8	29
+docs/source/release-notes/index.rst	def	chapter	2.x Release Series	-		-	-	-	ReStructuredText	30	54
+docs/source/release-notes/index.rst	def	chapter	1.x Release Series	-		-	-	-	ReStructuredText	55	70
+docs/source/release-notes/index.rst	def	chapter	0.x Release Series	-		-	-	-	ReStructuredText	71	78
+src/flake8/__init__.py	pascalcase	word	Flake8	-		-	-	-	Python	1	
+src/flake8/__init__.py	pascalcase	word	Top	-		-	-	-	Python	1	
+src/flake8/__init__.py	pascalcase	word	This	-		-	-	-	Python	3	
+src/flake8/__init__.py	imported	module	logging	-		-	-	-	Python	12	
+src/flake8/__init__.py	imported	module	sys	-		-	-	-	Python	13	
+src/flake8/__init__.py	def	variable	LOG	-		public	-	-	Python	15	
+src/flake8/__init__.py	pascalcase	word	NullHandler	-		-	-	-	Python	16	
+src/flake8/__init__.py	def	variable	__version__	-		protected	-	-	Python	18	
+src/flake8/__init__.py	def	variable	__version_info__	-		protected	-	-	Python	19	
+src/flake8/__init__.py	pascalcase	word	There	-		-	-	-	Python	24	
+src/flake8/__init__.py	def	variable	_EXTRA_VERBOSE	-		protected	-	-	Python	26	
+src/flake8/__init__.py	def	variable	_VERBOSITY_TO_LOG_LEVEL	-		protected	-	-	Python	29	
+src/flake8/__init__.py	def	variable	LOG_FORMAT	-		public	-	-	Python	38	
+src/flake8/__init__.py	pascalcase	word	None	-		-	-	-	Python	44	
+src/flake8/__init__.py	def	function	configure_logging	-		public	-	-	Python	44	75
+src/flake8/__init__.py	pascalcase	word	Configure	-		-	-	-	Python	45	
+src/flake8/__init__.py	pascalcase	word	How	-		-	-	-	Python	48	
+src/flake8/__init__.py	pascalcase	word	Name	-		-	-	-	Python	50	
+src/flake8/__init__.py	pascalcase	word	None	-		-	-	-	Python	51	
+src/flake8/__init__.py	pascalcase	word	If	-		-	-	-	Python	51	
+src/flake8/__init__.py	pascalcase	word	If	-		-	-	-	Python	52	
+src/flake8/__init__.py	pascalcase	word	StreamHandler	-		-	-	-	Python	64	
+src/flake8/__init__.py	pascalcase	word	FileHandler	-		-	-	-	Python	67	
+src/flake8/__init__.py	pascalcase	word	Formatter	-		-	-	-	Python	70	
+src/flake8/__init__.py	pascalcase	word	Added	-		-	-	-	Python	74	
+src/flake8/main/application.py	pascalcase	word	Flake8	-		-	-	-	Python	1	
+src/flake8/main/application.py	pascalcase	word	Module	-		-	-	-	Python	1	
+src/flake8/main/application.py	namespace	module	__future__	-		-	-	-	Python	2	
+src/flake8/main/application.py	imported	unknown	print_function	-		-	-	-	Python	2	
+src/flake8/main/application.py	imported	module	logging	-		-	-	-	Python	4	
+src/flake8/main/application.py	imported	module	sys	-		-	-	-	Python	5	
+src/flake8/main/application.py	pascalcase	word	Sequence	-		-	-	-	Python	7	
+src/flake8/main/application.py	pascalcase	word	Optional	-		-	-	-	Python	7	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	7	
+src/flake8/main/application.py	imported	module	time	-		-	-	-	Python	6	
+src/flake8/main/application.py	namespace	module	typing	-		-	-	-	Python	7	
+src/flake8/main/application.py	imported	unknown	List	-		-	-	-	Python	7	
+src/flake8/main/application.py	imported	unknown	Optional	-		-	-	-	Python	7	
+src/flake8/main/application.py	pascalcase	word	Type	-		-	-	-	Python	8	
+src/flake8/main/application.py	imported	unknown	Sequence	-		-	-	-	Python	7	
+src/flake8/main/application.py	namespace	module	typing	-		-	-	-	Python	8	
+src/flake8/main/application.py	imported	unknown	Type	-		-	-	-	Python	8	
+src/flake8/main/application.py	imported	unknown	TYPE_CHECKING	-		-	-	-	Python	8	
+src/flake8/main/application.py	imported	module	flake8	-		-	-	-	Python	10	
+src/flake8/main/application.py	namespace	module	flake8	-		-	-	-	Python	11	
+src/flake8/main/application.py	imported	unknown	checker	-		-	-	-	Python	11	
+src/flake8/main/application.py	namespace	module	flake8	-		-	-	-	Python	12	
+src/flake8/main/application.py	imported	unknown	defaults	-		-	-	-	Python	12	
+src/flake8/main/application.py	namespace	module	flake8	-		-	-	-	Python	13	
+src/flake8/main/application.py	imported	unknown	exceptions	-		-	-	-	Python	13	
+src/flake8/main/application.py	namespace	module	flake8	-		-	-	-	Python	14	
+src/flake8/main/application.py	imported	unknown	style_guide	-		-	-	-	Python	14	
+src/flake8/main/application.py	namespace	module	flake8	-		-	-	-	Python	15	
+src/flake8/main/application.py	imported	unknown	utils	-		-	-	-	Python	15	
+src/flake8/main/application.py	namespace	module	flake8.main	-		-	-	-	Python	16	
+src/flake8/main/application.py	imported	unknown	options	-		-	-	-	Python	16	
+src/flake8/main/application.py	namespace	module	flake8.options	-		-	-	-	Python	17	
+src/flake8/main/application.py	imported	unknown	aggregator	-		-	-	-	Python	17	
+src/flake8/main/application.py	imported	unknown	config	-		-	-	-	Python	17	
+src/flake8/main/application.py	namespace	module	flake8.options	-		-	-	-	Python	18	
+src/flake8/main/application.py	imported	unknown	manager	-		-	-	-	Python	18	
+src/flake8/main/application.py	namespace	module	flake8.plugins	-		-	-	-	Python	19	
+src/flake8/main/application.py	indirectly-imported	unknown	manager	-		-	-	-	Python	19	
+src/flake8/main/application.py	def	unknown	plugin_manager	-		public	-	-	Python	19	
+src/flake8/main/application.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	23	
+src/flake8/main/application.py	namespace	module	flake8.formatting.base	-		-	-	-	Python	23	
+src/flake8/main/application.py	imported	unknown	BaseFormatter	-		-	-	-	Python	23	
+src/flake8/main/application.py	def	variable	LOG	-		public	-	-	Python	27	
+src/flake8/main/application.py	pascalcase	word	Application	-		-	-	-	Python	30	
+src/flake8/main/application.py	def	class	Application	-		public	-	object	Python	30	405
+src/flake8/main/application.py	pascalcase	word	Abstract	-		-	-	-	Python	31	
+src/flake8/main/application.py	def	member	__init__	-	Application	public	-	-	Python	33	98
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	34	
+src/flake8/main/application.py	pascalcase	word	Initialize	-		-	-	-	Python	35	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	38	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	40	
+src/flake8/main/application.py	pascalcase	word	Application	-		-	-	-	Python	42	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	42	
+src/flake8/main/application.py	pascalcase	word	Application	-		-	-	-	Python	44	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	44	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	45	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	46	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	48	
+src/flake8/main/application.py	pascalcase	word	OptionManager	-		-	-	-	Python	50	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	50	
+src/flake8/main/application.py	pascalcase	word	OptionManager	-		-	-	-	Python	52	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	56	
+src/flake8/main/application.py	pascalcase	word	Values	-		-	-	-	Python	57	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	58	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	59	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	60	
+src/flake8/main/application.py	pascalcase	word	ConfigFileFinder	-		-	-	-	Python	61	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	61	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	62	
+src/flake8/main/application.py	pascalcase	word	LocalPlugins	-		-	-	-	Python	64	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	64	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	65	
+src/flake8/main/application.py	pascalcase	word	Checkers	-		-	-	-	Python	66	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	66	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	67	
+src/flake8/main/application.py	pascalcase	word	ReportFormatters	-		-	-	-	Python	68	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	68	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	69	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	70	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	71	
+src/flake8/main/application.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	72	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	72	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	74	
+src/flake8/main/application.py	pascalcase	word	Manager	-		-	-	-	Python	75	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	75	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	77	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	79	
+src/flake8/main/application.py	pascalcase	word	Values	-		-	-	-	Python	80	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	81	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	82	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	84	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	85	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	88	
+src/flake8/main/application.py	pascalcase	word	Whether	-		-	-	-	Python	91	
+src/flake8/main/application.py	pascalcase	word	False	-		-	-	-	Python	93	
+src/flake8/main/application.py	pascalcase	word	Whether	-		-	-	-	Python	95	
+src/flake8/main/application.py	pascalcase	word	False	-		-	-	-	Python	96	
+src/flake8/main/application.py	pascalcase	word	The	-		-	-	-	Python	97	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	100	
+src/flake8/main/application.py	def	member	parse_preliminary_options_and_args	-	Application	public	-	-	Python	100	140
+src/flake8/main/application.py	pascalcase	word	Get	-		-	-	-	Python	101	
+src/flake8/main/application.py	pascalcase	word	We	-		-	-	-	Python	103	
+src/flake8/main/application.py	pascalcase	word	Since	-		-	-	-	Python	106	
+src/flake8/main/application.py	pascalcase	word	Sets	-		-	-	-	Python	110	
+src/flake8/main/application.py	pascalcase	word	Command	-		-	-	-	Python	113	
+src/flake8/main/application.py	pascalcase	word	We	-		-	-	-	Python	115	
+src/flake8/main/application.py	pascalcase	word	First	-		-	-	-	Python	117	
+src/flake8/main/application.py	pascalcase	word	If	-		-	-	-	Python	119	
+src/flake8/main/application.py	pascalcase	word	If	-		-	-	-	Python	120	
+src/flake8/main/application.py	pascalcase	word	Similarly	-		-	-	-	Python	122	
+src/flake8/main/application.py	pascalcase	word	ValueError	-		-	-	-	Python	126	
+src/flake8/main/application.py	pascalcase	word	ValueError	-		-	-	-	Python	130	
+src/flake8/main/application.py	pascalcase	word	ValueError	-		-	-	-	Python	134	
+src/flake8/main/application.py	def	member	exit	-	Application	public	-	-	Python	142	155
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	143	
+src/flake8/main/application.py	pascalcase	word	Handle	-		-	-	-	Python	144	
+src/flake8/main/application.py	pascalcase	word	It	-		-	-	-	Python	146	
+src/flake8/main/application.py	pascalcase	word	This	-		-	-	-	Python	146	
+src/flake8/main/application.py	pascalcase	word	SystemExit	-		-	-	-	Python	153	
+src/flake8/main/application.py	def	member	make_config_finder	-	Application	public	-	-	Python	157	167
+src/flake8/main/application.py	pascalcase	word	ConfigFileFinder	-		-	-	-	Python	158	
+src/flake8/main/application.py	pascalcase	word	Make	-		-	-	-	Python	158	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	159	
+src/flake8/main/application.py	pascalcase	word	ConfigFileFinder	-		-	-	-	Python	163	
+src/flake8/main/application.py	def	member	find_plugins	-	Application	public	-	-	Python	169	199
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	170	
+src/flake8/main/application.py	pascalcase	word	Find	-		-	-	-	Python	171	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	173	
+src/flake8/main/application.py	pascalcase	word	If	-		-	-	-	Python	173	
+src/flake8/main/application.py	pascalcase	word	Given	-		-	-	-	Python	175	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	177	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	179	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	188	
+src/flake8/main/application.py	pascalcase	word	Checkers	-		-	-	-	Python	189	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	193	
+src/flake8/main/application.py	pascalcase	word	ReportFormatters	-		-	-	-	Python	194	
+src/flake8/main/application.py	def	member	register_plugin_options	-	Application	public	-	-	Python	201	206
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	202	
+src/flake8/main/application.py	pascalcase	word	Register	-		-	-	-	Python	203	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	208	
+src/flake8/main/application.py	def	member	parse_configuration_and_cli	-	Application	public	-	-	Python	208	233
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	209	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	209	
+src/flake8/main/application.py	pascalcase	word	Optional	-		-	-	-	Python	209	
+src/flake8/main/application.py	pascalcase	word	Parse	-		-	-	-	Python	210	
+src/flake8/main/application.py	pascalcase	word	Command	-		-	-	-	Python	213	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	215	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	215	
+src/flake8/main/application.py	pascalcase	word	False	-		-	-	-	Python	226	
+src/flake8/main/application.py	def	member	formatter_for	-	Application	public	-	-	Python	235	246
+src/flake8/main/application.py	pascalcase	word	Retrieve	-		-	-	-	Python	236	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	239	
+src/flake8/main/application.py	pascalcase	word	Falling	-		-	-	-	Python	241	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	248	
+src/flake8/main/application.py	def	member	make_formatter	-	Application	public	-	-	Python	248	261
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	249	
+src/flake8/main/application.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	249	
+src/flake8/main/application.py	pascalcase	word	Type	-		-	-	-	Python	249	
+src/flake8/main/application.py	pascalcase	word	Initialize	-		-	-	-	Python	250	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	251	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	258	
+src/flake8/main/application.py	def	member	make_guide	-	Application	public	-	-	Python	263	272
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	264	
+src/flake8/main/application.py	pascalcase	word	StyleGuide	-		-	-	-	Python	265	
+src/flake8/main/application.py	pascalcase	word	Initialize	-		-	-	-	Python	265	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	266	
+src/flake8/main/application.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	267	
+src/flake8/main/application.py	def	member	make_file_checker_manager	-	Application	public	-	-	Python	274	282
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	275	
+src/flake8/main/application.py	pascalcase	word	Manager	-		-	-	-	Python	276	
+src/flake8/main/application.py	pascalcase	word	FileChecker	-		-	-	-	Python	276	
+src/flake8/main/application.py	pascalcase	word	Initialize	-		-	-	-	Python	276	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	277	
+src/flake8/main/application.py	pascalcase	word	Manager	-		-	-	-	Python	278	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	284	
+src/flake8/main/application.py	def	member	run_checks	-	Application	public	-	-	Python	284	306
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	285	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	285	
+src/flake8/main/application.py	pascalcase	word	Optional	-		-	-	-	Python	285	
+src/flake8/main/application.py	pascalcase	word	Manager	-		-	-	-	Python	286	
+src/flake8/main/application.py	pascalcase	word	FileChecker	-		-	-	-	Python	286	
+src/flake8/main/application.py	pascalcase	word	Run	-		-	-	-	Python	286	
+src/flake8/main/application.py	pascalcase	word	This	-		-	-	-	Python	288	
+src/flake8/main/application.py	pascalcase	word	Manger	-		-	-	-	Python	289	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	293	
+src/flake8/main/application.py	pascalcase	word	PluginExecutionFailed	-		-	-	-	Python	300	
+src/flake8/main/application.py	pascalcase	word	Run	-		-	-	-	Python	302	
+src/flake8/main/application.py	pascalcase	word	True	-		-	-	-	Python	303	
+src/flake8/main/application.py	pascalcase	word	Finished	-		-	-	-	Python	304	
+src/flake8/main/application.py	def	member	report_benchmarks	-	Application	public	-	-	Python	308	323
+src/flake8/main/application.py	pascalcase	word	Aggregate	-		-	-	-	Python	309	
+src/flake8/main/application.py	def	member	report_errors	-	Application	public	-	-	Python	325	339
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	326	
+src/flake8/main/application.py	pascalcase	word	Report	-		-	-	-	Python	327	
+src/flake8/main/application.py	pascalcase	word	This	-		-	-	-	Python	329	
+src/flake8/main/application.py	pascalcase	word	Reporting	-		-	-	-	Python	332	
+src/flake8/main/application.py	pascalcase	word	Found	-		-	-	-	Python	336	
+src/flake8/main/application.py	def	member	report_statistics	-	Application	public	-	-	Python	341	346
+src/flake8/main/application.py	pascalcase	word	Aggregate	-		-	-	-	Python	342	
+src/flake8/main/application.py	def	member	initialize	-	Application	public	-	-	Python	348	367
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	349	
+src/flake8/main/application.py	pascalcase	word	Sequence	-		-	-	-	Python	349	
+src/flake8/main/application.py	pascalcase	word	Initialize	-		-	-	-	Python	350	
+src/flake8/main/application.py	pascalcase	word	This	-		-	-	-	Python	352	
+src/flake8/main/application.py	pascalcase	word	When	-		-	-	-	Python	355	
+src/flake8/main/application.py	def	member	report	-	Application	public	-	-	Python	369	375
+src/flake8/main/application.py	pascalcase	word	Report	-		-	-	-	Python	370	
+src/flake8/main/application.py	def	member	_run	-	Application	protected	-	-	Python	377	381
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	378	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	378	
+src/flake8/main/application.py	pascalcase	word	Optional	-		-	-	-	Python	378	
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	383	
+src/flake8/main/application.py	def	member	run	-	Application	public	-	-	Python	383	405
+src/flake8/main/application.py	pascalcase	word	None	-		-	-	-	Python	384	
+src/flake8/main/application.py	pascalcase	word	List	-		-	-	-	Python	384	
+src/flake8/main/application.py	pascalcase	word	Optional	-		-	-	-	Python	384	
+src/flake8/main/application.py	pascalcase	word	Run	-		-	-	-	Python	385	
+src/flake8/main/application.py	pascalcase	word	KeyboardInterrupt	-		-	-	-	Python	387	
+src/flake8/main/application.py	pascalcase	word	This	-		-	-	-	Python	387	
+src/flake8/main/application.py	pascalcase	word	KeyboardInterrupt	-		-	-	-	Python	388	
+src/flake8/main/application.py	pascalcase	word	If	-		-	-	-	Python	388	
+src/flake8/main/application.py	pascalcase	word	Manager	-		-	-	-	Python	389	
+src/flake8/main/application.py	pascalcase	word	KeyboardInterrupt	-		-	-	-	Python	393	
+src/flake8/main/application.py	pascalcase	word	Caught	-		-	-	-	Python	395	
+src/flake8/main/application.py	pascalcase	word	True	-		-	-	-	Python	397	
+src/flake8/main/application.py	pascalcase	word	ExecutionError	-		-	-	-	Python	398	
+src/flake8/main/application.py	pascalcase	word	Flake8	-		-	-	-	Python	399	
+src/flake8/main/application.py	pascalcase	word	There	-		-	-	-	Python	399	
+src/flake8/main/application.py	pascalcase	word	True	-		-	-	-	Python	402	
+src/flake8/main/application.py	pascalcase	word	EarlyQuit	-		-	-	-	Python	403	
+src/flake8/main/application.py	pascalcase	word	True	-		-	-	-	Python	404	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	1	
+src/flake8/plugins/manager.py	imported	module	logging	-		-	-	-	Python	2	
+src/flake8/plugins/manager.py	imported	module	sys	-		-	-	-	Python	3	
+src/flake8/plugins/manager.py	imported	module	entrypoints	-		-	-	-	Python	5	
+src/flake8/plugins/manager.py	namespace	module	flake8	-		-	-	-	Python	7	
+src/flake8/plugins/manager.py	imported	unknown	exceptions	-		-	-	-	Python	7	
+src/flake8/plugins/manager.py	namespace	module	flake8	-		-	-	-	Python	8	
+src/flake8/plugins/manager.py	imported	unknown	utils	-		-	-	-	Python	8	
+src/flake8/plugins/manager.py	indirectly-imported	module	collections.abc	-		-	-	-	Python	11	
+src/flake8/plugins/manager.py	def	namespace	collections_abc	-		public	-	-	Python	11	
+src/flake8/plugins/manager.py	indirectly-imported	module	collections	-		-	-	-	Python	13	
+src/flake8/plugins/manager.py	def	namespace	collections_abc	-		public	-	-	Python	13	
+src/flake8/plugins/manager.py	def	variable	LOG	-		public	-	-	Python	15	
+src/flake8/plugins/manager.py	pascalcase	word	ReportFormatters	-		-	-	-	Python	17	
+src/flake8/plugins/manager.py	pascalcase	word	PluginManager	-		-	-	-	Python	17	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	17	
+src/flake8/plugins/manager.py	def	variable	__all__	-		protected	-	-	Python	17	
+src/flake8/plugins/manager.py	def	variable	NO_GROUP_FOUND	-		public	-	-	Python	19	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	22	
+src/flake8/plugins/manager.py	def	class	Plugin	-		public	-	object	Python	22	224
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	23	
+src/flake8/plugins/manager.py	pascalcase	word	Wrap	-		-	-	-	Python	23	
+src/flake8/plugins/manager.py	pascalcase	word	False	-		-	-	-	Python	25	
+src/flake8/plugins/manager.py	def	member	__init__	-	Plugin	public	-	-	Python	25	45
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	26	
+src/flake8/plugins/manager.py	pascalcase	word	Initialize	-		-	-	-	Python	26	
+src/flake8/plugins/manager.py	pascalcase	word	Name	-		-	-	-	Python	29	
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	31	
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	33	
+src/flake8/plugins/manager.py	pascalcase	word	Is	-		-	-	-	Python	35	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	40	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	41	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	42	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	43	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	44	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	45	
+src/flake8/plugins/manager.py	def	member	__repr__	-	Plugin	public	-	-	Python	47	51
+src/flake8/plugins/manager.py	pascalcase	word	Provide	-		-	-	-	Python	48	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	49	
+src/flake8/plugins/manager.py	def	member	to_dictionary	-	Plugin	public	-	-	Python	53	61
+src/flake8/plugins/manager.py	pascalcase	word	Convert	-		-	-	-	Python	54	
+src/flake8/plugins/manager.py	def	member	is_in_a_group	-	Plugin	public	-	-	Python	63	71
+src/flake8/plugins/manager.py	pascalcase	word	Determine	-		-	-	-	Python	64	
+src/flake8/plugins/manager.py	pascalcase	word	False	-		-	-	-	Python	67	
+src/flake8/plugins/manager.py	pascalcase	word	True	-		-	-	-	Python	67	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	71	
+src/flake8/plugins/manager.py	def	member	group	-	Plugin	public	-	-	Python	73	83
+src/flake8/plugins/manager.py	pascalcase	word	Find	-		-	-	-	Python	74	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	75	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	82	
+src/flake8/plugins/manager.py	def	member	parameters	-	Plugin	public	-	-	Python	86	90
+src/flake8/plugins/manager.py	pascalcase	word	List	-		-	-	-	Python	87	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	88	
+src/flake8/plugins/manager.py	def	member	parameter_names	-	Plugin	public	-	-	Python	93	97
+src/flake8/plugins/manager.py	pascalcase	word	List	-		-	-	-	Python	94	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	95	
+src/flake8/plugins/manager.py	def	member	plugin	-	Plugin	public	-	-	Python	100	106
+src/flake8/plugins/manager.py	pascalcase	word	Load	-		-	-	-	Python	101	
+src/flake8/plugins/manager.py	pascalcase	word	This	-		-	-	-	Python	103	
+src/flake8/plugins/manager.py	def	member	version	-	Plugin	public	-	-	Python	109	117
+src/flake8/plugins/manager.py	pascalcase	word	Return	-		-	-	-	Python	110	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	111	
+src/flake8/plugins/manager.py	def	member	plugin_name	-	Plugin	public	-	-	Python	120	128
+src/flake8/plugins/manager.py	pascalcase	word	Return	-		-	-	-	Python	121	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	122	
+src/flake8/plugins/manager.py	def	member	off_by_default	-	Plugin	public	-	-	Python	131	133
+src/flake8/plugins/manager.py	pascalcase	word	Return	-		-	-	-	Python	132	
+src/flake8/plugins/manager.py	pascalcase	word	False	-		-	-	-	Python	133	
+src/flake8/plugins/manager.py	def	member	execute	-	Plugin	public	-	-	Python	135	137
+src/flake8/plugins/manager.py	pascalcase	word	Call	-		-	-	-	Python	136	
+src/flake8/plugins/manager.py	def	member	_load	-	Plugin	protected	-	-	Python	139	148
+src/flake8/plugins/manager.py	pascalcase	word	It	-		-	-	-	Python	143	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	143	
+src/flake8/plugins/manager.py	pascalcase	word	TypeError	-		-	-	-	Python	148	
+src/flake8/plugins/manager.py	def	member	load_plugin	-	Plugin	public	-	-	Python	150	170
+src/flake8/plugins/manager.py	pascalcase	word	Retrieve	-		-	-	-	Python	151	
+src/flake8/plugins/manager.py	pascalcase	word	This	-		-	-	-	Python	153	
+src/flake8/plugins/manager.py	pascalcase	word	It	-		-	-	-	Python	154	
+src/flake8/plugins/manager.py	pascalcase	word	Nothing	-		-	-	-	Python	158	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	160	
+src/flake8/plugins/manager.py	pascalcase	word	Loading	-		-	-	-	Python	161	
+src/flake8/plugins/manager.py	pascalcase	word	Exception	-		-	-	-	Python	164	
+src/flake8/plugins/manager.py	pascalcase	word	FailedToLoadPlugin	-		-	-	-	Python	166	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	172	
+src/flake8/plugins/manager.py	def	member	enable	-	Plugin	public	-	-	Python	172	185
+src/flake8/plugins/manager.py	pascalcase	word	Remove	-		-	-	-	Python	173	
+src/flake8/plugins/manager.py	pascalcase	word	KeyError	-		-	-	-	Python	180	
+src/flake8/plugins/manager.py	pascalcase	word	ValueError	-		-	-	-	Python	180	
+src/flake8/plugins/manager.py	pascalcase	word	Attempted	-		-	-	-	Python	182	
+src/flake8/plugins/manager.py	def	member	disable	-	Plugin	public	-	-	Python	187	189
+src/flake8/plugins/manager.py	pascalcase	word	Add	-		-	-	-	Python	188	
+src/flake8/plugins/manager.py	def	member	provide_options	-	Plugin	public	-	-	Python	191	202
+src/flake8/plugins/manager.py	pascalcase	word	Pass	-		-	-	-	Python	192	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	193	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	194	
+src/flake8/plugins/manager.py	pascalcase	word	Providing	-		-	-	-	Python	195	
+src/flake8/plugins/manager.py	pascalcase	word	TypeError	-		-	-	-	Python	198	
+src/flake8/plugins/manager.py	def	member	register_options	-	Plugin	public	-	-	Python	204	224
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	205	
+src/flake8/plugins/manager.py	pascalcase	word	Register	-		-	-	-	Python	205	
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	208	
+src/flake8/plugins/manager.py	pascalcase	word	Instantiated	-		-	-	-	Python	208	
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	210	
+src/flake8/plugins/manager.py	pascalcase	word	Nothing	-		-	-	-	Python	212	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	214	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	215	
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	217	
+src/flake8/plugins/manager.py	pascalcase	word	Registering	-		-	-	-	Python	217	
+src/flake8/plugins/manager.py	pascalcase	word	PluginManager	-		-	-	-	Python	227	
+src/flake8/plugins/manager.py	def	class	PluginManager	-		public	-	object	Python	227	314
+src/flake8/plugins/manager.py	pascalcase	word	Find	-		-	-	-	Python	228	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	230	
+src/flake8/plugins/manager.py	def	member	__init__	-	PluginManager	public	-	-	Python	230	242
+src/flake8/plugins/manager.py	pascalcase	word	Initialize	-		-	-	-	Python	231	
+src/flake8/plugins/manager.py	pascalcase	word	Namespace	-		-	-	-	Python	234	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	236	
+src/flake8/plugins/manager.py	pascalcase	word	Plugins	-		-	-	-	Python	236	
+src/flake8/plugins/manager.py	def	member	_load_local_plugins	-	PluginManager	protected	-	-	Python	244	254
+src/flake8/plugins/manager.py	pascalcase	word	Load	-		-	-	-	Python	245	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	248	
+src/flake8/plugins/manager.py	pascalcase	word	Plugins	-		-	-	-	Python	248	
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	253	
+src/flake8/plugins/manager.py	pascalcase	word	True	-		-	-	-	Python	254	
+src/flake8/plugins/manager.py	def	member	_load_entrypoint_plugins	-	PluginManager	protected	-	-	Python	256	259
+src/flake8/plugins/manager.py	pascalcase	word	Loading	-		-	-	-	Python	257	
+src/flake8/plugins/manager.py	pascalcase	word	False	-		-	-	-	Python	261	
+src/flake8/plugins/manager.py	def	member	_load_plugin_from_entrypoint	-	PluginManager	protected	-	-	Python	261	272
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	262	
+src/flake8/plugins/manager.py	pascalcase	word	Load	-		-	-	-	Python	262	
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	264	
+src/flake8/plugins/manager.py	pascalcase	word	EntryPoint	-		-	-	-	Python	265	
+src/flake8/plugins/manager.py	pascalcase	word	Is	-		-	-	-	Python	267	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	270	
+src/flake8/plugins/manager.py	pascalcase	word	Loaded	-		-	-	-	Python	272	
+src/flake8/plugins/manager.py	def	member	map	-	PluginManager	public	-	-	Python	274	296
+src/flake8/plugins/manager.py	pascalcase	word	Call	-		-	-	-	Python	275	
+src/flake8/plugins/manager.py	pascalcase	word	This	-		-	-	-	Python	277	
+src/flake8/plugins/manager.py	pascalcase	word	Callable	-		-	-	-	Python	279	
+src/flake8/plugins/manager.py	pascalcase	word	Signature	-		-	-	-	Python	280	
+src/flake8/plugins/manager.py	pascalcase	word	Function	-		-	-	-	Python	280	
+src/flake8/plugins/manager.py	pascalcase	word	Any	-		-	-	-	Python	287	
+src/flake8/plugins/manager.py	pascalcase	word	The	-		-	-	-	Python	288	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	289	
+src/flake8/plugins/manager.py	pascalcase	word	Positional	-		-	-	-	Python	291	
+src/flake8/plugins/manager.py	pascalcase	word	Keyword	-		-	-	-	Python	293	
+src/flake8/plugins/manager.py	def	member	versions	-	PluginManager	public	-	-	Python	298	314
+src/flake8/plugins/manager.py	pascalcase	word	Generate	-		-	-	-	Python	300	
+src/flake8/plugins/manager.py	pascalcase	word	Tuples	-		-	-	-	Python	303	
+src/flake8/plugins/manager.py	def	function	version_for	-		public	-	-	Python	317	336
+src/flake8/plugins/manager.py	pascalcase	word	Optional	-		-	-	-	Python	318	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	318	
+src/flake8/plugins/manager.py	pascalcase	word	Determine	-		-	-	-	Python	319	
+src/flake8/plugins/manager.py	pascalcase	word	The	-		-	-	-	Python	322	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	324	
+src/flake8/plugins/manager.py	pascalcase	word	ImportError	-		-	-	-	Python	333	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	334	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	336	
+src/flake8/plugins/manager.py	pascalcase	word	PluginTypeManager	-		-	-	-	Python	339	
+src/flake8/plugins/manager.py	def	class	PluginTypeManager	-		public	-	object	Python	339	437
+src/flake8/plugins/manager.py	pascalcase	word	Parent	-		-	-	-	Python	340	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	342	
+src/flake8/plugins/manager.py	def	variable	namespace	-	PluginTypeManager	public	-	-	Python	342	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	344	
+src/flake8/plugins/manager.py	def	member	__init__	-	PluginTypeManager	public	-	-	Python	344	353
+src/flake8/plugins/manager.py	pascalcase	word	Initialize	-		-	-	-	Python	345	
+src/flake8/plugins/manager.py	pascalcase	word	Plugins	-		-	-	-	Python	348	
+src/flake8/plugins/manager.py	pascalcase	word	PluginManager	-		-	-	-	Python	350	
+src/flake8/plugins/manager.py	pascalcase	word	False	-		-	-	-	Python	353	
+src/flake8/plugins/manager.py	def	member	__contains__	-	PluginTypeManager	public	-	-	Python	355	358
+src/flake8/plugins/manager.py	pascalcase	word	Check	-		-	-	-	Python	356	
+src/flake8/plugins/manager.py	pascalcase	word	Checking	-		-	-	-	Python	357	
+src/flake8/plugins/manager.py	def	member	__getitem__	-	PluginTypeManager	public	-	-	Python	360	363
+src/flake8/plugins/manager.py	pascalcase	word	Retrieve	-		-	-	-	Python	361	
+src/flake8/plugins/manager.py	pascalcase	word	Retrieving	-		-	-	-	Python	362	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	365	
+src/flake8/plugins/manager.py	def	member	get	-	PluginTypeManager	public	-	-	Python	365	379
+src/flake8/plugins/manager.py	pascalcase	word	Retrieve	-		-	-	-	Python	366	
+src/flake8/plugins/manager.py	pascalcase	word	Name	-		-	-	-	Python	369	
+src/flake8/plugins/manager.py	pascalcase	word	Default	-		-	-	-	Python	371	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	373	
+src/flake8/plugins/manager.py	pascalcase	word	Plugin	-		-	-	-	Python	375	
+src/flake8/plugins/manager.py	def	member	names	-	PluginTypeManager	public	-	-	Python	382	384
+src/flake8/plugins/manager.py	pascalcase	word	Proxy	-		-	-	-	Python	383	
+src/flake8/plugins/manager.py	def	member	plugins	-	PluginTypeManager	public	-	-	Python	387	389
+src/flake8/plugins/manager.py	pascalcase	word	Proxy	-		-	-	-	Python	388	
+src/flake8/plugins/manager.py	def	member	_generate_call_function	-	PluginTypeManager	protected	-	-	Python	392	400
+src/flake8/plugins/manager.py	def	function	generated_function	-	PluginTypeManager._generate_call_function	private	-	-	Python	393	398
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	394	
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	395	
+src/flake8/plugins/manager.py	pascalcase	word	Callable	-		-	-	-	Python	396	
+src/flake8/plugins/manager.py	def	member	load_plugins	-	PluginTypeManager	public	-	-	Python	402	414
+src/flake8/plugins/manager.py	pascalcase	word	Load	-		-	-	-	Python	403	
+src/flake8/plugins/manager.py	def	function	load_plugin	-	PluginTypeManager.load_plugins	private	-	-	Python	407	409
+src/flake8/plugins/manager.py	pascalcase	word	Call	-		-	-	-	Python	408	
+src/flake8/plugins/manager.py	pascalcase	word	Do	-		-	-	-	Python	412	
+src/flake8/plugins/manager.py	pascalcase	word	True	-		-	-	-	Python	413	
+src/flake8/plugins/manager.py	def	member	register_plugin_versions	-	PluginTypeManager	public	-	-	Python	416	420
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	417	
+src/flake8/plugins/manager.py	pascalcase	word	Register	-		-	-	-	Python	417	
+src/flake8/plugins/manager.py	def	member	register_options	-	PluginTypeManager	public	-	-	Python	422	429
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	423	
+src/flake8/plugins/manager.py	pascalcase	word	Register	-		-	-	-	Python	423	
+src/flake8/plugins/manager.py	def	member	provide_options	-	PluginTypeManager	public	-	-	Python	431	437
+src/flake8/plugins/manager.py	pascalcase	word	Provide	-		-	-	-	Python	432	
+src/flake8/plugins/manager.py	pascalcase	word	PluginTypeManager	-		-	-	-	Python	440	
+src/flake8/plugins/manager.py	pascalcase	word	Checkers	-		-	-	-	Python	440	
+src/flake8/plugins/manager.py	def	class	Checkers	-		public	-	PluginTypeManager	Python	440	517
+src/flake8/plugins/manager.py	pascalcase	word	All	-		-	-	-	Python	441	
+src/flake8/plugins/manager.py	def	variable	namespace	-	Checkers	public	-	-	Python	443	
+src/flake8/plugins/manager.py	def	member	checks_expecting	-	Checkers	public	-	-	Python	445	452
+src/flake8/plugins/manager.py	pascalcase	word	Retrieve	-		-	-	-	Python	446	
+src/flake8/plugins/manager.py	pascalcase	word	Find	-		-	-	-	Python	448	
+src/flake8/plugins/manager.py	def	member	to_dictionary	-	Checkers	public	-	-	Python	454	467
+src/flake8/plugins/manager.py	pascalcase	word	Return	-		-	-	-	Python	455	
+src/flake8/plugins/manager.py	def	member	register_options	-	Checkers	public	-	-	Python	469	490
+src/flake8/plugins/manager.py	pascalcase	word	OptionManager	-		-	-	-	Python	470	
+src/flake8/plugins/manager.py	pascalcase	word	Register	-		-	-	-	Python	470	
+src/flake8/plugins/manager.py	pascalcase	word	This	-		-	-	-	Python	472	
+src/flake8/plugins/manager.py	pascalcase	word	We	-		-	-	-	Python	475	
+src/flake8/plugins/manager.py	pascalcase	word	PluginTypeManager	-		-	-	-	Python	476	
+src/flake8/plugins/manager.py	pascalcase	word	Instead	-		-	-	-	Python	477	
+src/flake8/plugins/manager.py	def	function	register_and_enable	-	Checkers.register_options	private	-	-	Python	485	488
+src/flake8/plugins/manager.py	pascalcase	word	None	-		-	-	-	Python	487	
+src/flake8/plugins/manager.py	def	member	ast_plugins	-	Checkers	public	-	-	Python	493	499
+src/flake8/plugins/manager.py	pascalcase	word	List	-		-	-	-	Python	494	
+src/flake8/plugins/manager.py	def	member	logical_line_plugins	-	Checkers	public	-	-	Python	502	508
+src/flake8/plugins/manager.py	pascalcase	word	List	-		-	-	-	Python	503	
+src/flake8/plugins/manager.py	def	member	physical_line_plugins	-	Checkers	public	-	-	Python	511	517
+src/flake8/plugins/manager.py	pascalcase	word	List	-		-	-	-	Python	512	
+src/flake8/plugins/manager.py	pascalcase	word	PluginTypeManager	-		-	-	-	Python	520	
+src/flake8/plugins/manager.py	pascalcase	word	ReportFormatters	-		-	-	-	Python	520	
+src/flake8/plugins/manager.py	def	class	ReportFormatters	-		public	-	PluginTypeManager	Python	520	523
+src/flake8/plugins/manager.py	pascalcase	word	All	-		-	-	-	Python	521	
+src/flake8/plugins/manager.py	def	variable	namespace	-	ReportFormatters	public	-	-	Python	523	
+src/flake8/style_guide.py	pascalcase	word	Flake8	-		-	-	-	Python	1	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	1	
+src/flake8/style_guide.py	pascalcase	word	Implementation	-		-	-	-	Python	1	
+src/flake8/style_guide.py	imported	module	collections	-		-	-	-	Python	2	
+src/flake8/style_guide.py	imported	module	contextlib	-		-	-	-	Python	3	
+src/flake8/style_guide.py	imported	module	copy	-		-	-	-	Python	4	
+src/flake8/style_guide.py	imported	module	enum	-		-	-	-	Python	5	
+src/flake8/style_guide.py	imported	module	functools	-		-	-	-	Python	6	
+src/flake8/style_guide.py	imported	module	itertools	-		-	-	-	Python	7	
+src/flake8/style_guide.py	imported	module	linecache	-		-	-	-	Python	8	
+src/flake8/style_guide.py	pascalcase	word	Union	-		-	-	-	Python	10	
+src/flake8/style_guide.py	pascalcase	word	Optional	-		-	-	-	Python	10	
+src/flake8/style_guide.py	imported	module	logging	-		-	-	-	Python	9	
+src/flake8/style_guide.py	namespace	module	typing	-		-	-	-	Python	10	
+src/flake8/style_guide.py	imported	unknown	Optional	-		-	-	-	Python	10	
+src/flake8/style_guide.py	imported	unknown	Union	-		-	-	-	Python	10	
+src/flake8/style_guide.py	namespace	module	flake8	-		-	-	-	Python	12	
+src/flake8/style_guide.py	imported	unknown	defaults	-		-	-	-	Python	12	
+src/flake8/style_guide.py	namespace	module	flake8	-		-	-	-	Python	13	
+src/flake8/style_guide.py	imported	unknown	statistics	-		-	-	-	Python	13	
+src/flake8/style_guide.py	namespace	module	flake8	-		-	-	-	Python	14	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	16	
+src/flake8/style_guide.py	imported	unknown	utils	-		-	-	-	Python	14	
+src/flake8/style_guide.py	def	variable	__all__	-		protected	-	-	Python	16	
+src/flake8/style_guide.py	def	variable	LOG	-		public	-	-	Python	18	
+src/flake8/style_guide.py	pascalcase	word	AttributeError	-		-	-	-	Python	23	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	25	
+src/flake8/style_guide.py	def	function	lru_cache	-		public	-	-	Python	25	27
+src/flake8/style_guide.py	pascalcase	word	Stub	-		-	-	-	Python	26	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	30	
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	31	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	31	
+src/flake8/style_guide.py	def	class	Selected	-		public	-	enum.Enum	Python	31	35
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	32	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	34	
+src/flake8/style_guide.py	def	variable	Explicitly	-	Selected	public	-	-	Python	34	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	35	
+src/flake8/style_guide.py	def	variable	Implicitly	-	Selected	public	-	-	Python	35	
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	38	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	38	
+src/flake8/style_guide.py	def	class	Ignored	-		public	-	enum.Enum	Python	38	42
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	39	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	41	
+src/flake8/style_guide.py	def	variable	Explicitly	-	Ignored	public	-	-	Python	41	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	42	
+src/flake8/style_guide.py	def	variable	Implicitly	-	Ignored	public	-	-	Python	42	
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	45	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	45	
+src/flake8/style_guide.py	def	class	Decision	-		public	-	enum.Enum	Python	45	49
+src/flake8/style_guide.py	pascalcase	word	Enum	-		-	-	-	Python	46	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	48	
+src/flake8/style_guide.py	def	variable	Ignored	-	Decision	public	-	-	Python	48	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	49	
+src/flake8/style_guide.py	def	variable	Selected	-	Decision	public	-	-	Python	49	
+src/flake8/style_guide.py	def	function	find_noqa	-		public	-	-	Python	53	54
+src/flake8/style_guide.py	def	variable	_Violation	-		protected	-	-	Python	57	
+src/flake8/style_guide.py	pascalcase	word	Violation	-		-	-	-	Python	58	
+src/flake8/style_guide.py	pascalcase	word	Violation	-		-	-	-	Python	70	
+src/flake8/style_guide.py	def	class	Violation	-		public	-	_Violation	Python	70	148
+src/flake8/style_guide.py	pascalcase	word	Flake8	-		-	-	-	Python	71	
+src/flake8/style_guide.py	pascalcase	word	Class	-		-	-	-	Python	71	
+src/flake8/style_guide.py	def	member	is_inline_ignored	-	Violation	public	-	-	Python	73	113
+src/flake8/style_guide.py	pascalcase	word	Violation	-		-	-	-	Python	74	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	75	
+src/flake8/style_guide.py	pascalcase	word	Whether	-		-	-	-	Python	78	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	80	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	80	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	85	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	87	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	89	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	92	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	94	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	97	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	99	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	108	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	113	
+src/flake8/style_guide.py	def	member	is_in	-	Violation	public	-	-	Python	115	148
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	116	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	118	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	119	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	119	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	121	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	121	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	121	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	123	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	124	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	129	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	130	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	136	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	138	
+src/flake8/style_guide.py	pascalcase	word	In	-		-	-	-	Python	140	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	141	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	142	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	142	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	146	
+src/flake8/style_guide.py	pascalcase	word	DecisionEngine	-		-	-	-	Python	151	
+src/flake8/style_guide.py	def	class	DecisionEngine	-		public	-	object	Python	151	323
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	154	
+src/flake8/style_guide.py	def	member	__init__	-	DecisionEngine	public	-	-	Python	158	176
+src/flake8/style_guide.py	pascalcase	word	Initialize	-		-	-	-	Python	159	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	163	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	167	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	172	
+src/flake8/style_guide.py	def	member	_in_all_selected	-	DecisionEngine	protected	-	-	Python	178	179
+src/flake8/style_guide.py	def	member	_in_extended_selected	-	DecisionEngine	protected	-	-	Python	181	184
+src/flake8/style_guide.py	def	member	was_selected	-	DecisionEngine	public	-	-	Python	186	208
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	187	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	187	
+src/flake8/style_guide.py	pascalcase	word	Union	-		-	-	-	Python	187	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	188	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	191	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	193	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	193	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	194	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	194	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	196	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	196	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	200	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	200	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	203	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	206	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	206	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	208	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	208	
+src/flake8/style_guide.py	def	member	was_ignored	-	DecisionEngine	public	-	-	Python	210	226
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	211	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	211	
+src/flake8/style_guide.py	pascalcase	word	Union	-		-	-	-	Python	211	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	212	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	215	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	217	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	217	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	218	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	218	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	220	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	220	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	224	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	224	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	226	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	226	
+src/flake8/style_guide.py	def	member	more_specific_decision_for	-	DecisionEngine	public	-	-	Python	228	275
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	229	
+src/flake8/style_guide.py	pascalcase	word	Violation	-		-	-	-	Python	229	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	235	
+src/flake8/style_guide.py	pascalcase	word	An	-		-	-	-	Python	237	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	241	
+src/flake8/style_guide.py	pascalcase	word	We	-		-	-	-	Python	241	
+src/flake8/style_guide.py	pascalcase	word	In	-		-	-	-	Python	243	
+src/flake8/style_guide.py	pascalcase	word	If	-		-	-	-	Python	244	
+src/flake8/style_guide.py	pascalcase	word	In	-		-	-	-	Python	246	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	250	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	250	
+src/flake8/style_guide.py	pascalcase	word	Now	-		-	-	-	Python	253	
+src/flake8/style_guide.py	pascalcase	word	At	-		-	-	-	Python	253	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	254	
+src/flake8/style_guide.py	pascalcase	word	Here	-		-	-	-	Python	261	
+src/flake8/style_guide.py	pascalcase	word	In	-		-	-	-	Python	264	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	266	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	266	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	267	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	268	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	270	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	270	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	271	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	272	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	274	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	274	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	275	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	275	
+src/flake8/style_guide.py	def	member	make_decision	-	DecisionEngine	public	-	-	Python	277	301
+src/flake8/style_guide.py	pascalcase	word	Decide	-		-	-	-	Python	278	
+src/flake8/style_guide.py	pascalcase	word	Deciding	-		-	-	-	Python	279	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	283	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	290	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	290	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	290	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	291	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	291	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	292	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	292	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	294	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	294	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	294	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	296	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	296	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	296	
+src/flake8/style_guide.py	pascalcase	word	Explicitly	-		-	-	-	Python	299	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	299	
+src/flake8/style_guide.py	pascalcase	word	Implicitly	-		-	-	-	Python	299	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	300	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	300	
+src/flake8/style_guide.py	def	member	decision_for	-	DecisionEngine	public	-	-	Python	303	323
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	304	
+src/flake8/style_guide.py	pascalcase	word	Return	-		-	-	-	Python	305	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	307	
+src/flake8/style_guide.py	pascalcase	word	We	-		-	-	-	Python	308	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	312	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	316	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	319	
+src/flake8/style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	326	
+src/flake8/style_guide.py	def	class	StyleGuideManager	-		public	-	object	Python	326	433
+src/flake8/style_guide.py	pascalcase	word	Manage	-		-	-	-	Python	327	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	329	
+src/flake8/style_guide.py	def	member	__init__	-	StyleGuideManager	public	-	-	Python	329	347
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	330	
+src/flake8/style_guide.py	pascalcase	word	Initialize	-		-	-	-	Python	330	
+src/flake8/style_guide.py	pascalcase	word	Add	-		-	-	-	Python	332	
+src/flake8/style_guide.py	pascalcase	word	Statistics	-		-	-	-	Python	336	
+src/flake8/style_guide.py	pascalcase	word	DecisionEngine	-		-	-	-	Python	337	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	339	
+src/flake8/style_guide.py	def	member	populate_style_guides_with	-	StyleGuideManager	public	-	-	Python	349	367
+src/flake8/style_guide.py	pascalcase	word	Generate	-		-	-	-	Python	350	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	353	
+src/flake8/style_guide.py	pascalcase	word	Values	-		-	-	-	Python	355	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	359	
+src/flake8/style_guide.py	def	member	style_guide_for	-	StyleGuideManager	public	-	-	Python	369	377
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	370	
+src/flake8/style_guide.py	pascalcase	word	Find	-		-	-	-	Python	370	
+src/flake8/style_guide.py	def	member	processing_file	-	StyleGuideManager	public	-	-	Python	380	384
+src/flake8/style_guide.py	pascalcase	word	Record	-		-	-	-	Python	381	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	393	
+src/flake8/style_guide.py	def	member	handle_error	-	StyleGuideManager	public	-	-	Python	386	421
+src/flake8/style_guide.py	pascalcase	word	Optional	-		-	-	-	Python	395	
+src/flake8/style_guide.py	pascalcase	word	Handle	-		-	-	-	Python	396	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	399	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	401	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	403	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	406	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	409	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	411	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	413	
+src/flake8/style_guide.py	def	member	add_diff_ranges	-	StyleGuideManager	public	-	-	Python	423	433
+src/flake8/style_guide.py	pascalcase	word	StyleGuides	-		-	-	-	Python	424	
+src/flake8/style_guide.py	pascalcase	word	Update	-		-	-	-	Python	424	
+src/flake8/style_guide.py	pascalcase	word	StyleGuides	-		-	-	-	Python	426	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	426	
+src/flake8/style_guide.py	pascalcase	word	Dictionary	-		-	-	-	Python	430	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	436	
+src/flake8/style_guide.py	def	class	StyleGuide	-		public	-	object	Python	436	576
+src/flake8/style_guide.py	pascalcase	word	Flake8	-		-	-	-	Python	437	
+src/flake8/style_guide.py	pascalcase	word	Manage	-		-	-	-	Python	437	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	439	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	439	
+src/flake8/style_guide.py	def	member	__init__	-	StyleGuide	public	-	-	Python	439	451
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	440	
+src/flake8/style_guide.py	pascalcase	word	Initialize	-		-	-	-	Python	440	
+src/flake8/style_guide.py	pascalcase	word	Add	-		-	-	-	Python	442	
+src/flake8/style_guide.py	pascalcase	word	Statistics	-		-	-	-	Python	446	
+src/flake8/style_guide.py	pascalcase	word	DecisionEngine	-		-	-	-	Python	447	
+src/flake8/style_guide.py	def	member	__repr__	-	StyleGuide	public	-	-	Python	453	455
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	454	
+src/flake8/style_guide.py	pascalcase	word	Make	-		-	-	-	Python	454	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	455	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	457	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	457	
+src/flake8/style_guide.py	def	member	copy	-	StyleGuide	public	-	-	Python	457	462
+src/flake8/style_guide.py	pascalcase	word	Create	-		-	-	-	Python	458	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	462	
+src/flake8/style_guide.py	def	member	processing_file	-	StyleGuide	public	-	-	Python	465	469
+src/flake8/style_guide.py	pascalcase	word	Record	-		-	-	-	Python	466	
+src/flake8/style_guide.py	def	member	applies_to	-	StyleGuide	public	-	-	Python	471	489
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	472	
+src/flake8/style_guide.py	pascalcase	word	Check	-		-	-	-	Python	472	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	475	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	476	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	478	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	478	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	482	
+src/flake8/style_guide.py	pascalcase	word	True	-		-	-	-	Python	483	
+src/flake8/style_guide.py	def	member	should_report_error	-	StyleGuide	public	-	-	Python	491	504
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	492	
+src/flake8/style_guide.py	pascalcase	word	Determine	-		-	-	-	Python	493	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	495	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	498	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	502	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	513	
+src/flake8/style_guide.py	def	member	handle_error	-	StyleGuide	public	-	-	Python	506	565
+src/flake8/style_guide.py	pascalcase	word	Optional	-		-	-	-	Python	515	
+src/flake8/style_guide.py	pascalcase	word	Handle	-		-	-	-	Python	516	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	519	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	521	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	523	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	526	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	529	
+src/flake8/style_guide.py	pascalcase	word	The	-		-	-	-	Python	531	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	533	
+src/flake8/style_guide.py	pascalcase	word	Apparently	-		-	-	-	Python	539	
+src/flake8/style_guide.py	pascalcase	word	SyntaxError	-		-	-	-	Python	540	
+src/flake8/style_guide.py	pascalcase	word	Also	-		-	-	-	Python	540	
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	541	
+src/flake8/style_guide.py	pascalcase	word	Violation	-		-	-	-	Python	544	
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	553	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	553	
+src/flake8/style_guide.py	pascalcase	word	False	-		-	-	-	Python	555	
+src/flake8/style_guide.py	def	member	add_diff_ranges	-	StyleGuide	public	-	-	Python	567	576
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	568	
+src/flake8/style_guide.py	pascalcase	word	Update	-		-	-	-	Python	568	
+src/flake8/style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	570	
+src/flake8/style_guide.py	pascalcase	word	This	-		-	-	-	Python	570	
+src/flake8/style_guide.py	pascalcase	word	Dictionary	-		-	-	-	Python	574	
+src/flake8/style_guide.py	def	function	find_more_specific	-		public	-	-	Python	579	582
+src/flake8/style_guide.py	pascalcase	word	Selected	-		-	-	-	Python	581	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	581	
+src/flake8/style_guide.py	pascalcase	word	Ignored	-		-	-	-	Python	582	
+src/flake8/style_guide.py	pascalcase	word	Decision	-		-	-	-	Python	582	
+src/flake8/style_guide.py	def	function	find_first_match	-		public	-	-	Python	585	592
+src/flake8/style_guide.py	pascalcase	word	None	-		-	-	-	Python	591	
+src/flake8/utils.py	pascalcase	word	Utility	-		-	-	-	Python	1	
+src/flake8/utils.py	imported	module	collections	-		-	-	-	Python	2	
+src/flake8/utils.py	indirectly-imported	module	fnmatch	-		-	-	-	Python	3	
+src/flake8/utils.py	def	namespace	_fnmatch	-		protected	-	-	Python	3	
+src/flake8/utils.py	imported	module	inspect	-		-	-	-	Python	4	
+src/flake8/utils.py	imported	module	io	-		-	-	-	Python	5	
+src/flake8/utils.py	imported	module	os	-		-	-	-	Python	6	
+src/flake8/utils.py	imported	module	platform	-		-	-	-	Python	7	
+src/flake8/utils.py	imported	module	re	-		-	-	-	Python	8	
+src/flake8/utils.py	imported	module	sys	-		-	-	-	Python	9	
+src/flake8/utils.py	pascalcase	word	Generator	-		-	-	-	Python	11	
+src/flake8/utils.py	pascalcase	word	Dict	-		-	-	-	Python	11	
+src/flake8/utils.py	pascalcase	word	Callable	-		-	-	-	Python	11	
+src/flake8/utils.py	imported	module	tokenize	-		-	-	-	Python	10	
+src/flake8/utils.py	namespace	module	typing	-		-	-	-	Python	11	
+src/flake8/utils.py	imported	unknown	Callable	-		-	-	-	Python	11	
+src/flake8/utils.py	imported	unknown	Dict	-		-	-	-	Python	11	
+src/flake8/utils.py	pascalcase	word	Sequence	-		-	-	-	Python	12	
+src/flake8/utils.py	pascalcase	word	Pattern	-		-	-	-	Python	12	
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	12	
+src/flake8/utils.py	imported	unknown	Generator	-		-	-	-	Python	11	
+src/flake8/utils.py	namespace	module	typing	-		-	-	-	Python	12	
+src/flake8/utils.py	imported	unknown	List	-		-	-	-	Python	12	
+src/flake8/utils.py	imported	unknown	Pattern	-		-	-	-	Python	12	
+src/flake8/utils.py	pascalcase	word	Tuple	-		-	-	-	Python	13	
+src/flake8/utils.py	imported	unknown	Sequence	-		-	-	-	Python	12	
+src/flake8/utils.py	namespace	module	typing	-		-	-	-	Python	13	
+src/flake8/utils.py	imported	unknown	Tuple	-		-	-	-	Python	13	
+src/flake8/utils.py	pascalcase	word	Union	-		-	-	-	Python	14	
+src/flake8/utils.py	imported	unknown	TYPE_CHECKING	-		-	-	-	Python	13	
+src/flake8/utils.py	namespace	module	typing	-		-	-	-	Python	14	
+src/flake8/utils.py	imported	unknown	Union	-		-	-	-	Python	14	
+src/flake8/utils.py	pascalcase	word	Plugin	-		-	-	-	Python	17	
+src/flake8/utils.py	namespace	module	flake8.plugins.manager	-		-	-	-	Python	17	
+src/flake8/utils.py	imported	unknown	Plugin	-		-	-	-	Python	17	
+src/flake8/utils.py	def	variable	DIFF_HUNK_REGEXP	-		public	-	-	Python	19	
+src/flake8/utils.py	def	variable	COMMA_SEPARATED_LIST_RE	-		public	-	-	Python	20	
+src/flake8/utils.py	def	variable	LOCAL_PLUGIN_LIST_RE	-		public	-	-	Python	21	
+src/flake8/utils.py	def	function	parse_comma_separated_list	-		public	-	-	Python	24	47
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	25	
+src/flake8/utils.py	pascalcase	word	Pattern	-		-	-	-	Python	25	
+src/flake8/utils.py	pascalcase	word	Sequence	-		-	-	-	Python	25	
+src/flake8/utils.py	pascalcase	word	Parse	-		-	-	-	Python	26	
+src/flake8/utils.py	pascalcase	word	String	-		-	-	-	Python	29	
+src/flake8/utils.py	pascalcase	word	Compiled	-		-	-	-	Python	31	
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	36	
+src/flake8/utils.py	pascalcase	word	Token	-		-	-	-	Python	50	
+src/flake8/utils.py	def	variable	_Token	-		protected	-	-	Python	50	
+src/flake8/utils.py	def	variable	_CODE	-		protected	-	-	Python	51	
+src/flake8/utils.py	def	variable	_FILE	-		protected	-	-	Python	51	
+src/flake8/utils.py	def	variable	_COLON	-		protected	-	-	Python	51	
+src/flake8/utils.py	def	variable	_COMMA	-		protected	-	-	Python	51	
+src/flake8/utils.py	def	variable	_WS	-		protected	-	-	Python	51	
+src/flake8/utils.py	def	variable	_EOF	-		protected	-	-	Python	52	
+src/flake8/utils.py	def	variable	_FILE_LIST_TOKEN_TYPES	-		protected	-	-	Python	53	
+src/flake8/utils.py	def	function	_tokenize_files_to_codes_mapping	-		protected	-	-	Python	62	77
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	63	
+src/flake8/utils.py	pascalcase	word	AssertionError	-		-	-	-	Python	74	
+src/flake8/utils.py	def	function	parse_files_to_codes_mapping	-		public	-	-	Python	80	141
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	81	
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	81	
+src/flake8/utils.py	pascalcase	word	Tuple	-		-	-	-	Python	81	
+src/flake8/utils.py	pascalcase	word	Parse	-		-	-	-	Python	82	
+src/flake8/utils.py	pascalcase	word	Each	-		-	-	-	Python	85	
+src/flake8/utils.py	pascalcase	word	String	-		-	-	-	Python	88	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	98	
+src/flake8/utils.py	def	class	State	-	parse_files_to_codes_mapping	private	-		Python	98	102
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	99	
+src/flake8/utils.py	def	variable	seen_sep	-	parse_files_to_codes_mapping.State	public	-	-	Python	99	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	100	
+src/flake8/utils.py	def	variable	seen_colon	-	parse_files_to_codes_mapping.State	public	-	-	Python	100	
+src/flake8/utils.py	def	variable	filenames	-	parse_files_to_codes_mapping.State	public	-	-	Python	101	
+src/flake8/utils.py	def	variable	codes	-	parse_files_to_codes_mapping.State	public	-	-	Python	102	
+src/flake8/utils.py	def	function	_reset	-	parse_files_to_codes_mapping	private	-	-	Python	104	111
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	105	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	106	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	107	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	108	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	108	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	109	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	109	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	110	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	111	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	116	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	116	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	118	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	120	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	120	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	121	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	121	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	122	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	123	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	124	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	124	
+src/flake8/utils.py	pascalcase	word	Unexpected	-		-	-	-	Python	126	
+src/flake8/utils.py	pascalcase	word	ValueError	-		-	-	-	Python	126	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	131	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	132	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	133	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	133	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	134	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	136	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	137	
+src/flake8/utils.py	pascalcase	word	State	-		-	-	-	Python	137	
+src/flake8/utils.py	pascalcase	word	Unexpected	-		-	-	-	Python	139	
+src/flake8/utils.py	pascalcase	word	ValueError	-		-	-	-	Python	139	
+src/flake8/utils.py	def	function	normalize_paths	-		public	-	-	Python	144	155
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	145	
+src/flake8/utils.py	pascalcase	word	Sequence	-		-	-	-	Python	145	
+src/flake8/utils.py	pascalcase	word	Union	-		-	-	-	Python	145	
+src/flake8/utils.py	pascalcase	word	Parse	-		-	-	-	Python	146	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	149	
+src/flake8/utils.py	def	function	normalize_path	-		public	-	-	Python	158	177
+src/flake8/utils.py	pascalcase	word	Normalize	-		-	-	-	Python	160	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	163	
+src/flake8/utils.py	pascalcase	word	Using	-		-	-	-	Python	167	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	168	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	168	
+src/flake8/utils.py	pascalcase	word	Unix	-		-	-	-	Python	169	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	171	
+src/flake8/utils.py	def	function	_stdin_get_value_py3	-		protected	-	-	Python	180	187
+src/flake8/utils.py	pascalcase	word	BytesIO	-		-	-	-	Python	182	
+src/flake8/utils.py	pascalcase	word	StringIO	-		-	-	-	Python	185	
+src/flake8/utils.py	pascalcase	word	UnicodeError	-		-	-	-	Python	186	
+src/flake8/utils.py	pascalcase	word	SyntaxError	-		-	-	-	Python	186	
+src/flake8/utils.py	pascalcase	word	LookupError	-		-	-	-	Python	186	
+src/flake8/utils.py	pascalcase	word	StringIO	-		-	-	-	Python	187	
+src/flake8/utils.py	def	function	stdin_get_value	-		public	-	-	Python	190	201
+src/flake8/utils.py	pascalcase	word	Get	-		-	-	-	Python	192	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	193	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	194	
+src/flake8/utils.py	pascalcase	word	BytesIO	-		-	-	-	Python	196	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	204	
+src/flake8/utils.py	def	function	parse_unified_diff	-		public	-	-	Python	204	273
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	205	
+src/flake8/utils.py	pascalcase	word	Parse	-		-	-	-	Python	206	
+src/flake8/utils.py	pascalcase	word	Allow	-		-	-	-	Python	213	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	214	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	217	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	218	
+src/flake8/utils.py	pascalcase	word	Below	-		-	-	-	Python	222	
+src/flake8/utils.py	pascalcase	word	Python	-		-	-	-	Python	223	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	226	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	227	
+src/flake8/utils.py	pascalcase	word	When	-		-	-	-	Python	230	
+src/flake8/utils.py	pascalcase	word	Diffs	-		-	-	-	Python	234	
+src/flake8/utils.py	pascalcase	word	Every	-		-	-	-	Python	239	
+src/flake8/utils.py	pascalcase	word	Below	-		-	-	-	Python	239	
+src/flake8/utils.py	pascalcase	word	Which	-		-	-	-	Python	243	
+src/flake8/utils.py	pascalcase	word	In	-		-	-	-	Python	244	
+src/flake8/utils.py	pascalcase	word	This	-		-	-	-	Python	247	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	250	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	250	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	251	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	252	
+src/flake8/utils.py	pascalcase	word	But	-		-	-	-	Python	259	
+src/flake8/utils.py	pascalcase	word	So	-		-	-	-	Python	260	
+src/flake8/utils.py	pascalcase	word	We	-		-	-	-	Python	271	
+src/flake8/utils.py	def	function	is_windows	-		public	-	-	Python	276	285
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	278	
+src/flake8/utils.py	pascalcase	word	Determine	-		-	-	-	Python	278	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	281	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	281	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	281	
+src/flake8/utils.py	pascalcase	word	If	-		-	-	-	Python	288	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	289	
+src/flake8/utils.py	def	function	can_run_multiprocessing_on_windows	-		public	-	-	Python	290	309
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	292	
+src/flake8/utils.py	pascalcase	word	Determine	-		-	-	-	Python	292	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	294	
+src/flake8/utils.py	pascalcase	word	This	-		-	-	-	Python	294	
+src/flake8/utils.py	pascalcase	word	Once	-		-	-	-	Python	295	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	295	
+src/flake8/utils.py	pascalcase	word	Python	-		-	-	-	Python	296	
+src/flake8/utils.py	pascalcase	word	Windows	-		-	-	-	Python	297	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	303	
+src/flake8/utils.py	pascalcase	word	Python	-		-	-	-	Python	303	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	303	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	309	
+src/flake8/utils.py	def	function	is_using_stdin	-		public	-	-	Python	312	323
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	313	
+src/flake8/utils.py	pascalcase	word	Determine	-		-	-	-	Python	314	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	317	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	319	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	319	
+src/flake8/utils.py	def	function	_default_predicate	-		protected	-	-	Python	326	327
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	327	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	330	
+src/flake8/utils.py	def	function	filenames_from	-		public	-	-	Python	330	369
+src/flake8/utils.py	pascalcase	word	Generator	-		-	-	-	Python	331	
+src/flake8/utils.py	pascalcase	word	Callable	-		-	-	-	Python	331	
+src/flake8/utils.py	pascalcase	word	Generate	-		-	-	-	Python	332	
+src/flake8/utils.py	pascalcase	word	Parameter	-		-	-	-	Python	335	
+src/flake8/utils.py	pascalcase	word	If	-		-	-	-	Python	337	
+src/flake8/utils.py	pascalcase	word	Predicate	-		-	-	-	Python	337	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	338	
+src/flake8/utils.py	pascalcase	word	By	-		-	-	-	Python	339	
+src/flake8/utils.py	pascalcase	word	Generator	-		-	-	-	Python	342	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	344	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	372	
+src/flake8/utils.py	def	function	fnmatch	-		public	-	-	Python	372	388
+src/flake8/utils.py	pascalcase	word	List	-		-	-	-	Python	373	
+src/flake8/utils.py	pascalcase	word	Wrap	-		-	-	-	Python	374	
+src/flake8/utils.py	pascalcase	word	Name	-		-	-	-	Python	377	
+src/flake8/utils.py	pascalcase	word	Patterns	-		-	-	-	Python	379	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	381	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	383	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	383	
+src/flake8/utils.py	def	function	parameters_for	-		public	-	-	Python	391	436
+src/flake8/utils.py	pascalcase	word	Dict	-		-	-	-	Python	392	
+src/flake8/utils.py	pascalcase	word	Plugin	-		-	-	-	Python	392	
+src/flake8/utils.py	pascalcase	word	Return	-		-	-	-	Python	393	
+src/flake8/utils.py	pascalcase	word	This	-		-	-	-	Python	395	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	400	
+src/flake8/utils.py	pascalcase	word	Plugin	-		-	-	-	Python	402	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	411	
+src/flake8/utils.py	pascalcase	word	OrderedDict	-		-	-	-	Python	418	
+src/flake8/utils.py	pascalcase	word	OrderedDict	-		-	-	-	Python	425	
+src/flake8/utils.py	pascalcase	word	None	-		-	-	-	Python	434	
+src/flake8/utils.py	def	function	matches_filename	-		public	-	-	Python	439	468
+src/flake8/utils.py	pascalcase	word	Use	-		-	-	-	Python	440	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	443	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	445	
+src/flake8/utils.py	pascalcase	word	The	-		-	-	-	Python	449	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	451	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	451	
+src/flake8/utils.py	pascalcase	word	False	-		-	-	-	Python	456	
+src/flake8/utils.py	pascalcase	word	True	-		-	-	-	Python	460	
+src/flake8/utils.py	def	function	get_python_version	-		public	-	-	Python	471	483
+src/flake8/utils.py	pascalcase	word	Find	-		-	-	-	Python	472	
+src/flake8/utils.py	pascalcase	word	Implementation	-		-	-	-	Python	475	
+tests/integration/test_main.py	pascalcase	word	Integration	-		-	-	-	Python	1	
+tests/integration/test_main.py	imported	module	mock	-		-	-	-	Python	2	
+tests/integration/test_main.py	namespace	module	flake8	-		-	-	-	Python	4	
+tests/integration/test_main.py	imported	unknown	utils	-		-	-	-	Python	4	
+tests/integration/test_main.py	namespace	module	flake8.main	-		-	-	-	Python	5	
+tests/integration/test_main.py	imported	unknown	application	-		-	-	-	Python	5	
+tests/integration/test_main.py	def	function	test_diff_option	-		public	-	-	Python	8	43
+tests/integration/test_main.py	pascalcase	word	FileChecker	-		-	-	-	Python	9	
+tests/integration/test_main.py	pascalcase	word	Ensure	-		-	-	-	Python	9	
+tests/integration/test_main.py	pascalcase	word	Application	-		-	-	-	Python	38	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	1	
+tests/unit/test_style_guide.py	pascalcase	word	Tests	-		-	-	-	Python	1	
+tests/unit/test_style_guide.py	imported	module	optparse	-		-	-	-	Python	2	
+tests/unit/test_style_guide.py	imported	module	mock	-		-	-	-	Python	4	
+tests/unit/test_style_guide.py	imported	module	pytest	-		-	-	-	Python	5	
+tests/unit/test_style_guide.py	namespace	module	flake8	-		-	-	-	Python	7	
+tests/unit/test_style_guide.py	imported	unknown	style_guide	-		-	-	-	Python	7	
+tests/unit/test_style_guide.py	namespace	module	flake8	-		-	-	-	Python	8	
+tests/unit/test_style_guide.py	imported	unknown	utils	-		-	-	-	Python	8	
+tests/unit/test_style_guide.py	namespace	module	flake8.formatting	-		-	-	-	Python	9	
+tests/unit/test_style_guide.py	imported	unknown	base	-		-	-	-	Python	9	
+tests/unit/test_style_guide.py	def	function	create_options	-		public	-	-	Python	12	21
+tests/unit/test_style_guide.py	pascalcase	word	Values	-		-	-	-	Python	13	
+tests/unit/test_style_guide.py	pascalcase	word	Create	-		-	-	-	Python	13	
+tests/unit/test_style_guide.py	pascalcase	word	False	-		-	-	-	Python	18	
+tests/unit/test_style_guide.py	pascalcase	word	Values	-		-	-	-	Python	21	
+tests/unit/test_style_guide.py	def	function	test_handle_error_does_not_raise_type_errors	-		public	-	-	Python	24	32
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	25	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	26	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	26	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	27	
+tests/unit/test_style_guide.py	pascalcase	word	None	-		-	-	-	Python	31	
+tests/unit/test_style_guide.py	def	function	test_style_guide_manager	-		public	-	-	Python	35	41
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	36	
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	36	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	37	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	37	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	39	
+tests/unit/test_style_guide.py	def	variable	PER_FILE_IGNORES_UNPARSED	-		public	-	-	Python	44	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	53	
+tests/unit/test_style_guide.py	pascalcase	word	False	-		-	-	-	Python	54	
+tests/unit/test_style_guide.py	pascalcase	word	False	-		-	-	-	Python	55	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	56	
+tests/unit/test_style_guide.py	pascalcase	word	False	-		-	-	-	Python	57	
+tests/unit/test_style_guide.py	def	function	test_style_guide_applies_to	-		public	-	-	Python	59	66
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	60	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	61	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	61	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuide	-		-	-	-	Python	63	
+tests/unit/test_style_guide.py	def	function	test_style_guide_manager_pre_file_ignores_parsing	-		public	-	-	Python	69	78
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	70	
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	70	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	71	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	71	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	73	
+tests/unit/test_style_guide.py	def	function	test_style_guide_manager_pre_file_ignores	-		public	-	-	Python	89	98
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	91	
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	91	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	92	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	92	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	96	
+tests/unit/test_style_guide.py	pascalcase	word	Fake	-		-	-	-	Python	97	
+tests/unit/test_style_guide.py	pascalcase	word	None	-		-	-	-	Python	105	
+tests/unit/test_style_guide.py	pascalcase	word	None	-		-	-	-	Python	107	
+tests/unit/test_style_guide.py	def	function	test_style_guide_manager_style_guide_for	-		public	-	-	Python	109	116
+tests/unit/test_style_guide.py	pascalcase	word	Verify	-		-	-	-	Python	110	
+tests/unit/test_style_guide.py	pascalcase	word	True	-		-	-	-	Python	111	
+tests/unit/test_style_guide.py	pascalcase	word	BaseFormatter	-		-	-	-	Python	111	
+tests/unit/test_style_guide.py	pascalcase	word	StyleGuideManager	-		-	-	-	Python	113	
+tests/unit/test_utils.py	pascalcase	word	Tests	-		-	-	-	Python	1	
+tests/unit/test_utils.py	imported	module	os	-		-	-	-	Python	2	
+tests/unit/test_utils.py	imported	module	mock	-		-	-	-	Python	4	
+tests/unit/test_utils.py	imported	module	pytest	-		-	-	-	Python	5	
+tests/unit/test_utils.py	namespace	module	flake8	-		-	-	-	Python	7	
+tests/unit/test_utils.py	imported	unknown	utils	-		-	-	-	Python	7	
+tests/unit/test_utils.py	namespace	module	flake8.plugins	-		-	-	-	Python	8	
+tests/unit/test_utils.py	indirectly-imported	unknown	manager	-		-	-	-	Python	8	
+tests/unit/test_utils.py	def	unknown	plugin_manager	-		public	-	-	Python	8	
+tests/unit/test_utils.py	def	variable	RELATIVE_PATHS	-		public	-	-	Python	10	
+tests/unit/test_utils.py	def	function	test_parse_comma_separated_list	-		public	-	-	Python	30	32
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	31	
+tests/unit/test_utils.py	pascalcase	word	Eg	-		-	-	-	Python	86	
+tests/unit/test_utils.py	pascalcase	word	Eg	-		-	-	-	Python	86	
+tests/unit/test_utils.py	def	function	test_parse_files_to_codes_mapping	-		public	-	-	Python	94	96
+tests/unit/test_utils.py	pascalcase	word	Test	-		-	-	-	Python	95	
+tests/unit/test_utils.py	def	function	test_invalid_file_list	-		public	-	-	Python	112	115
+tests/unit/test_utils.py	pascalcase	word	Test	-		-	-	-	Python	113	
+tests/unit/test_utils.py	pascalcase	word	ValueError	-		-	-	-	Python	114	
+tests/unit/test_utils.py	def	function	test_normalize_path	-		public	-	-	Python	123	125
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	124	
+tests/unit/test_utils.py	def	function	test_normalize_paths	-		public	-	-	Python	135	137
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	136	
+tests/unit/test_utils.py	def	function	test_is_windows_checks_for_nt	-		public	-	-	Python	140	146
+tests/unit/test_utils.py	pascalcase	word	Windows	-		-	-	-	Python	141	
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	141	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	143	
+tests/unit/test_utils.py	pascalcase	word	False	-		-	-	-	Python	146	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	150	
+tests/unit/test_utils.py	pascalcase	word	False	-		-	-	-	Python	151	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	152	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	153	
+tests/unit/test_utils.py	def	function	test_fnmatch	-		public	-	-	Python	155	157
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	156	
+tests/unit/test_utils.py	def	function	test_fnmatch_returns_the_default_with_empty_default	-		public	-	-	Python	160	163
+tests/unit/test_utils.py	pascalcase	word	The	-		-	-	-	Python	161	
+tests/unit/test_utils.py	def	function	test_filenames_from_a_directory	-		public	-	-	Python	166	170
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	167	
+tests/unit/test_utils.py	def	function	test_filenames_from_a_directory_with_a_predicate	-		public	-	-	Python	173	180
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	174	
+tests/unit/test_utils.py	def	function	test_filenames_from_a_single_file	-		public	-	-	Python	183	188
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	184	
+tests/unit/test_utils.py	def	function	test_filenames_from_exclude_doesnt_exclude_directory_names	-		public	-	-	Python	191	203
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	192	
+tests/unit/test_utils.py	pascalcase	word	This	-		-	-	-	Python	197	
+tests/unit/test_utils.py	def	function	predicate	-	test_filenames_from_exclude_doesnt_exclude_directory_names	private	-	-	Python	198	199
+tests/unit/test_utils.py	def	function	test_parameters_for_class_plugin	-		public	-	-	Python	206	214
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	207	
+tests/unit/test_utils.py	pascalcase	word	FakeCheck	-		-	-	-	Python	208	
+tests/unit/test_utils.py	def	class	FakeCheck	-	test_parameters_for_class_plugin	private	-	object	Python	208	210
+tests/unit/test_utils.py	def	member	__init__	-	test_parameters_for_class_plugin.FakeCheck	public	-	-	Python	209	210
+tests/unit/test_utils.py	pascalcase	word	Plugin	-		-	-	-	Python	212	
+tests/unit/test_utils.py	pascalcase	word	FakeCheck	-		-	-	-	Python	213	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	214	
+tests/unit/test_utils.py	def	function	test_parameters_for_function_plugin	-		public	-	-	Python	217	229
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	218	
+tests/unit/test_utils.py	pascalcase	word	None	-		-	-	-	Python	219	
+tests/unit/test_utils.py	def	function	fake_plugin	-	test_parameters_for_function_plugin	private	-	-	Python	219	220
+tests/unit/test_utils.py	pascalcase	word	Plugin	-		-	-	-	Python	222	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	225	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	226	
+tests/unit/test_utils.py	pascalcase	word	True	-		-	-	-	Python	227	
+tests/unit/test_utils.py	pascalcase	word	False	-		-	-	-	Python	228	
+tests/unit/test_utils.py	def	function	read_diff_file	-		public	-	-	Python	232	236
+tests/unit/test_utils.py	pascalcase	word	Read	-		-	-	-	Python	233	
+tests/unit/test_utils.py	def	variable	SINGLE_FILE_DIFF	-		public	-	-	Python	239	
+tests/unit/test_utils.py	def	variable	SINGLE_FILE_INFO	-		public	-	-	Python	240	
+tests/unit/test_utils.py	def	variable	TWO_FILE_DIFF	-		public	-	-	Python	243	
+tests/unit/test_utils.py	def	variable	TWO_FILE_INFO	-		public	-	-	Python	244	
+tests/unit/test_utils.py	def	variable	MULTI_FILE_DIFF	-		public	-	-	Python	248	
+tests/unit/test_utils.py	def	variable	MULTI_FILE_INFO	-		public	-	-	Python	249	
+tests/unit/test_utils.py	def	function	test_parse_unified_diff	-		public	-	-	Python	262	264
+tests/unit/test_utils.py	pascalcase	word	Verify	-		-	-	-	Python	263	

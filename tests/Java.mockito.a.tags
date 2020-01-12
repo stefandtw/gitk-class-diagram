@@ -1,0 +1,691 @@
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Copyright	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	License	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	This	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	package	org.mockito.internal.creation.bytebuddy	-		-	-	-	Java	5	5
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ByteBuddy	-		-	-	-	Java	7	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.ByteBuddy	-		-	-	-	Java	7	7
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDescription	-		-	-	-	Java	8	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.description.method.MethodDescription	-		-	-	-	Java	8	8
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Ownership	-		-	-	-	Java	9	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.description.modifier.Ownership	-		-	-	-	Java	9	9
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SynchronizationState	-		-	-	-	Java	10	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.description.modifier.SynchronizationState	-		-	-	-	Java	10	10
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Visibility	-		-	-	-	Java	11	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.description.modifier.Visibility	-		-	-	-	Java	11	11
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	DynamicType	-		-	-	-	Java	12	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.dynamic.DynamicType	-		-	-	-	Java	12	12
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MultipleParentClassLoader	-		-	-	-	Java	13	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.dynamic.loading.MultipleParentClassLoader	-		-	-	-	Java	13	13
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	TypeValidation	-		-	-	-	Java	14	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.dynamic.scaffold.TypeValidation	-		-	-	-	Java	14	14
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	FieldAccessor	-		-	-	-	Java	15	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.FieldAccessor	-		-	-	-	Java	15	15
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	16	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.Implementation	-		-	-	-	Java	16	16
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	17	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.MethodCall	-		-	-	-	Java	17	17
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodAttributeAppender	-		-	-	-	Java	18	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.attribute.MethodAttributeAppender	-		-	-	-	Java	18	18
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatcher	-		-	-	-	Java	19	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.matcher.ElementMatcher	-		-	-	-	Java	19	19
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	20	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.Mockito	-		-	-	-	Java	20	20
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	21	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.exceptions.base.MockitoException	-		-	-	-	Java	21	21
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	CrossClassLoaderSerializableMock	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ByteBuddyCrossClassLoaderSerializationSupport	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.internal.creation.bytebuddy.ByteBuddyCrossClassLoaderSerializationSupport.CrossClassLoaderSerializableMock	-		-	-	-	Java	22	22
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	DispatcherDefaultingToRealMethod	-		-	-	-	Java	23	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	23	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.DispatcherDefaultingToRealMethod	-		-	-	-	Java	23	23
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SerializableMode	-		-	-	-	Java	24	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.mock.SerializableMode	-		-	-	-	Java	24	24
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	IOException	-		-	-	-	Java	26	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.io.IOException	-		-	-	-	Java	26	26
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ObjectInputStream	-		-	-	-	Java	27	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.io.ObjectInputStream	-		-	-	-	Java	27	27
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Annotation	-		-	-	-	Java	28	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.lang.annotation.Annotation	-		-	-	-	Java	28	28
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Method	-		-	-	-	Java	29	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.lang.reflect.Method	-		-	-	-	Java	29	29
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Modifier	-		-	-	-	Java	30	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.lang.reflect.Modifier	-		-	-	-	Java	30	30
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Type	-		-	-	-	Java	31	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.lang.reflect.Type	-		-	-	-	Java	31	31
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ArrayList	-		-	-	-	Java	32	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.util.ArrayList	-		-	-	-	Java	32	32
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Random	-		-	-	-	Java	33	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.util.Random	-		-	-	-	Java	33	33
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Thread	-		-	-	-	Java	35	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	java.lang.Thread.currentThread	-		-	-	-	Java	35	35
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Visibility	-		-	-	-	Java	36	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.description.modifier.Visibility.PRIVATE	-		-	-	-	Java	36	36
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ForMethod	-		-	-	-	Java	37	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Transformer	-		-	-	-	Java	37	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.dynamic.Transformer.ForMethod.withModifiers	-		-	-	-	Java	37	37
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDelegation	-		-	-	-	Java	38	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.MethodDelegation.to	-		-	-	-	Java	38	38
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ForInstrumentedMethod	-		-	-	-	Java	39	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodAttributeAppender	-		-	-	-	Java	39	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.implementation.attribute.MethodAttributeAppender.ForInstrumentedMethod.INCLUDING_RECEIVER	-		-	-	-	Java	39	39
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatchers	-		-	-	-	Java	40	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	net.bytebuddy.matcher.ElementMatchers.	-		-	-	-	Java	40	40
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	StringUtil	-		-	-	-	Java	41	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	imported	package	org.mockito.internal.util.StringUtil.join	-		-	-	-	Java	41	41
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	BytecodeGenerator	-		-	-	-	Java	43	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassBytecodeGenerator	-		-	-	-	Java	43	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	class	SubclassBytecodeGenerator	-		-	-	BytecodeGenerator	Java	43	332
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	45	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	CODEGEN_PACKAGE	-	SubclassBytecodeGenerator	private	-	-	Java	45	45
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Object	-		-	-	-	Java	47	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	MOCKITO_MODULE	-	SubclassBytecodeGenerator	private	-	-	Java	47	47
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Method	-		-	-	-	Java	48	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	GET_MODULE	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	IS_OPEN	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	IS_EXPORTED	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	ADD_EXPORTS	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	CAN_READ	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	ADD_READ	-	SubclassBytecodeGenerator	private	-	-	Java	48	48
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Object	-		-	-	-	Java	51	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Method	-		-	-	-	Java	52	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	54	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	55	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	57	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	58	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	60	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Throwable	-		-	-	-	Java	61	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	79	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	loader	-	SubclassBytecodeGenerator	private	-	-	Java	79	79
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ByteBuddy	-		-	-	-	Java	81	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	byteBuddy	-	SubclassBytecodeGenerator	private	-	-	Java	81	81
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Random	-		-	-	-	Java	82	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	random	-	SubclassBytecodeGenerator	private	-	-	Java	82	82
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	84	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	readReplace	-	SubclassBytecodeGenerator	private	-	-	Java	84	84
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDescription	-		-	-	-	Java	85	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatcher	-		-	-	-	Java	85	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	matcher	-	SubclassBytecodeGenerator	private	-	-	Java	85	85
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	DispatcherDefaultingToRealMethod	-		-	-	-	Java	87	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	87	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	dispatcher	-	SubclassBytecodeGenerator	private	-	-	Java	87	87
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ForHashCode	-		-	-	-	Java	88	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	88	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	88	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	hashCode	-	SubclassBytecodeGenerator	private	-	-	Java	88	88
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ForEquals	-		-	-	-	Java	89	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	89	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	89	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	equals	-	SubclassBytecodeGenerator	private	-	-	Java	89	89
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ForWriteReplace	-		-	-	-	Java	90	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	90	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	90	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	field	writeReplace	-	SubclassBytecodeGenerator	private	-	-	Java	90	90
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassBytecodeGenerator	-		-	-	-	Java	92	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	SubclassBytecodeGenerator	-	SubclassBytecodeGenerator	public	-	-	Java	92	94
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassInjectionLoader	-		-	-	-	Java	93	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	96	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassBytecodeGenerator	-		-	-	-	Java	96	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	SubclassBytecodeGenerator	-	SubclassBytecodeGenerator	public	-	-	Java	96	98
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDescription	-		-	-	-	Java	100	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatcher	-		-	-	-	Java	100	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	100	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	SubclassBytecodeGenerator	-	SubclassBytecodeGenerator	public	-	-	Java	100	102
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SubclassInjectionLoader	-		-	-	-	Java	101	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDescription	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatcher	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Implementation	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	SubclassBytecodeGenerator	-	SubclassBytecodeGenerator	protected	-	-	Java	104	110
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	TypeValidation	-		-	-	-	Java	108	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ByteBuddy	-		-	-	-	Java	108	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Random	-		-	-	-	Java	109	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Override	-		-	-	-	Java	112	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockFeatures	-		-	-	-	Java	113	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	113	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	mockClass	-	SubclassBytecodeGenerator	public	-	-	Java	113	178
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Builder	-		-	-	-	Java	114	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MultipleParentClassLoader	-		-	-	-	Java	114	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ClassLoader	-		-	-	-	Java	114	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	DispatcherDefaultingToRealMethod	-		-	-	-	Java	118	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockAccess	-		-	-	-	Java	118	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	119	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	119	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	121	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	124	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	127	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	128	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	130	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	133	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	134	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Builder	-		-	-	-	Java	138	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	DynamicType	-		-	-	-	Java	138	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Annotation	-		-	-	-	Java	143	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Type	-		-	-	-	Java	145	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ArrayList	-		-	-	-	Java	145	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SynchronizationState	-		-	-	-	Java	148	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	NoOp	-		-	-	-	Java	150	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodAttributeAppender	-		-	-	-	Java	150	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockMethodInterceptor	-		-	-	-	Java	157	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockAccess	-		-	-	-	Java	158	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	FieldAccessor	-		-	-	-	Java	159	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	SerializableMode	-		-	-	-	Java	160	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	CrossClassLoaderSerializableMock	-		-	-	-	Java	161	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Visibility	-		-	-	-	Java	165	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ObjectInputStream	-		-	-	-	Java	166	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	IOException	-		-	-	-	Java	167	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ClassNotFoundException	-		-	-	-	Java	167	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	180	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	180	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	addReadEdgeByProbe	-	SubclassBytecodeGenerator	private	-	-	Java	180	200
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Object	-		-	-	-	Java	185	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Math	-		-	-	-	Java	186	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoModuleProbe	-		-	-	-	Java	186	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	186	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	187	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Ownership	-		-	-	-	Java	187	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Visibility	-		-	-	-	Java	187	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	188	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	189	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	195	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Could	-		-	-	-	Java	196	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	196	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	This	-		-	-	-	Java	198	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	202	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	202	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	addExportEdgeByProbe	-	SubclassBytecodeGenerator	private	-	-	Java	202	223
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Object	-		-	-	-	Java	207	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Math	-		-	-	-	Java	208	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoModuleProbe	-		-	-	-	Java	208	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	208	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	209	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Ownership	-		-	-	-	Java	209	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Visibility	-		-	-	-	Java	209	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	210	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodCall	-		-	-	-	Java	212	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	218	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Could	-		-	-	-	Java	219	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	219	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	This	-		-	-	-	Java	221	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MethodDescription	-		-	-	-	Java	225	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ElementMatcher	-		-	-	-	Java	225	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isGroovyMethod	-	SubclassBytecodeGenerator	private	-	-	Java	225	227
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	GroovyObjectSupport	-		-	-	-	Java	226	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	ClassLoader	-		-	-	-	Java	229	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	229	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	229	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	nameFor	-	SubclassBytecodeGenerator	private	-	-	Java	229	239
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	230	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	232	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Math	-		-	-	-	Java	238	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoMock	-		-	-	-	Java	238	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	String	-		-	-	-	Java	238	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	241	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isComingFromJDK	-	SubclassBytecodeGenerator	private	-	-	Java	241	248
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Comes	-		-	-	-	Java	242	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Environment	-		-	-	-	Java	243	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Runtime	-		-	-	-	Java	243	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Java	-		-	-	-	Java	243	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	This	-		-	-	-	Java	244	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Environment	-		-	-	-	Java	245	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Runtime	-		-	-	-	Java	245	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Java	-		-	-	-	Java	245	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	250	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isComingFromSealedPackage	-	SubclassBytecodeGenerator	private	-	-	Java	250	252
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	254	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Object	-		-	-	-	Java	254	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	getModule	-	SubclassBytecodeGenerator	private	-	-	Java	254	264
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	260	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Cannot	-		-	-	-	Java	261	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	261	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	266	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	266	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isOpenedTo	-	SubclassBytecodeGenerator	private	-	-	Java	266	278
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Boolean	-		-	-	-	Java	271	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	272	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	273	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Cannot	-		-	-	-	Java	273	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	273	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Java	-		-	-	-	Java	275	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Error	-		-	-	-	Java	275	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	280	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	280	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	canRead	-	SubclassBytecodeGenerator	private	-	-	Java	280	292
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Boolean	-		-	-	-	Java	285	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	286	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	287	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Cannot	-		-	-	-	Java	287	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	287	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Java	-		-	-	-	Java	289	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Error	-		-	-	-	Java	289	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	294	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	294	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isExportedTo	-	SubclassBytecodeGenerator	private	-	-	Java	294	306
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Boolean	-		-	-	-	Java	299	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Exception	-		-	-	-	Java	300	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	301	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Cannot	-		-	-	-	Java	301	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	301	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Java	-		-	-	-	Java	303	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Error	-		-	-	-	Java	303	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	308	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	isComingFromSignedJar	-	SubclassBytecodeGenerator	private	-	-	Java	308	310
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	312	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	assertVisibility	-	SubclassBytecodeGenerator	private	-	-	Java	312	322
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Modifier	-		-	-	-	Java	313	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Cannot	-		-	-	-	Java	314	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	314	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	The	-		-	-	-	Java	316	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	This	-		-	-	-	Java	317	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	You	-		-	-	-	Java	318	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	OSGi	-		-	-	-	Java	319	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	319	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	The	-		-	-	-	Java	320	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Class	-		-	-	-	Java	324	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	def	method	assertModuleAccessability	-	SubclassBytecodeGenerator	private	-	-	Java	324	331
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	325	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	325	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	326	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mocking	-		-	-	-	Java	326	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	MockitoException	-		-	-	-	Java	326	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Mockito	-		-	-	-	Java	328	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	Types	-		-	-	-	Java	328	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java	pascalcase	word	To	-		-	-	-	Java	329	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Mockito	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Copyright	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	License	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	This	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	package	org.mockito.internal.creation.bytebuddy	-		-	-	-	Java	5	5
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassInjector	-		-	-	-	Java	7	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	net.bytebuddy.dynamic.loading.ClassInjector	-		-	-	-	Java	7	7
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	8	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	net.bytebuddy.dynamic.loading.ClassLoadingStrategy	-		-	-	-	Java	8	8
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	InjectionBase	-		-	-	-	Java	9	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	org.mockito.codegen.InjectionBase	-		-	-	-	Java	9	9
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MockitoException	-		-	-	-	Java	10	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	org.mockito.exceptions.base.MockitoException	-		-	-	-	Java	10	10
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Platform	-		-	-	-	Java	11	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	org.mockito.internal.util.Platform	-		-	-	-	Java	11	11
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	InvocationTargetException	-		-	-	-	Java	13	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	java.lang.reflect.InvocationTargetException	-		-	-	-	Java	13	13
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Method	-		-	-	-	Java	14	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	java.lang.reflect.Method	-		-	-	-	Java	14	14
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	StringUtil	-		-	-	-	Java	16	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	imported	package	org.mockito.internal.util.StringUtil.join	-		-	-	-	Java	16	16
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	18	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassInjectionLoader	-		-	-	-	Java	18	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	class	SubclassInjectionLoader	-		-	-	SubclassLoader	Java	18	107
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	The	-		-	-	-	Java	20	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	String	-		-	-	-	Java	20	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Unsafe	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Mockito	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Currently	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Neither	-		-	-	-	Java	23	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	field	ERROR_MESSAGE	-	SubclassInjectionLoader	private	-	-	Java	20	23
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	25	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	field	loader	-	SubclassInjectionLoader	private	-	-	Java	25	25
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassInjectionLoader	-		-	-	-	Java	27	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	SubclassInjectionLoader	-	SubclassInjectionLoader	default	-	-	Java	27	35
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	UsingReflection	-		-	-	-	Java	28	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassInjector	-		-	-	-	Java	28	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Boolean	-		-	-	-	Java	28	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	WithReflection	-		-	-	-	Java	29	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	UsingLookup	-		-	-	-	Java	30	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassInjector	-		-	-	-	Java	30	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Platform	-		-	-	-	Java	33	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MockitoException	-		-	-	-	Java	33	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	37	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	tryLookup	-	SubclassInjectionLoader	private	-	-	Java	37	47
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MethodHandles	-		-	-	-	Java	39	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	39	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	39	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	40	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Lookup	-		-	-	-	Java	41	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MethodHandles	-		-	-	-	Java	41	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	41	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	InjectionBase	-		-	-	-	Java	42	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	42	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	WithLookup	-		-	-	-	Java	43	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Exception	-		-	-	-	Java	44	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Platform	-		-	-	-	Java	45	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MockitoException	-		-	-	-	Java	45	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	49	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	WithReflection	-		-	-	-	Java	49	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	class	WithReflection	-	SubclassInjectionLoader	private	-	SubclassLoader	Java	49	55
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Override	-		-	-	-	Java	51	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	52	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	52	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	52	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	resolveStrategy	-	SubclassInjectionLoader.WithReflection	public	-	-	Java	52	54
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	InjectionBase	-		-	-	-	Java	53	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Default	-		-	-	-	Java	53	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	53	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	57	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	WithLookup	-		-	-	-	Java	57	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	class	WithLookup	-	SubclassInjectionLoader	private	-	SubclassLoader	Java	57	101
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	59	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	field	lookup	-	SubclassInjectionLoader.WithLookup	private	-	-	Java	59	59
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	61	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	field	codegenLookup	-	SubclassInjectionLoader.WithLookup	private	-	-	Java	61	61
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Method	-		-	-	-	Java	63	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	field	privateLookupIn	-	SubclassInjectionLoader.WithLookup	private	-	-	Java	63	63
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Method	-		-	-	-	Java	65	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	65	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	65	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	WithLookup	-	SubclassInjectionLoader.WithLookup	default	-	-	Java	65	69
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Override	-		-	-	-	Java	71	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	72	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	72	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	72	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	resolveStrategy	-	SubclassInjectionLoader.WithLookup	public	-	-	Java	72	100
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	UsingLookup	-		-	-	-	Java	74	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	74	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Default	-		-	-	-	Java	76	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	76	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Object	-		-	-	-	Java	79	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	InvocationTargetException	-		-	-	-	Java	82	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	IllegalAccessException	-		-	-	-	Java	83	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Default	-		-	-	-	Java	84	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	84	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	UsingLookup	-		-	-	-	Java	89	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	89	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Throwable	-		-	-	-	Java	90	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	MockitoException	-		-	-	-	Java	91	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Mockito	-		-	-	-	Java	92	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Java	-		-	-	-	Java	92	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	The	-		-	-	-	Java	92	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Mockito	-		-	-	-	Java	94	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	To	-		-	-	-	Java	94	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Remember	-		-	-	-	Java	95	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Override	-		-	-	-	Java	103	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	Class	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	104	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java	def	method	resolveStrategy	-	SubclassInjectionLoader	public	-	-	Java	104	106
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	Mockito	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	Copyright	-		-	-	-	Java	2	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	License	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	This	-		-	-	-	Java	3	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	def	package	org.mockito.internal.creation.bytebuddy	-		-	-	-	Java	5	5
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	7	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	imported	package	net.bytebuddy.dynamic.loading.ClassLoadingStrategy	-		-	-	-	Java	7	7
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	12	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	def	interface	SubclassLoader	-		-	-	-	Java	12	23
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	Resolves	-		-	-	-	Java	15	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	The	-		-	-	-	Java	17	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	The	-		-	-	-	Java	18	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	An	-		-	-	-	Java	20	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	Class	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	pascalcase	word	ClassLoader	-		-	-	-	Java	22	
+src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java	def	method	resolveStrategy	-	SubclassLoader	public	-	-	Java	22	22
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Mockito	-		-	-	-	Java	2	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Copyright	-		-	-	-	Java	2	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	License	-		-	-	-	Java	3	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	This	-		-	-	-	Java	3	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	def	package	org.mockito.android.internal.creation	-		-	-	-	Java	5	5
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	AndroidClassLoadingStrategy	-		-	-	-	Java	7	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	net.bytebuddy.android.AndroidClassLoadingStrategy	-		-	-	-	Java	7	7
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	ClassLoadingStrategy	-		-	-	-	Java	8	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	net.bytebuddy.dynamic.loading.ClassLoadingStrategy	-		-	-	-	Java	8	8
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	MockitoException	-		-	-	-	Java	9	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	org.mockito.exceptions.base.MockitoException	-		-	-	-	Java	9	9
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	10	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	org.mockito.internal.creation.bytebuddy.SubclassLoader	-		-	-	-	Java	10	10
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	File	-		-	-	-	Java	12	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	java.io.File	-		-	-	-	Java	12	12
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	StringUtil	-		-	-	-	Java	14	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	imported	package	org.mockito.internal.util.StringUtil.join	-		-	-	-	Java	14	14
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	SubclassLoader	-		-	-	-	Java	16	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	AndroidLoadingStrategy	-		-	-	-	Java	16	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	def	class	AndroidLoadingStrategy	-		-	-	SubclassLoader	Java	16	36
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Override	-		-	-	-	Java	18	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	ClassLoader	-		-	-	-	Java	19	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Class	-		-	-	-	Java	19	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	ClassLoader	-		-	-	-	Java	19	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	def	method	resolveStrategy	-	AndroidLoadingStrategy	public	-	-	Java	19	35
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	AndroidTempFileLocator	-		-	-	-	Java	20	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	File	-		-	-	-	Java	20	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	MockitoException	-		-	-	-	Java	22	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Could	-		-	-	-	Java	23	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	You	-		-	-	-	Java	25	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	This	-		-	-	-	Java	27	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Context	-		-	-	-	Java	29	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	MyActivity	-		-	-	-	Java	29	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	Injecting	-		-	-	-	Java	34	
+subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java	pascalcase	word	AndroidClassLoadingStrategy	-		-	-	-	Java	34	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	2	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Copyright	-		-	-	-	Java	2	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	License	-		-	-	-	Java	3	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	This	-		-	-	-	Java	3	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	package	org.mockito.moduletest	-		-	-	-	Java	5	5
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ByteBuddy	-		-	-	-	Java	7	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.ByteBuddy	-		-	-	-	Java	7	7
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Visibility	-		-	-	-	Java	8	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.description.modifier.Visibility	-		-	-	-	Java	8	8
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	FixedValue	-		-	-	-	Java	9	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.implementation.FixedValue	-		-	-	-	Java	9	9
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassWriter	-		-	-	-	Java	10	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.jar.asm.ClassWriter	-		-	-	-	Java	10	10
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleVisitor	-		-	-	-	Java	11	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.jar.asm.ModuleVisitor	-		-	-	-	Java	11	11
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Opcodes	-		-	-	-	Java	12	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.jar.asm.Opcodes	-		-	-	-	Java	12	12
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OpenedClassReader	-		-	-	-	Java	13	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.utility.OpenedClassReader	-		-	-	-	Java	13	13
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	14	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.junit.Test	-		-	-	-	Java	14	14
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	15	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.mockito.Mockito	-		-	-	-	Java	15	15
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoException	-		-	-	-	Java	16	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.mockito.exceptions.base.MockitoException	-		-	-	-	Java	16	16
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	17	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.mockito.stubbing.OngoingStubbing	-		-	-	-	Java	17	17
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	IOException	-		-	-	-	Java	19	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.io.IOException	-		-	-	-	Java	19	19
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Configuration	-		-	-	-	Java	20	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.lang.module.Configuration	-		-	-	-	Java	20	20
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleFinder	-		-	-	-	Java	21	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.lang.module.ModuleFinder	-		-	-	-	Java	21	21
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	InvocationTargetException	-		-	-	-	Java	22	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.lang.reflect.InvocationTargetException	-		-	-	-	Java	22	22
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MalformedURLException	-		-	-	-	Java	23	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.net.MalformedURLException	-		-	-	-	Java	23	23
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Files	-		-	-	-	Java	24	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.nio.file.Files	-		-	-	-	Java	24	24
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	25	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.nio.file.Path	-		-	-	-	Java	25	25
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Collections	-		-	-	-	Java	26	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.util.Collections	-		-	-	-	Java	26	26
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	27	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.util.concurrent.Callable	-		-	-	-	Java	27	27
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarEntry	-		-	-	-	Java	28	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.util.jar.JarEntry	-		-	-	-	Java	28	28
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarOutputStream	-		-	-	-	Java	29	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	java.util.jar.JarOutputStream	-		-	-	-	Java	29	29
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ElementMatchers	-		-	-	-	Java	31	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	net.bytebuddy.matcher.ElementMatchers.named	-		-	-	-	Java	31	31
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Assertions	-		-	-	-	Java	32	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.assertj.core.api.Assertions.assertThat	-		-	-	-	Java	32	32
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Assertions	-		-	-	-	Java	33	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	imported	package	org.assertj.core.api.Assertions.fail	-		-	-	-	Java	33	33
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	CanLoadWithSimpleModule	-		-	-	-	Java	35	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	class	CanLoadWithSimpleModule	-		-	-	-	Java	35	244
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	37	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	38	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	can_define_class_in_open_reading_module	-	CanLoadWithSimpleModule	public	-	-	Java	38	59
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	39	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	40	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	42	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	43	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	43	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	45	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	45	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	46	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	48	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	48	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	SuppressWarnings	-		-	-	-	Java	49	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	50	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	String	-		-	-	-	Java	50	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	50	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	51	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	51	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	52	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoMock	-		-	-	-	Java	54	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	54	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	57	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	61	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	62	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	can_define_class_in_open_reading_private_module	-	CanLoadWithSimpleModule	public	-	-	Java	62	83
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	63	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	64	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	66	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	67	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	67	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	69	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	69	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	70	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	72	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	72	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	SuppressWarnings	-		-	-	-	Java	73	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	74	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	String	-		-	-	-	Java	74	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	74	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	75	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	75	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	76	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoMock	-		-	-	-	Java	78	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	78	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	81	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	85	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	86	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	can_define_class_in_open_non_reading_module	-	CanLoadWithSimpleModule	public	-	-	Java	86	107
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	87	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	88	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	90	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	91	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	91	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	93	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	93	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	94	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	96	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	96	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	SuppressWarnings	-		-	-	-	Java	97	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	98	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	String	-		-	-	-	Java	98	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	98	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	99	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	99	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	100	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoMock	-		-	-	-	Java	102	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	102	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	105	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	109	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	110	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	can_define_class_in_open_non_reading_non_exporting_module	-	CanLoadWithSimpleModule	public	-	-	Java	110	131
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	111	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	112	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	114	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	115	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	115	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	117	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	117	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	118	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	120	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	120	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	SuppressWarnings	-		-	-	-	Java	121	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	122	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	String	-		-	-	-	Java	122	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	122	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	123	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	123	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	124	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoMock	-		-	-	-	Java	126	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	126	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	129	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	133	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	134	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	can_define_class_in_closed_module	-	CanLoadWithSimpleModule	public	-	-	Java	134	155
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	135	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	136	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	138	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	139	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	139	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	141	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	141	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	142	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	144	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	144	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	SuppressWarnings	-		-	-	-	Java	145	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	146	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	String	-		-	-	-	Java	146	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	146	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	147	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Object	-		-	-	-	Java	147	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OngoingStubbing	-		-	-	-	Java	148	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoMock	-		-	-	-	Java	150	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	150	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	153	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Test	-		-	-	-	Java	157	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Exception	-		-	-	-	Java	158	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	cannot_define_class_in_non_opened_non_exported_module	-	CanLoadWithSimpleModule	public	-	-	Java	158	178
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	159	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	160	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	162	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	163	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	163	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	165	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	165	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	166	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	168	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	168	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Class	-		-	-	-	Java	170	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Expected	-		-	-	-	Java	171	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	InvocationTargetException	-		-	-	-	Java	172	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MockitoException	-		-	-	-	Java	173	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Thread	-		-	-	-	Java	176	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	IOException	-		-	-	-	Java	180	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	180	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	modularJar	-	CanLoadWithSimpleModule	private	-	-	Java	180	191
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Files	-		-	-	-	Java	181	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	181	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Files	-		-	-	-	Java	182	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarOutputStream	-		-	-	-	Java	182	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarOutputStream	-		-	-	-	Java	182	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarEntry	-		-	-	-	Java	183	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	186	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	JarEntry	-		-	-	-	Java	186	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	type	-	CanLoadWithSimpleModule	private	-	-	Java	193	202
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ByteBuddy	-		-	-	-	Java	194	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Callable	-		-	-	-	Java	195	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MyCallable	-		-	-	-	Java	196	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Visibility	-		-	-	-	Java	197	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Visibility	-		-	-	-	Java	197	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	FixedValue	-		-	-	-	Java	199	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	moduleInfo	-	CanLoadWithSimpleModule	private	-	-	Java	204	219
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	OpenedClassReader	-		-	-	-	Java	205	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassWriter	-		-	-	-	Java	205	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassWriter	-		-	-	-	Java	205	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Opcodes	-		-	-	-	Java	206	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Opcodes	-		-	-	-	Java	206	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleVisitor	-		-	-	-	Java	207	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Opcodes	-		-	-	-	Java	208	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	MalformedURLException	-		-	-	-	Java	221	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Path	-		-	-	-	Java	221	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	221	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	def	method	layer	-	CanLoadWithSimpleModule	private	-	-	Java	221	242
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Configuration	-		-	-	-	Java	222	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Configuration	-		-	-	-	Java	222	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleFinder	-		-	-	-	Java	223	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	224	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Collections	-		-	-	-	Java	224	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleFinder	-		-	-	-	Java	225	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Collections	-		-	-	-	Java	226	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ReplicatingClassLoader	-		-	-	-	Java	229	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ClassLoader	-		-	-	-	Java	229	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	230	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Controller	-		-	-	-	Java	230	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	230	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	ModuleLayer	-		-	-	-	Java	232	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Collections	-		-	-	-	Java	232	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	IllegalStateException	-		-	-	-	Java	237	
+subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java	pascalcase	word	Mockito	-		-	-	-	Java	238	

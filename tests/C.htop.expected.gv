@@ -1,0 +1,132 @@
+digraph cl {
+    size="104.16666666666667,104.16666666666667";
+    ratio=collapse;
+    outputorder=edgesfirst;
+    maxiter=600;
+    splines=compound;
+    node [shape=none margin=0 style=filled fillcolor="#fff3d0"
+        fontname="Roboto, Verdana, Arial" fontsize=11];
+    edge [arrowhead=open]
+subgraph cluster_solaris_Platform_c {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/Platform.c}">solaris/Platform.c</td></tr></table>>;
+    style=invis;
+    label="";
+solaris_Platform_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {solaris/Platform.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>Platform.c</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_setBindings}">Platform_setBindings()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_getUptime}">Platform_getUptime()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_getLoadAverage}">Platform_getLoadAverage()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_getMaxPid}">Platform_getMaxPid()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_setCPUValues}">Platform_setCPUValues()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_setMemoryValues}">Platform_setMemoryValues()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_setSwapValues}">Platform_setSwapValues()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Platform_getProcessEnv}">Platform_getProcessEnv()</td></tr></table>> ]
+}
+subgraph cluster_solaris_Platform_h {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/Platform.h}">solaris/Platform.h</td></tr></table>>;
+    style=invis;
+    label="";
+solaris_Platform_h [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {solaris/Platform.h}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>Platform.h</b></font></td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+subgraph cluster_solaris_SolarisProcess_c {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcess.c}">solaris/SolarisProcess.c</td></tr></table>>;
+    style=invis;
+    label="";
+solaris_SolarisProcess_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {solaris/SolarisProcess.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>SolarisProcess.c</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SolarisProcess_new}">SolarisProcess_new()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {Process_delete}">Process_delete()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {SolarisProcess_writeField}">SolarisProcess_writeField()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {SolarisProcess_compare}">SolarisProcess_compare()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {Process_isThread}">Process_isThread()</td></tr></table>> ]
+}
+subgraph cluster_solaris_SolarisProcess_h {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcess.h}">solaris/SolarisProcess.h</td></tr></table>>;
+solaris_SolarisProcess_h_SolarisProcessFields [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SolarisProcessFields}" sides="b"><font point-size="11">&lt;&lt;enum&gt;&gt;<br/></font><font point-size="18"><b>SolarisProcessFields</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ZONEID}">+ZONEID</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ZONE}">+ZONE</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {PROJID}">+PROJID</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {TASKID}">+TASKID</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {POOLID}">+POOLID</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {CONTID}">+CONTID</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {LWPID}">+LWPID</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {LAST_PROCESSFIELD}">+LAST_PROCESSFIELD</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+solaris_SolarisProcess_h_SolarisProcess_ [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SolarisProcess_}" sides="b"><font point-size="18"><b>SolarisProcess_</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {super}">+super<i> : Process</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {kernel}">+kernel<i> : int</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {zoneid}">+zoneid<i> : zoneid_t</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {zname}">+zname<i> : char *</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {taskid}">+taskid<i> : taskid_t</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {projid}">+projid<i> : projid_t</i></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {is_lwp}">+is_lwp<i> : bool</i></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {realpid}">+realpid<i> : pid_t</i></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {realppid}">+realppid<i> : pid_t</i></td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {lwpid}">+lwpid<i> : pid_t</i></td></tr>
+<tr><td border="0" align="left">...</td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+subgraph cluster_solaris_SolarisProcessList_c {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}">solaris/SolarisProcessList.c</td></tr></table>>;
+    style=invis;
+    label="";
+solaris_SolarisProcessList_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>SolarisProcessList.c</b></font></td></tr>
+<tr><td sides="b"></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SolarisProcessList_readZoneName}">SolarisProcessList_readZoneName()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ProcessList_new}">ProcessList_new()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SolarisProcessList_scanCPUTime}">SolarisProcessList_scanCPUTime()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {SolarisProcessList_scanMemoryInfo}">SolarisProcessList_scanMemoryInfo()</td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {ProcessList_delete}">ProcessList_delete()</td></tr>
+<tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {ProcessList_enumerateLWPs}">ProcessList_enumerateLWPs()</td></tr>
+<tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {ProcessList_goThroughEntries}">ProcessList_goThroughEntries()</td></tr></table>> ]
+}
+subgraph cluster_solaris_SolarisProcessList_h {
+    style=dotted;
+    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.h}">solaris/SolarisProcessList.h</td></tr></table>>;
+solaris_SolarisProcessList_h_CPUData_ [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {CPUData_}" sides="b"><font point-size="18"><b>CPUData_</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {userPercent}">+userPercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {nicePercent}">+nicePercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {systemPercent}">+systemPercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {irqPercent}">+irqPercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {idlePercent}">+idlePercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {systemAllPercent}">+systemAllPercent<i> : double</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {luser}">+luser<i> : uint64_t</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {lkrnl}">+lkrnl<i> : uint64_t</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {lintr}">+lintr<i> : uint64_t</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {lidle}">+lidle<i> : uint64_t</i></td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+solaris_SolarisProcessList_h_SolarisProcessList_ [label=<<table cellspacing="0" cellpadding="1">
+<tr><td href="gitk:search_next {SolarisProcessList_}" sides="b"><font point-size="18"><b>SolarisProcessList_</b></font></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {super}">+super<i> : ProcessList</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {kd}">+kd<i> : kstat_ctl_t *</i></td></tr>
+<tr><td border="0" align="left" href="gitk:search_next {cpus}">+cpus<i> : CPUData *</i></td></tr>
+<tr><td sides="b"></td></tr></table>> ]
+}
+solaris_Platform_c -> solaris_Platform_h []
+solaris_Platform_c -> cluster_solaris_SolarisProcess_h []
+solaris_Platform_c -> cluster_solaris_SolarisProcessList_h []
+solaris_SolarisProcess_c -> cluster_solaris_SolarisProcess_h []
+solaris_SolarisProcess_c -> solaris_Platform_h []
+solaris_SolarisProcessList_c -> cluster_solaris_SolarisProcess_h []
+solaris_SolarisProcessList_c -> cluster_solaris_SolarisProcessList_h []
+}
+

@@ -1,0 +1,144 @@
+solaris/Platform.c	local	header	Platform.h	-		-	-	-	C	10	
+solaris/Platform.c	local	header	Meter.h	-		-	-	-	C	11	
+solaris/Platform.c	local	header	CPUMeter.h	-		-	-	-	C	12	
+solaris/Platform.c	local	header	MemoryMeter.h	-		-	-	-	C	13	
+solaris/Platform.c	local	header	SwapMeter.h	-		-	-	-	C	14	
+solaris/Platform.c	local	header	TasksMeter.h	-		-	-	-	C	15	
+solaris/Platform.c	local	header	LoadAverageMeter.h	-		-	-	-	C	16	
+solaris/Platform.c	local	header	ClockMeter.h	-		-	-	-	C	17	
+solaris/Platform.c	local	header	HostnameMeter.h	-		-	-	-	C	18	
+solaris/Platform.c	local	header	UptimeMeter.h	-		-	-	-	C	19	
+solaris/Platform.c	local	header	SolarisProcess.h	-		-	-	-	C	20	
+solaris/Platform.c	local	header	SolarisProcessList.h	-		-	-	-	C	21	
+solaris/Platform.c	system	header	sys/types.h	-		-	-	-	C	23	
+solaris/Platform.c	system	header	sys/time.h	-		-	-	-	C	24	
+solaris/Platform.c	system	header	sys/resource.h	-		-	-	-	C	25	
+solaris/Platform.c	system	header	utmpx.h	-		-	-	-	C	26	
+solaris/Platform.c	system	header	sys/loadavg.h	-		-	-	-	C	27	
+solaris/Platform.c	system	header	string.h	-		-	-	-	C	28	
+solaris/Platform.c	system	header	kstat.h	-		-	-	-	C	29	
+solaris/Platform.c	system	header	time.h	-		-	-	-	C	30	
+solaris/Platform.c	system	header	math.h	-		-	-	-	C	31	
+solaris/Platform.c	system	header	sys/var.h	-		-	-	-	C	32	
+solaris/Platform.c	def	variable	plat_loadavg	typename:double[3]		-	-	-	C	48	
+solaris/Platform.c	def	variable	Platform_signals	typename:const SignalItem[]		-	-	-	C	50	
+solaris/Platform.c	def	variable	Platform_numberOfSignals	typename:const unsigned int		-	-	-	C	95	
+solaris/Platform.c	def	variable	Platform_defaultFields	typename:ProcessField[]		-	-	-	C	97	
+solaris/Platform.c	def	variable	Platform_meterTypes	typename:MeterClass * []		-	-	-	C	99	
+solaris/Platform.c	def	function	Platform_setBindings	typename:void		-	-	-	C	120	122
+solaris/Platform.c	def	variable	Platform_numberOfFields	typename:int		-	-	-	C	124	
+solaris/Platform.c	def	function	Platform_getUptime	typename:int		-	-	-	C	128	142
+solaris/Platform.c	def	function	Platform_getLoadAverage	typename:void		-	-	-	C	144	149
+solaris/Platform.c	def	function	Platform_getMaxPid	typename:int		-	-	-	C	151	165
+solaris/Platform.c	def	function	Platform_setCPUValues	typename:double		-	-	-	C	167	198
+solaris/Platform.c	def	function	Platform_setMemoryValues	typename:void		-	-	-	C	200	206
+solaris/Platform.c	def	function	Platform_setSwapValues	typename:void		-	-	-	C	208	212
+solaris/Platform.c	def	function	Platform_getProcessEnv	typename:char *		-	-	-	C	214	217
+solaris/Platform.h	def	macro	HEADER_Platform	-		-	-	-	C++	4	4
+solaris/Platform.h	local	header	Action.h	-		-	-	-	C++	14	
+solaris/Platform.h	local	header	BatteryMeter.h	-		-	-	-	C++	15	
+solaris/Platform.h	local	header	SignalsPanel.h	-		-	-	-	C++	16	
+solaris/Platform.h	system	header	signal.h	-		-	-	-	C++	17	
+solaris/Platform.h	system	header	sys/mkdev.h	-		-	-	-	C++	18	
+solaris/Platform.h	def	macro	kill	-		-	-	-	C++	20	20
+solaris/Platform.h	def	typedef	kvar_t	struct:var		-	-	-	C++	23	
+solaris/SolarisProcess.c	local	header	Process.h	-		-	-	-	C	9	
+solaris/SolarisProcess.c	local	header	ProcessList.h	-		-	-	-	C	10	
+solaris/SolarisProcess.c	local	header	SolarisProcess.h	-		-	-	-	C	11	
+solaris/SolarisProcess.c	local	header	Platform.h	-		-	-	-	C	12	
+solaris/SolarisProcess.c	local	header	CRT.h	-		-	-	-	C	13	
+solaris/SolarisProcess.c	system	header	stdlib.h	-		-	-	-	C	15	
+solaris/SolarisProcess.c	system	header	string.h	-		-	-	-	C	16	
+solaris/SolarisProcess.c	system	header	unistd.h	-		-	-	-	C	17	
+solaris/SolarisProcess.c	system	header	sys/syscall.h	-		-	-	-	C	18	
+solaris/SolarisProcess.c	def	variable	SolarisProcess_class	typename:ProcessClass		-	-	-	C	63	
+solaris/SolarisProcess.c	def	variable	Process_fields	typename:ProcessFieldData[]		-	-	-	C	73	
+solaris/SolarisProcess.c	def	variable	Process_pidColumns	typename:ProcessPidColumn[]		-	-	-	C	108	
+solaris/SolarisProcess.c	def	function	SolarisProcess_new	typename:SolarisProcess *		-	-	-	C	124	129
+solaris/SolarisProcess.c	def	function	Process_delete	typename:void		-	-	-	C	131	136
+solaris/SolarisProcess.c	def	function	SolarisProcess_writeField	typename:void		-	-	-	C	138	172
+solaris/SolarisProcess.c	def	function	SolarisProcess_compare	typename:long		-	-	-	C	174	206
+solaris/SolarisProcess.c	def	function	Process_isThread	typename:bool		-	-	-	C	208	218
+solaris/SolarisProcess.h	def	macro	HEADER_SolarisProcess	-		-	-	-	C++	4	4
+solaris/SolarisProcess.h	local	header	Settings.h	-		-	-	-	C++	13	
+solaris/SolarisProcess.h	system	header	zone.h	-		-	-	-	C++	14	
+solaris/SolarisProcess.h	def	enum	SolarisProcessFields	-		-	-	-	C++	16	26
+solaris/SolarisProcess.h	def	enumerator	ZONEID	-	SolarisProcessFields	public	-	-	C++	18	
+solaris/SolarisProcess.h	def	enumerator	ZONE	-	SolarisProcessFields	public	-	-	C++	19	
+solaris/SolarisProcess.h	def	enumerator	PROJID	-	SolarisProcessFields	public	-	-	C++	20	
+solaris/SolarisProcess.h	def	enumerator	TASKID	-	SolarisProcessFields	public	-	-	C++	21	
+solaris/SolarisProcess.h	def	enumerator	POOLID	-	SolarisProcessFields	public	-	-	C++	22	
+solaris/SolarisProcess.h	def	enumerator	CONTID	-	SolarisProcessFields	public	-	-	C++	23	
+solaris/SolarisProcess.h	def	enumerator	LWPID	-	SolarisProcessFields	public	-	-	C++	24	
+solaris/SolarisProcess.h	def	enumerator	LAST_PROCESSFIELD	-	SolarisProcessFields	public	-	-	C++	25	
+solaris/SolarisProcess.h	def	typedef	SolarisProcessField	enum:SolarisProcessFields		-	-	-	C++	26	
+solaris/SolarisProcess.h	def	struct	SolarisProcess_	-		-	-	-	C++	29	42
+solaris/SolarisProcess.h	def	member	super	typename:Process	SolarisProcess_	public	-	-	C++	30	
+solaris/SolarisProcess.h	def	member	kernel	typename:int	SolarisProcess_	public	-	-	C++	31	
+solaris/SolarisProcess.h	def	member	zoneid	typename:zoneid_t	SolarisProcess_	public	-	-	C++	32	
+solaris/SolarisProcess.h	def	member	zname	typename:char *	SolarisProcess_	public	-	-	C++	33	
+solaris/SolarisProcess.h	def	member	taskid	typename:taskid_t	SolarisProcess_	public	-	-	C++	34	
+solaris/SolarisProcess.h	def	member	projid	typename:projid_t	SolarisProcess_	public	-	-	C++	35	
+solaris/SolarisProcess.h	def	member	poolid	typename:poolid_t	SolarisProcess_	public	-	-	C++	36	
+solaris/SolarisProcess.h	def	member	contid	typename:ctid_t	SolarisProcess_	public	-	-	C++	37	
+solaris/SolarisProcess.h	def	member	is_lwp	typename:bool	SolarisProcess_	public	-	-	C++	38	
+solaris/SolarisProcess.h	def	member	realpid	typename:pid_t	SolarisProcess_	public	-	-	C++	39	
+solaris/SolarisProcess.h	def	member	realppid	typename:pid_t	SolarisProcess_	public	-	-	C++	40	
+solaris/SolarisProcess.h	def	member	lwpid	typename:pid_t	SolarisProcess_	public	-	-	C++	41	
+solaris/SolarisProcess.h	def	typedef	SolarisProcess	struct:SolarisProcess_		-	-	-	C++	42	
+solaris/SolarisProcess.h	def	macro	Process_isKernelThread	-		-	-	-	C++	46	46
+solaris/SolarisProcess.h	def	macro	Process_isUserlandThread	-		-	-	-	C++	50	50
+solaris/SolarisProcessList.c	local	header	ProcessList.h	-		-	-	-	C	9	
+solaris/SolarisProcessList.c	local	header	SolarisProcess.h	-		-	-	-	C	10	
+solaris/SolarisProcessList.c	local	header	SolarisProcessList.h	-		-	-	-	C	11	
+solaris/SolarisProcessList.c	system	header	unistd.h	-		-	-	-	C	13	
+solaris/SolarisProcessList.c	system	header	stdlib.h	-		-	-	-	C	14	
+solaris/SolarisProcessList.c	system	header	sys/types.h	-		-	-	-	C	15	
+solaris/SolarisProcessList.c	system	header	sys/user.h	-		-	-	-	C	16	
+solaris/SolarisProcessList.c	system	header	err.h	-		-	-	-	C	17	
+solaris/SolarisProcessList.c	system	header	fcntl.h	-		-	-	-	C	18	
+solaris/SolarisProcessList.c	system	header	limits.h	-		-	-	-	C	19	
+solaris/SolarisProcessList.c	system	header	string.h	-		-	-	-	C	20	
+solaris/SolarisProcessList.c	system	header	procfs.h	-		-	-	-	C	21	
+solaris/SolarisProcessList.c	system	header	errno.h	-		-	-	-	C	22	
+solaris/SolarisProcessList.c	system	header	pwd.h	-		-	-	-	C	23	
+solaris/SolarisProcessList.c	system	header	dirent.h	-		-	-	-	C	24	
+solaris/SolarisProcessList.c	system	header	math.h	-		-	-	-	C	25	
+solaris/SolarisProcessList.c	system	header	time.h	-		-	-	-	C	26	
+solaris/SolarisProcessList.c	def	macro	MAXCMDLINE	-		-	-	-	C	28	28
+solaris/SolarisProcessList.c	def	function	SolarisProcessList_readZoneName	typename:char *		-	-	-	C	65	76
+solaris/SolarisProcessList.c	def	function	ProcessList_new	typename:ProcessList *		-	-	-	C	78	94
+solaris/SolarisProcessList.c	def	function	SolarisProcessList_scanCPUTime	typename:void		-	-	-	C	96	169
+solaris/SolarisProcessList.c	def	function	SolarisProcessList_scanMemoryInfo	typename:void		-	-	-	C	171	236
+solaris/SolarisProcessList.c	def	function	ProcessList_delete	typename:void		-	-	-	C	238	244
+solaris/SolarisProcessList.c	def	function	ProcessList_enumerateLWPs	typename:void		-	-	-	C	246	381
+solaris/SolarisProcessList.c	def	function	ProcessList_goThroughEntries	typename:void		-	-	-	C	384	555
+solaris/SolarisProcessList.h	def	macro	HEADER_SolarisProcessList	-		-	-	-	C++	4	4
+solaris/SolarisProcessList.h	def	macro	MAXCMDLINE	-		-	-	-	C++	13	13
+solaris/SolarisProcessList.h	system	header	kstat.h	-		-	-	-	C++	16	
+solaris/SolarisProcessList.h	system	header	sys/param.h	-		-	-	-	C++	17	
+solaris/SolarisProcessList.h	system	header	zone.h	-		-	-	-	C++	18	
+solaris/SolarisProcessList.h	system	header	sys/uio.h	-		-	-	-	C++	19	
+solaris/SolarisProcessList.h	system	header	sys/resource.h	-		-	-	-	C++	20	
+solaris/SolarisProcessList.h	system	header	sys/sysconf.h	-		-	-	-	C++	21	
+solaris/SolarisProcessList.h	system	header	sys/sysinfo.h	-		-	-	-	C++	22	
+solaris/SolarisProcessList.h	system	header	sys/swap.h	-		-	-	-	C++	23	
+solaris/SolarisProcessList.h	def	macro	ZONE_ERRMSGLEN	-		-	-	-	C++	25	25
+solaris/SolarisProcessList.h	def	variable	zone_errmsg	typename:char[]		-	-	-	C++	26	
+solaris/SolarisProcessList.h	def	struct	CPUData_	-		-	-	-	C++	28	39
+solaris/SolarisProcessList.h	def	member	userPercent	typename:double	CPUData_	public	-	-	C++	29	
+solaris/SolarisProcessList.h	def	member	nicePercent	typename:double	CPUData_	public	-	-	C++	30	
+solaris/SolarisProcessList.h	def	member	systemPercent	typename:double	CPUData_	public	-	-	C++	31	
+solaris/SolarisProcessList.h	def	member	irqPercent	typename:double	CPUData_	public	-	-	C++	32	
+solaris/SolarisProcessList.h	def	member	idlePercent	typename:double	CPUData_	public	-	-	C++	33	
+solaris/SolarisProcessList.h	def	member	systemAllPercent	typename:double	CPUData_	public	-	-	C++	34	
+solaris/SolarisProcessList.h	def	member	luser	typename:uint64_t	CPUData_	public	-	-	C++	35	
+solaris/SolarisProcessList.h	def	member	lkrnl	typename:uint64_t	CPUData_	public	-	-	C++	36	
+solaris/SolarisProcessList.h	def	member	lintr	typename:uint64_t	CPUData_	public	-	-	C++	37	
+solaris/SolarisProcessList.h	def	member	lidle	typename:uint64_t	CPUData_	public	-	-	C++	38	
+solaris/SolarisProcessList.h	def	typedef	CPUData	struct:CPUData_		-	-	-	C++	39	
+solaris/SolarisProcessList.h	def	struct	SolarisProcessList_	-		-	-	-	C++	41	45
+solaris/SolarisProcessList.h	def	member	super	typename:ProcessList	SolarisProcessList_	public	-	-	C++	42	
+solaris/SolarisProcessList.h	def	member	kd	typename:kstat_ctl_t *	SolarisProcessList_	public	-	-	C++	43	
+solaris/SolarisProcessList.h	def	member	cpus	typename:CPUData *	SolarisProcessList_	public	-	-	C++	44	
+solaris/SolarisProcessList.h	def	typedef	SolarisProcessList	struct:SolarisProcessList_		-	-	-	C++	45	
