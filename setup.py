@@ -1,13 +1,14 @@
 
 from setuptools import setup
 
-version = "0.0.2"
+version = "0.1.0"
 
 setup(
     name="gitk-class-diagram",
     version=version,
     license="GPLv3+",
-    description="https://github.com/stefandtw/gitk-class-diagram",
+    description="Class diagrams based on commit diffs",
+    url="https://github.com/stefandtw/gitk-class-diagram",
     packages=["classdiff"],
     scripts=["gitk-cl"],
     entry_points={

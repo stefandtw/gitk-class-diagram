@@ -54,7 +54,7 @@ List of what is recognized in popular languages:
 How to get more associations between classes
 --------------------------------------------
 
-Put a file like [classref.ctags](blob/master/doc/classref.ctags) in *$HOME/.ctags.d/* to produce associations based on regular expressions. The example file will instruct ctags to record any words in Java source code starting with an upper-case letter (and containing lower-case letters). These words will automatically be interpreted as references to other classes. This works pretty well with some languages. Of course, it's not as reliable as a parser that understands the language. It's also slower.
+Put a file like [classref.ctags](doc/classref.ctags) in *$HOME/.ctags.d/* to produce associations based on regular expressions. The example file will instruct ctags to record any words in Java source code starting with an upper-case letter (and containing lower-case letters). These words will automatically be interpreted as references to other classes. This works pretty well with some languages. Of course, it's not as reliable as a parser that understands the language. It's also slower.
 
 How to add your own language
 ----------------------------
