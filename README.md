@@ -65,7 +65,7 @@ Installation
 ------------
 
 ```
-pip install gitk-class-diagram
+pip install gitk-class-diagram --index-url https://test.pypi.org/simple/
 ```
 
 Your existing gitk binary remains as it is. Start the extended version with:
