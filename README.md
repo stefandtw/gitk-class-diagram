@@ -20,6 +20,7 @@ Interaction
 -----------
 
 * Left-click on any text in the diagram to search for it in gitk's diff view
+* Left-click on the border or space around a class to scroll to its file in gitk's diff view
 * If the image is too small, right-click and select "Open full-size PNG"
 
 Visual aspects

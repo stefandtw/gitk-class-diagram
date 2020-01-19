@@ -401,4 +401,15 @@ proc search_next {search_term} {
     dosearch
 }
 
+proc scroll_to_file {name} {
+    # Called by evalable
+    global ctext_file_names difffilestart ctext
+
+    set i [lsearch -exact $ctext_file_names $name]
+    if {$i >= 0} {
+	set loc [lindex $difffilestart $i]
+        $ctext yview $loc
+    }
+}
+
 # vim: ft=tcl ts=8 sts=4 sw=4

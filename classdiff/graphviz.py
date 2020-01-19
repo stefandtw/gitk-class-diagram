@@ -54,6 +54,9 @@ class Gv:
     def search(s):
         return f"href=\"gitk:search_next {{{Gv.htmlesc(s)}}}\""
 
+    def scroll(file):
+        return f"href=\"gitk:scroll_to_file {{{Gv.htmlesc(file)}}}\""
+
     def px_to_inches(s):
         gv_default_dpi = 96.0
         return str(float(s) / gv_default_dpi)
@@ -83,9 +86,10 @@ class GvBuilder:
     def digraph(self, name):
         return self.text(f"digraph {name} {{", "}\n")
 
-    def cluster(self, name):
+    def cluster(self, name, attr):
         return self.text(f"""subgraph {Gv.clustername(name)} {{
     style=dotted;
+    {attr};
 """, "}\n")
 
     def node(self, name, attr):
@@ -195,7 +199,7 @@ class GvFile:
         self.classes.append(cl)
 
     def print(self, b):
-        with b.cluster(self.name):
+        with b.cluster(self.name,  Gv.scroll(self.name)):
             with b.text("    label=<", ">;\n"):
                 with b.table("cellspacing=\"0\" cellpadding=\"0\""
                              " border=\"0\""):
