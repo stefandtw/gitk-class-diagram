@@ -31,6 +31,7 @@ Visual aspects
 * Light blue background indicates a changed operation
 * A dashed border indicates that the element is not a real class, but rather the global scope of a file
 * If a file contains multiple classes, they are clustered within a dotted border
+* A blue border indicates the file that is currently shown in gitk's diff view
 
 Language support
 ----------------

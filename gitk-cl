@@ -58,6 +58,7 @@ rename clear_ctext orig_clear_ctext
 proc clear_ctext {{first 1.0}} {
     orig_clear_ctext $first
     clear_previous_image
+    clear_rectangles
     clear_debugtext
 }
 
@@ -71,17 +72,19 @@ proc create_ui {} {
     }
 
     set brightdiagram [${NS}::frame .bright.diagram]
-    set img [label .bright.diagram.img]
-    pack $img -anchor nw
+    set canvas .bright.diagram.canvas
+    canvas $canvas
+    pack $canvas -anchor nw
     pack forget .bright.cfiles
     pack .bright.diagram -side right -fill both -expand 1
     pack .bright.cfiles -side left -fill y -expand 0
 
-    bind .bright.diagram.img <ButtonRelease> {
+    bind .bright.diagram.canvas <ButtonRelease> {
 	dict for {id val} $imap {
 	    dict with val {
 		if {%x >= $left && %x <= $right && %y >= $top && %y <= $bottom} {
 		    {*}$evalable
+		    return
 		}
 	    }
 	}
@@ -89,17 +92,17 @@ proc create_ui {} {
 
     set diagram_menu .diagramctxmenu
     makemenu $diagram_menu {
-        {mc "Open full-size PNG" command {create_and_open_png_full_size}}
-        {mc "Copy path: PNG" command {copy_path_png}}
-        {mc "Copy path: old code directory" command {copy_path_dir 0}}
-        {mc "Copy path: new code directory" command {copy_path_dir 1}}
-        {mc "Copy path: output directory" command {copy_path_dir 2}}
-        {mc "Show debug info" command {show_debug_info}}
+	{mc "Open full-size PNG" command {create_and_open_png_full_size}}
+	{mc "Copy path: PNG" command {copy_path_png}}
+	{mc "Copy path: old code directory" command {copy_path_dir 0}}
+	{mc "Copy path: new code directory" command {copy_path_dir 1}}
+	{mc "Copy path: output directory" command {copy_path_dir 2}}
+	{mc "Show debug info" command {show_debug_info}}
     }
     $diagram_menu configure -tearoff 0
 
     bind .bright.diagram $ctxbut {pop_diagram_menu %W %X %Y %x %y}
-    bind .bright.diagram.img $ctxbut {pop_diagram_menu %W %X %Y %x %y}
+    bind .bright.diagram.canvas $ctxbut {pop_diagram_menu %W %X %Y %x %y}
 }
 
 proc pop_diagram_menu {w X Y x y} {
@@ -111,6 +114,14 @@ proc clear_previous_image {} {
 
     if {[info exists imap]} {
 	diagram_img blank
+    }
+}
+
+proc clear_rectangles {} {
+    global imap
+
+    if {[info exists imap]} {
+	.bright.diagram.canvas delete rect
     }
 }
 
@@ -209,10 +220,10 @@ proc generate_diff_ranges {outputpath} {
 
     set diffcmd [diffcmd $diffids "-p --submodule --no-commit-id -U0 --no-prefix"]
     if {$ignorespace} {
-        append diffcmd " -w"
+	append diffcmd " -w"
     }
     if {$limitdiffs && $vfilelimit($curview) ne {}} {
-        set diffcmd [concat $diffcmd -- $vfilelimit($curview)]
+	set diffcmd [concat $diffcmd -- $vfilelimit($curview)]
     }
 
     set diffcmd [string trimleft $diffcmd "| "]
@@ -246,18 +257,24 @@ proc generate_img {tags1 tags2 imgpath} {
 proc load_img {imgpath} {
     global imap
 
-    image create photo diagram_img -file "$imgpath.png"
-    .bright.diagram.img configure -image diagram_img
+    set rect_image [image create photo diagram_img -file "$imgpath.png"]
+    .bright.diagram.canvas create image 0 0 -image $rect_image -anchor nw
+    .bright.diagram.canvas configure -width [image width $rect_image] -height [image height $rect_image]
 
     set imap [dict create]
     set file [open "$imgpath.imap_np"]
     while {[gets $file line] > -1} {
-	if {[regexp "^rect gitk:(.*) (\\d+),(\\d+) (\\d+),(\\d+)$" $line match evalable left top right bottom]} {
-	    dict set imap $match left $left
-	    dict set imap $match top $top
-	    dict set imap $match right $right
-	    dict set imap $match bottom $bottom
-	    dict set imap $match evalable $evalable
+	if {[regexp "^rect (?:filename:(.*):)?gitk:(.*) (\\d+),(\\d+) (\\d+),(\\d+)$" $line match fname evalable left top right bottom]} {
+	    set key $match
+	    if {$fname ne {}} {
+		set key $fname
+		dict set imap $key fname $fname
+	    }
+	    dict set imap $key left $left
+	    dict set imap $key top $top
+	    dict set imap $key right $right
+	    dict set imap $key bottom $bottom
+	    dict set imap $key evalable $evalable
 	}
     }
     close $file
@@ -385,9 +402,7 @@ proc launch_file_viewer {path} {
 proc show_debug_info {} {
     global debugtext
 
-    if {[
-	confirm_popup "$debugtext\n\nCopy to clipboard?"
-    ]} {
+    if {[confirm_popup "$debugtext\n\nCopy to clipboard?"]} {
 	clipboard clear
 	clipboard append $debugtext
     }
@@ -408,7 +423,41 @@ proc scroll_to_file {name} {
     set i [lsearch -exact $ctext_file_names $name]
     if {$i >= 0} {
 	set loc [lindex $difffilestart $i]
-        $ctext yview $loc
+	$ctext yview $loc
+    }
+}
+
+# highlightfile: Replace gitk's original
+rename highlightfile orig_highlightfile
+proc highlightfile {cline} {
+    orig_highlightfile $cline
+    draw_file_rectangle
+}
+
+# sel_flist: Replace gitk's original
+rename sel_flist orig_sel_flist
+proc sel_flist {w x y} {
+    orig_sel_flist $w $x $y
+    draw_file_rectangle
+}
+
+proc draw_file_rectangle {} {
+    global ctext_file_names cflist_top imap
+
+    set i [expr {$cflist_top - 2}]
+    if {$i >= 0} {
+	set f [lindex $ctext_file_names $i]
+	.bright.diagram.canvas delete rect
+	if {[dict exists $imap $f]} {
+	    set left [dict get $imap $f left]
+	    set top [dict get $imap $f top]
+	    set right [dict get $imap $f right]
+	    set bottom [dict get $imap $f bottom]
+	    .bright.diagram.canvas addtag rect withtag [ \
+		.bright.diagram.canvas create rectangle $left $top \
+		$right $bottom -outline blue -width 3
+	    ]
+	}
     }
 }
 

@@ -51,11 +51,13 @@ class Gv:
         else:
             return ""
 
-    def search(s):
+    def search_href(s):
         return f"href=\"gitk:search_next {{{Gv.htmlesc(s)}}}\""
 
-    def scroll(file):
-        return f"href=\"gitk:scroll_to_file {{{Gv.htmlesc(file)}}}\""
+    def file_href(file):
+        return ("href=\""
+                f"filename:{Gv.htmlesc(file)}:"
+                f"gitk:scroll_to_file {{{Gv.htmlesc(file)}}}\"")
 
     def px_to_inches(s):
         gv_default_dpi = 96.0
@@ -199,12 +201,12 @@ class GvFile:
         self.classes.append(cl)
 
     def print(self, b):
-        with b.cluster(self.name,  Gv.scroll(self.name)):
+        with b.cluster(self.name,  Gv.file_href(self.name)):
             with b.text("    label=<", ">;\n"):
                 with b.table("cellspacing=\"0\" cellpadding=\"0\""
                              " border=\"0\""):
                     with b.tr():
-                        with b.td(Gv.search(self.name)):
+                        with b.td(Gv.search_href(self.name)):
                             b.htmltext(self.name)
             if not show_single_scope_file_border and len(self.classes) == 1:
                 b.text("    style=invis;\n")
@@ -229,7 +231,7 @@ class GvClass:
         with b.node(self.qualified_name, fillcolor):
             with b.table("cellspacing=\"0\" cellpadding=\"1\"" + style):
                 with b.tr():
-                    with b.td(Gv.search(self.label) + " sides=\"b\""):
+                    with b.td(Gv.search_href(self.label) + " sides=\"b\""):
                         self._print_name(b)
                 self._print_attrs(b)
                 with b.tr():
@@ -290,7 +292,7 @@ class GvClass:
             bgcolor = Gv.bgcolor(tag.diffsym)
             with b.tr():
                 with b.td(f"border=\"0\" align=\"left\"{bgcolor} "
-                          + Gv.search(tag.name)):
+                          + Gv.search_href(tag.name)):
                     if tag.is_static:
                         with b.u():
                             b.htmltext(text)

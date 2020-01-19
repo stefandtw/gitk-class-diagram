@@ -9,7 +9,7 @@ digraph cl {
     edge [arrowhead=open]
 subgraph cluster_docs_source_release_notes_______rst {
     style=dotted;
-    href="gitk:scroll_to_file {docs/source/release-notes/3.7.2.rst}";
+    href="filename:docs/source/release-notes/3.7.2.rst:gitk:scroll_to_file {docs/source/release-notes/3.7.2.rst}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {docs/source/release-notes/3.7.2.rst}">docs/source/release-notes/3.7.2.rst</td></tr></table>>;
     style=invis;
@@ -23,7 +23,7 @@ docs_source_release_notes_______rst [label=<<table cellspacing="0" cellpadding="
 }
 subgraph cluster_docs_source_release_notes_______rst {
     style=dotted;
-    href="gitk:scroll_to_file {docs/source/release-notes/3.7.3.rst}";
+    href="filename:docs/source/release-notes/3.7.3.rst:gitk:scroll_to_file {docs/source/release-notes/3.7.3.rst}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {docs/source/release-notes/3.7.3.rst}">docs/source/release-notes/3.7.3.rst</td></tr></table>>;
     style=invis;
@@ -36,7 +36,7 @@ docs_source_release_notes_______rst [label=<<table cellspacing="0" cellpadding="
 }
 subgraph cluster_docs_source_release_notes_index_rst {
     style=dotted;
-    href="gitk:scroll_to_file {docs/source/release-notes/index.rst}";
+    href="filename:docs/source/release-notes/index.rst:gitk:scroll_to_file {docs/source/release-notes/index.rst}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {docs/source/release-notes/index.rst}">docs/source/release-notes/index.rst</td></tr></table>>;
     style=invis;
@@ -51,7 +51,7 @@ docs_source_release_notes_index_rst [label=<<table cellspacing="0" cellpadding="
 }
 subgraph cluster_src_flake____init___py {
     style=dotted;
-    href="gitk:scroll_to_file {src/flake8/__init__.py}";
+    href="filename:src/flake8/__init__.py:gitk:scroll_to_file {src/flake8/__init__.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {src/flake8/__init__.py}">src/flake8/__init__.py</td></tr></table>>;
     style=invis;
@@ -69,7 +69,7 @@ src_flake____init___py [label=<<table cellspacing="0" cellpadding="1" style="das
 }
 subgraph cluster_src_flake__main_application_py {
     style=dotted;
-    href="gitk:scroll_to_file {src/flake8/main/application.py}";
+    href="filename:src/flake8/main/application.py:gitk:scroll_to_file {src/flake8/main/application.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {src/flake8/main/application.py}">src/flake8/main/application.py</td></tr></table>>;
 src_flake__main_application_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
@@ -93,7 +93,7 @@ src_flake__main_application_py_Application [label=<<table cellspacing="0" cellpa
 }
 subgraph cluster_src_flake__plugins_manager_py {
     style=dotted;
-    href="gitk:scroll_to_file {src/flake8/plugins/manager.py}";
+    href="filename:src/flake8/plugins/manager.py:gitk:scroll_to_file {src/flake8/plugins/manager.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {src/flake8/plugins/manager.py}">src/flake8/plugins/manager.py</td></tr></table>>;
 src_flake__plugins_manager_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
@@ -158,7 +158,7 @@ src_flake__plugins_manager_py_ReportFormatters [label=<<table cellspacing="0" ce
 }
 subgraph cluster_src_flake__style_guide_py {
     style=dotted;
-    href="gitk:scroll_to_file {src/flake8/style_guide.py}";
+    href="filename:src/flake8/style_guide.py:gitk:scroll_to_file {src/flake8/style_guide.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {src/flake8/style_guide.py}">src/flake8/style_guide.py</td></tr></table>>;
 src_flake__style_guide_py [label=<<table cellspacing="0" cellpadding="1" style="dashed">
@@ -225,7 +225,7 @@ src_flake__style_guide_py_StyleGuide [label=<<table cellspacing="0" cellpadding=
 }
 subgraph cluster_src_flake__utils_py {
     style=dotted;
-    href="gitk:scroll_to_file {src/flake8/utils.py}";
+    href="filename:src/flake8/utils.py:gitk:scroll_to_file {src/flake8/utils.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {src/flake8/utils.py}">src/flake8/utils.py</td></tr></table>>;
     style=invis;
@@ -258,7 +258,7 @@ src_flake__utils_py [label=<<table cellspacing="0" cellpadding="1" style="dashed
 }
 subgraph cluster_tests_integration_test_main_py {
     style=dotted;
-    href="gitk:scroll_to_file {tests/integration/test_main.py}";
+    href="filename:tests/integration/test_main.py:gitk:scroll_to_file {tests/integration/test_main.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {tests/integration/test_main.py}">tests/integration/test_main.py</td></tr></table>>;
     style=invis;
@@ -272,7 +272,7 @@ tests_integration_test_main_py [label=<<table cellspacing="0" cellpadding="1" st
 }
 subgraph cluster_tests_unit_test_style_guide_py {
     style=dotted;
-    href="gitk:scroll_to_file {tests/unit/test_style_guide.py}";
+    href="filename:tests/unit/test_style_guide.py:gitk:scroll_to_file {tests/unit/test_style_guide.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {tests/unit/test_style_guide.py}">tests/unit/test_style_guide.py</td></tr></table>>;
     style=invis;
@@ -291,7 +291,7 @@ tests_unit_test_style_guide_py [label=<<table cellspacing="0" cellpadding="1" st
 }
 subgraph cluster_tests_unit_test_utils_py {
     style=dotted;
-    href="gitk:scroll_to_file {tests/unit/test_utils.py}";
+    href="filename:tests/unit/test_utils.py:gitk:scroll_to_file {tests/unit/test_utils.py}";
     label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {tests/unit/test_utils.py}">tests/unit/test_utils.py</td></tr></table>>;
     style=invis;
