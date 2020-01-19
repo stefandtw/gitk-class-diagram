@@ -171,21 +171,35 @@ proc put_files {diffid dir} {
 	}
 	return
     }
+    set files_esc [shell_escape $treediffs($diffids)]
     if {$diffid eq $nullid2} {
 	# Copy from the index
-	set cmd "git -C $worktree checkout-index -q --prefix=$dir/ -- $treediffs($diffids)"
+	set cmd "git -C $worktree checkout-index -q --prefix=$dir/ -- $files_esc"
 	exec_sync $cmd
 	return
     }
 
     # Ignore files that don't exist in this version, otherwise git archive will fail
-    set cmd "git -C $worktree ls-tree --name-only --full-tree -r $diffid -- $treediffs($diffids) | tr '\\n' ' '"
+    set cmd "git -C $worktree ls-tree --name-only --full-tree -r $diffid -- $files_esc"
     set files [exec_sync $cmd] 
     if {$files ne {}} {
 	# Copy from commit
-	set cmd "git -C $worktree archive $diffid $files | tar xC $dir"
+	set files_esc [shell_escape [split $files "\n"]]
+	set cmd "git -C $worktree archive $diffid $files_esc | tar xC $dir"
 	exec_sync $cmd
     }
+}
+
+proc shell_escape {lst} {
+    set escaped {}
+    foreach s $lst {
+	if {[string first ' $s] != -1} {
+	    # Ignore files with single quotes since our escaping can't handle them
+	    continue
+	}
+	append escaped "'$s' "
+    }
+    return $escaped
 }
 
 proc generate_diff_ranges {outputpath} {
