@@ -64,7 +64,6 @@ proc clear_ctext {{first 1.0}} {
 
 proc create_ui {} {
     global NS ctxbut
-    global imap
     global brightdiagram
 
     if {[info exists brightdiagram]} {
@@ -79,16 +78,7 @@ proc create_ui {} {
     pack .bright.diagram -side right -fill both -expand 1
     pack .bright.cfiles -side left -fill y -expand 0
 
-    bind .bright.diagram.canvas <ButtonRelease> {
-	dict for {id val} $imap {
-	    dict with val {
-		if {%x >= $left && %x <= $right && %y >= $top && %y <= $bottom} {
-		    {*}$evalable
-		    return
-		}
-	    }
-	}
-    }
+    bind .bright.diagram.canvas <ButtonRelease> {mouse_left %x %y}
 
     set diagram_menu .diagramctxmenu
     makemenu $diagram_menu {
@@ -103,6 +93,27 @@ proc create_ui {} {
 
     bind .bright.diagram $ctxbut {pop_diagram_menu %W %X %Y %x %y}
     bind .bright.diagram.canvas $ctxbut {pop_diagram_menu %W %X %Y %x %y}
+}
+
+proc mouse_left {x y} {
+    global imap
+
+    set evalables_sorted {}
+    dict for {id val} $imap {
+	dict with val {
+	    if {$x >= $left && $x <= $right && $y >= $top && $y <= $bottom} {
+		if {[string match *scroll_to_file* $evalable]} {
+		    # do scroll before search
+		    set evalables_sorted [linsert $evalables_sorted 0 $evalable]
+		} else {
+		    lappend evalables_sorted $evalable
+		}
+	    }
+	}
+    }
+    foreach evalable $evalables_sorted {
+	{*}$evalable
+    }
 }
 
 proc pop_diagram_menu {w X Y x y} {
@@ -411,20 +422,43 @@ proc show_debug_info {} {
 proc search_next {search_term} {
     # Called by evalable
     global searchstring
+    global latest_scroll_file
 
-    set searchstring $search_term
-    dosearch
+    if {$searchstring eq $search_term} {
+	dosearch
+    } else {
+	scroll_to_file $latest_scroll_file 1
+	reset_search_markers
+	set searchstring $search_term
+    }
 }
 
-proc scroll_to_file {name} {
+proc scroll_to_file {name {force 0}} {
     # Called by evalable
     global ctext_file_names difffilestart ctext
+    global latest_scroll_file
+
+    if {[info exists latest_scroll_file] && $latest_scroll_file eq $name && !$force} {
+	# Scrolling to the same position twice is usually unnecessary
+	# It's better to allow a search to scroll to other places
+	return
+    }
 
     set i [lsearch -exact $ctext_file_names $name]
     if {$i >= 0} {
 	set loc [lindex $difffilestart $i]
 	$ctext yview $loc
     }
+    set latest_scroll_file $name
+}
+
+proc reset_search_markers {} {
+    global ctext
+
+    # Resetting the search markers will start the next search from the
+    # scroll position rather than from previous search results
+    $ctext tag remove sel 1.0 end
+    $ctext mark unset anchor
 }
 
 # highlightfile: Replace gitk's original
