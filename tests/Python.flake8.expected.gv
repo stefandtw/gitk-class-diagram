@@ -1,6 +1,6 @@
 digraph cl {
     size="104.16666666666667,104.16666666666667";
-    ratio=collapse;
+    dpi=96;
     outputorder=edgesfirst;
     maxiter=600;
     splines=compound;

@@ -46,7 +46,7 @@ proc addtocflist {ids} {
     set async_callback_queue {}
     lappend async_callback_queue [concat "generate_ctags" $dir1]
     lappend async_callback_queue [concat "generate_ctags" $dir2]
-    lappend async_callback_queue [concat "generate_gv" $dir1 $dir2 $imgpath $rangespath no]
+    lappend async_callback_queue [concat "generate_gv" $dir1 $dir2 $imgpath $rangespath]
     lappend async_callback_queue [concat "generate_img" $dir1 $dir2 $imgpath]
     lappend async_callback_queue [concat "load_img" $imgpath]
 
@@ -60,11 +60,12 @@ proc clear_ctext {{first 1.0}} {
     clear_previous_image
     clear_rectangles
     clear_debugtext
+    reset_zoomlevel
 }
 
 proc create_ui {} {
     global NS ctxbut
-    global brightdiagram
+    global brightdiagram zoomlevel
 
     if {[info exists brightdiagram]} {
 	return
@@ -78,12 +79,9 @@ proc create_ui {} {
     pack .bright.diagram -side right -fill both -expand 1
     pack .bright.cfiles -side left -fill y -expand 0
 
-    bind .bright.diagram.canvas <ButtonRelease> {mouse_left %x %y}
-
     set diagram_menu .diagramctxmenu
     makemenu $diagram_menu {
-	{mc "Open full-size PNG" command {create_and_open_png_full_size}}
-	{mc "Copy path: PNG" command {copy_path_png}}
+	{mc "Open PNG" command {open_png}}
 	{mc "Copy path: old code directory" command {copy_path_dir 0}}
 	{mc "Copy path: new code directory" command {copy_path_dir 1}}
 	{mc "Copy path: output directory" command {copy_path_dir 2}}
@@ -93,15 +91,36 @@ proc create_ui {} {
 
     bind .bright.diagram $ctxbut {pop_diagram_menu %W %X %Y %x %y}
     bind .bright.diagram.canvas $ctxbut {pop_diagram_menu %W %X %Y %x %y}
+    bind .bright.diagram.canvas <ButtonPress-1> {%W scan mark   %x %y
+	set dragged 0
+	set xdrag [expr {![scaled_img_fully_visible_x]}]
+	set ydrag [expr {![scaled_img_fully_visible_y]}]
+    }
+    bind .bright.diagram.canvas <ButtonRelease-1> {
+	if {$dragged <= 10} {
+	    mouse_left %x %y
+	}
+    }
+    bind .bright.diagram.canvas <B1-Motion>     {
+	%W scan dragto [expr %x * $xdrag] [expr %y * $ydrag] 1
+	incr dragged
+    }
+    bind .bright.diagram.canvas <Button-4> {zoom $orig_image $scaled_image -1 %x %y}
+    bind .bright.diagram.canvas <Button-5> {zoom $orig_image $scaled_image 1 %x %y}
+    bind .bright.diagram.canvas <MouseWheel> {zoom $orig_image $scaled_image %D %x %y}
 }
 
 proc mouse_left {x y} {
-    global imap
+    global imap zoomlevel
+
+    set unzoomedx [expr {[.bright.diagram.canvas canvasx $x] * $zoomlevel}]
+    set unzoomedy [expr {[.bright.diagram.canvas canvasy $y] * $zoomlevel}]
 
     set evalables_sorted {}
     dict for {id val} $imap {
 	dict with val {
-	    if {$x >= $left && $x <= $right && $y >= $top && $y <= $bottom} {
+	    if {$unzoomedx >= $left && $unzoomedx <= $right &&
+		$unzoomedy >= $top && $unzoomedy <= $bottom} {
 		if {[string match *scroll_to_file* $evalable]} {
 		    # do scroll before search
 		    set evalables_sorted [linsert $evalables_sorted 0 $evalable]
@@ -125,6 +144,7 @@ proc clear_previous_image {} {
 
     if {[info exists imap]} {
 	diagram_img blank
+	scaled_img blank
     }
 }
 
@@ -140,6 +160,12 @@ proc clear_debugtext {} {
     global debugtext
 
     set debugtext ""
+}
+
+proc reset_zoomlevel {} {
+    global zoomlevel
+
+    set zoomlevel 1
 }
 
 proc put_src_files {} {
@@ -248,15 +274,8 @@ proc generate_ctags {srcdir} {
     exec_async $cmd
 }
 
-proc generate_gv {tags1 tags2 imgpath rangespath full_size} {
-    if {$full_size eq yes} {
-	set width 10000
-	set height 10000
-    } else {
-	set width [expr {round(([winfo width .bright.diagram]+[winfo width .bright.cfiles])*0.85)}]
-	set height [winfo height .bright.diagram]
-    }
-    set cmd [list | classdiff $tags1 $tags2 --width $width --height $height -o $imgpath.gv -r $rangespath]
+proc generate_gv {tags1 tags2 imgpath rangespath} {
+    set cmd [list | classdiff $tags1 $tags2 -o $imgpath.gv -r $rangespath]
     exec_async $cmd
 }
 
@@ -266,11 +285,22 @@ proc generate_img {tags1 tags2 imgpath} {
 }
 
 proc load_img {imgpath} {
-    global imap
+    global imap scaled_image orig_image
 
-    set rect_image [image create photo diagram_img -file "$imgpath.png"]
-    .bright.diagram.canvas create image 0 0 -image $rect_image -anchor nw
-    .bright.diagram.canvas configure -width [image width $rect_image] -height [image height $rect_image]
+    set orig_image [image create photo diagram_img -file "$imgpath.png"]
+    set scaled_image [image create photo scaled_img]
+    scaled_img copy $orig_image
+    set max_width [expr {round(([winfo width .bright.diagram]+[winfo width .bright.cfiles])*0.85)}]
+    set max_height [winfo height .bright.diagram]
+    set img_width [image width $scaled_image]
+    set img_height [image height $scaled_image]
+    set canvas_width [expr min($img_width, $max_width)]
+    set canvas_height [expr min($img_height, $max_height)]
+    .bright.diagram.canvas create image 0 0 -image $scaled_image -anchor nw
+    .bright.diagram.canvas configure -width $canvas_width -height $canvas_height
+    .bright.diagram.canvas configure -scrollregion [.bright.diagram.canvas bbox all]
+    .bright.diagram.canvas xview moveto 0
+    .bright.diagram.canvas yview moveto 0
 
     set imap [dict create]
     set file [open "$imgpath.imap_np"]
@@ -356,29 +386,10 @@ proc queue_next {name} {
     set res
 }
 
-proc create_and_open_png_full_size {} {
-    global latest_dirs
-
-    nowbusy gitk-cl
-    set dir1 [lindex $latest_dirs 0]
-    set dir2 [lindex $latest_dirs 1]
-    set dir3 [lindex $latest_dirs 2]
-    set imgpath $dir3/classes_full_size
-    set rangespath $dir3/ranges
-
-    global async_callback_queue
-    set async_callback_queue {}
-    lappend async_callback_queue [concat "generate_img" $dir1 $dir2 $imgpath]
-    lappend async_callback_queue [concat "launch_file_viewer" $imgpath.png]
-
-    generate_gv $dir1 $dir2 $imgpath $rangespath yes
-}
-
-proc copy_path_png {} {
+proc open_png {} {
     global latest_imgpath
 
-    clipboard clear
-    clipboard append [file normalize $latest_imgpath.png]
+    launch_file_viewer [file normalize $latest_imgpath.png]
 }
 
 proc copy_path_dir {index} {
@@ -403,9 +414,7 @@ proc launch_file_viewer {path} {
 	    }
 	}
 	exec {*}$cmd $path &
-	notbusy gitk-cl
     } err]} {
-	notbusy gitk-cl
 	error_popup $err
     }
 }
@@ -465,34 +474,116 @@ proc reset_search_markers {} {
 rename highlightfile orig_highlightfile
 proc highlightfile {cline} {
     orig_highlightfile $cline
-    draw_file_rectangle
+    draw_file_rectangle 1
 }
 
 # sel_flist: Replace gitk's original
 rename sel_flist orig_sel_flist
 proc sel_flist {w x y} {
     orig_sel_flist $w $x $y
-    draw_file_rectangle
+    draw_file_rectangle 1
 }
 
-proc draw_file_rectangle {} {
+proc draw_file_rectangle {focus} {
     global ctext_file_names cflist_top imap
+    global zoomlevel
 
     set i [expr {$cflist_top - 2}]
     if {$i >= 0} {
 	set f [lindex $ctext_file_names $i]
 	.bright.diagram.canvas delete rect
 	if {[dict exists $imap $f]} {
-	    set left [dict get $imap $f left]
-	    set top [dict get $imap $f top]
-	    set right [dict get $imap $f right]
-	    set bottom [dict get $imap $f bottom]
-	    .bright.diagram.canvas addtag rect withtag [ \
+	    set left [expr {[dict get $imap $f left] / $zoomlevel}]
+	    set top [expr {[dict get $imap $f top] / $zoomlevel}]
+	    set right [expr {[dict get $imap $f right] / $zoomlevel}]
+	    set bottom [expr {[dict get $imap $f bottom] / $zoomlevel}]
+	    set rect [ \
 		.bright.diagram.canvas create rectangle $left $top \
 		$right $bottom -outline blue -width 3
 	    ]
+	    .bright.diagram.canvas addtag rect withtag $rect
+	    if {$focus} {
+		canvas_focus_items .bright.diagram.canvas $rect
+	    }
 	}
     }
+}
+
+proc canvas_focus_items {c items} {
+    # https://wiki.tcl-lang.org/page/canvas
+    set box [eval $c bbox $items]
+
+    if {$box == ""} { return }
+
+    foreach { x y x1 y1  } $box break
+    foreach { top  btm   } [$c yview] break
+    foreach { left right } [$c xview] break
+    foreach { p q xmax ymax } [$c cget -scrollregion] break
+
+    set xpos [expr (($x1+$x) / 2.0) / $xmax - ($right-$left) / 2.0]
+    set ypos [expr (($y1+$y) / 2.0) / $ymax - ($btm-$top)    / 2.0]
+
+    if {[scaled_img_fully_visible_x]} {
+	set xpos 0
+    }
+    if {[scaled_img_fully_visible_y]} {
+	set ypos 0
+    }
+    $c xview moveto $xpos
+    $c yview moveto $ypos
+}
+
+proc scaled_img_fully_visible_x {} {
+    global scaled_image
+
+    set img_width [image width $scaled_image]
+    set max_width [winfo width .bright.diagram]
+    return [expr {$img_width < $max_width}]
+}
+
+proc scaled_img_fully_visible_y {} {
+    global scaled_image
+
+    set img_height [image height $scaled_image]
+    set max_height [winfo height .bright.diagram]
+    return [expr {$img_height < $max_height}]
+}
+
+proc zoom {srcimg destimg direction x y} {
+    global zoomlevel
+
+    set unzoomedx [expr {[.bright.diagram.canvas canvasx $x] * $zoomlevel}]
+    set unzoomedy [expr {[.bright.diagram.canvas canvasy $y] * $zoomlevel}]
+
+    if {$direction < 0} {
+	incr zoomlevel -1
+	if {$zoomlevel < 1} {
+	    set zoomlevel 1
+	}
+    } else {
+	if {![scaled_img_fully_visible_x] || ![scaled_img_fully_visible_y]} {
+	    incr zoomlevel
+	}
+    }
+
+    $destimg blank
+    $destimg copy $srcimg -shrink -subsample $zoomlevel
+
+    set img_width [image width $destimg]
+    set img_height [image height $destimg]
+    .bright.diagram.canvas configure -scrollregion [list 0 0 $img_width $img_height]
+    foreach { p q xmax ymax } [.bright.diagram.canvas cget -scrollregion] break
+    set zoomedx [expr {($unzoomedx / $zoomlevel - $x) / $xmax}]
+    set zoomedy [expr {($unzoomedy / $zoomlevel - $y) / $ymax}]
+    if {$zoomedx < 0} {
+	set zoomedx 0
+    }
+    if {$zoomedy < 0} {
+	set zoomedy 0
+    }
+    .bright.diagram.canvas xview moveto $zoomedx
+    .bright.diagram.canvas yview moveto $zoomedy
+    draw_file_rectangle 0
 }
 
 # vim: ft=tcl ts=8 sts=4 sw=4

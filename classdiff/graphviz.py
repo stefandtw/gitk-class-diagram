@@ -21,6 +21,7 @@ maxiter = 600
 # Big graphs are slow because of splines=compound. Don't use it if graphs are
 # bigger than X.
 splines_threshold = 5000
+dpi = 96
 
 
 class Gv:
@@ -60,8 +61,7 @@ class Gv:
                 f"gitk:scroll_to_file {{{Gv.htmlesc(file)}}}\"")
 
     def px_to_inches(s):
-        gv_default_dpi = 96.0
-        return str(float(s) / gv_default_dpi)
+        return str(float(s) / dpi)
 
 
 class GvBuilder:
@@ -160,7 +160,7 @@ class GvGraph:
         with GvBuilder().digraph("cl") as b:
             b.text(f"""
     size=\"{self.width_inches},{self.height_inches}\";
-    ratio=collapse;
+    dpi={dpi};
     outputorder=edgesfirst;
     maxiter={maxiter};
     splines={self._splines()};
