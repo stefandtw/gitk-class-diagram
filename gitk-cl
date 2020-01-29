@@ -488,10 +488,14 @@ proc draw_file_rectangle {focus} {
     global ctext_file_names cflist_top imap
     global zoomlevel
 
+    if {![info exists imap]} {
+	return
+    }
+
+    .bright.diagram.canvas delete rect
     set i [expr {$cflist_top - 2}]
     if {$i >= 0} {
 	set f [lindex $ctext_file_names $i]
-	.bright.diagram.canvas delete rect
 	if {[dict exists $imap $f]} {
 	    set left [expr {[dict get $imap $f left] / $zoomlevel}]
 	    set top [expr {[dict get $imap $f top] / $zoomlevel}]
