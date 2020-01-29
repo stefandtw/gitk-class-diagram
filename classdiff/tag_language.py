@@ -107,6 +107,3 @@ class TagLanguage:
 
     def local_name(self, scope):
         return scope.split(".")[-1]
-
-    def may_be_same_file(self, tag_ref, complete_file_name):
-        return tag_ref == complete_file_name.split("/")[-1]

@@ -58,7 +58,7 @@ rename clear_ctext orig_clear_ctext
 proc clear_ctext {{first 1.0}} {
     orig_clear_ctext $first
     clear_previous_image
-    clear_rectangles
+    clear_canvas
     clear_debugtext
     reset_zoomlevel
 }
@@ -148,11 +148,11 @@ proc clear_previous_image {} {
     }
 }
 
-proc clear_rectangles {} {
+proc clear_canvas {} {
     global imap
 
     if {[info exists imap]} {
-	.bright.diagram.canvas delete rect
+	.bright.diagram.canvas delete all
     }
 }
 

@@ -11,6 +11,8 @@ find_rel_scope_using_line_numbers = True
 
 
 class Model(dict):
+    _cached_file_names = None
+
     def find_scope(self, name, preferred_file):
         if self[preferred_file].has(name):
             return self[preferred_file].get_scope(name)
@@ -33,9 +35,11 @@ class Model(dict):
     def find_file(self, tag_ref, language):
         if tag_ref in self:
             return self[tag_ref]
-        for f in self.keys():
-            if language.may_be_same_file(tag_ref, f):
-                return self[f]
+        if not self._cached_file_names:
+            self._cached_file_names = {f.split("/")[-1]: f
+                                       for f in self.keys()}
+        if tag_ref in self._cached_file_names:
+            return self[self._cached_file_names[tag_ref]]
 
     def mark_changed_members(self):
         for fname in self:
