@@ -488,7 +488,7 @@ proc draw_file_rectangle {focus} {
     global ctext_file_names cflist_top imap
     global zoomlevel
 
-    if {![info exists imap]} {
+    if {![info exists imap] || ![info exists cflist_top]} {
 	return
     }
 
