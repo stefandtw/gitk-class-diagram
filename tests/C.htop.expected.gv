@@ -1,4 +1,5 @@
 digraph cl {
+    bgcolor="white";
     size="104.16666666666667,104.16666666666667";
     dpi=96;
     outputorder=edgesfirst;
@@ -7,15 +8,16 @@ digraph cl {
     node [shape=none margin=0 style=filled fillcolor="#fff3d0"
         fontname="Roboto, Verdana, Arial" fontsize=11];
     edge [arrowhead=open]
-subgraph cluster_solaris_Platform_c {
-    style=dotted;
-    href="filename:solaris/Platform.c:gitk:scroll_to_file {solaris/Platform.c}";
+subgraph cluster_p_solaris {
     label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/Platform.c}">solaris/Platform.c</td></tr></table>>;
+<tr><td href="gitk:search_next {solaris}">solaris</td></tr></table>>;
+    bgcolor="white";    color="#777777";    penwidth=5;subgraph cluster_solaris_Platform_c {
+style=dotted;penwidth=1;color=black;href="filename:solaris/Platform.c:gitk:scroll_to_file {solaris/Platform.c}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/Platform.c}">Platform.c</td></tr></table>>;
     style=invis;
     label="";
 solaris_Platform_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
-<tr><td href="gitk:search_next {solaris/Platform.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>Platform.c</b></font></td></tr>
+<tr><td href="gitk:search_next {solaris/Platform.c}" sides="b"><font point-size="18"><b>Platform.c</b></font></td></tr>
 <tr><td sides="b"></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {Platform_setBindings}">Platform_setBindings()</td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {Platform_getUptime}">Platform_getUptime()</td></tr>
@@ -27,25 +29,21 @@ solaris_Platform_c [label=<<table cellspacing="0" cellpadding="1" style="dashed"
 <tr><td border="0" align="left" href="gitk:search_next {Platform_getProcessEnv}">Platform_getProcessEnv()</td></tr></table>> ]
 }
 subgraph cluster_solaris_Platform_h {
-    style=dotted;
-    href="filename:solaris/Platform.h:gitk:scroll_to_file {solaris/Platform.h}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/Platform.h}">solaris/Platform.h</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:solaris/Platform.h:gitk:scroll_to_file {solaris/Platform.h}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/Platform.h}">Platform.h</td></tr></table>>;
     style=invis;
     label="";
 solaris_Platform_h [label=<<table cellspacing="0" cellpadding="1" style="dashed">
-<tr><td href="gitk:search_next {solaris/Platform.h}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>Platform.h</b></font></td></tr>
+<tr><td href="gitk:search_next {solaris/Platform.h}" sides="b"><font point-size="18"><b>Platform.h</b></font></td></tr>
 <tr><td sides="b"></td></tr></table>> ]
 }
 subgraph cluster_solaris_SolarisProcess_c {
-    style=dotted;
-    href="filename:solaris/SolarisProcess.c:gitk:scroll_to_file {solaris/SolarisProcess.c}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/SolarisProcess.c}">solaris/SolarisProcess.c</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:solaris/SolarisProcess.c:gitk:scroll_to_file {solaris/SolarisProcess.c}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcess.c}">SolarisProcess.c</td></tr></table>>;
     style=invis;
     label="";
 solaris_SolarisProcess_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
-<tr><td href="gitk:search_next {solaris/SolarisProcess.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>SolarisProcess.c</b></font></td></tr>
+<tr><td href="gitk:search_next {solaris/SolarisProcess.c}" sides="b"><font point-size="18"><b>SolarisProcess.c</b></font></td></tr>
 <tr><td sides="b"></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {SolarisProcess_new}">SolarisProcess_new()</td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {Process_delete}">Process_delete()</td></tr>
@@ -54,10 +52,8 @@ solaris_SolarisProcess_c [label=<<table cellspacing="0" cellpadding="1" style="d
 <tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {Process_isThread}">Process_isThread()</td></tr></table>> ]
 }
 subgraph cluster_solaris_SolarisProcess_h {
-    style=dotted;
-    href="filename:solaris/SolarisProcess.h:gitk:scroll_to_file {solaris/SolarisProcess.h}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/SolarisProcess.h}">solaris/SolarisProcess.h</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:solaris/SolarisProcess.h:gitk:scroll_to_file {solaris/SolarisProcess.h}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcess.h}">SolarisProcess.h</td></tr></table>>;
 solaris_SolarisProcess_h_SolarisProcessFields [label=<<table cellspacing="0" cellpadding="1">
 <tr><td href="gitk:search_next {SolarisProcessFields}" sides="b"><font point-size="11">&lt;&lt;enum&gt;&gt;<br/></font><font point-size="18"><b>SolarisProcessFields</b></font></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {ZONEID}">+ZONEID</td></tr>
@@ -85,14 +81,12 @@ solaris_SolarisProcess_h_SolarisProcess_ [label=<<table cellspacing="0" cellpadd
 <tr><td sides="b"></td></tr></table>> ]
 }
 subgraph cluster_solaris_SolarisProcessList_c {
-    style=dotted;
-    href="filename:solaris/SolarisProcessList.c:gitk:scroll_to_file {solaris/SolarisProcessList.c}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}">solaris/SolarisProcessList.c</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:solaris/SolarisProcessList.c:gitk:scroll_to_file {solaris/SolarisProcessList.c}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}">SolarisProcessList.c</td></tr></table>>;
     style=invis;
     label="";
 solaris_SolarisProcessList_c [label=<<table cellspacing="0" cellpadding="1" style="dashed">
-<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}" sides="b"><font point-size="11"><sup>solaris/</sup><br/></font><font point-size="18"><b>SolarisProcessList.c</b></font></td></tr>
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.c}" sides="b"><font point-size="18"><b>SolarisProcessList.c</b></font></td></tr>
 <tr><td sides="b"></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {SolarisProcessList_readZoneName}">SolarisProcessList_readZoneName()</td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {ProcessList_new}">ProcessList_new()</td></tr>
@@ -103,10 +97,8 @@ solaris_SolarisProcessList_c [label=<<table cellspacing="0" cellpadding="1" styl
 <tr><td border="0" align="left" bgcolor="#ddf3ff" href="gitk:search_next {ProcessList_goThroughEntries}">ProcessList_goThroughEntries()</td></tr></table>> ]
 }
 subgraph cluster_solaris_SolarisProcessList_h {
-    style=dotted;
-    href="filename:solaris/SolarisProcessList.h:gitk:scroll_to_file {solaris/SolarisProcessList.h}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {solaris/SolarisProcessList.h}">solaris/SolarisProcessList.h</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:solaris/SolarisProcessList.h:gitk:scroll_to_file {solaris/SolarisProcessList.h}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {solaris/SolarisProcessList.h}">SolarisProcessList.h</td></tr></table>>;
 solaris_SolarisProcessList_h_CPUData_ [label=<<table cellspacing="0" cellpadding="1">
 <tr><td href="gitk:search_next {CPUData_}" sides="b"><font point-size="18"><b>CPUData_</b></font></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {userPercent}">+userPercent<i> : double</i></td></tr>
@@ -126,6 +118,7 @@ solaris_SolarisProcessList_h_SolarisProcessList_ [label=<<table cellspacing="0" 
 <tr><td border="0" align="left" href="gitk:search_next {kd}">+kd<i> : kstat_ctl_t *</i></td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {cpus}">+cpus<i> : CPUData *</i></td></tr>
 <tr><td sides="b"></td></tr></table>> ]
+}
 }
 solaris_Platform_c -> solaris_Platform_h []
 solaris_Platform_c -> cluster_solaris_SolarisProcess_h []

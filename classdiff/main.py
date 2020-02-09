@@ -5,9 +5,11 @@ from argparse import ArgumentParser
 from classdiff.graphviz import GvGraph, GvFile, GvClass, GvRel
 from classdiff.tag_model import ModelFactory
 from classdiff.diff_range import DiffRangeFactory
+from classdiff.config import Config
 
 
 def main():
+    Config.load_defaults()
     argparser = ArgumentParser(description="Create a class diagram as"
                                " Graphviz output based on ctags files and diff"
                                " line ranges")
@@ -25,7 +27,15 @@ def main():
     argparser.add_argument("-H", "--height", dest="height", type=int,
                            help="maximum pixel height of the generated"
                            " diagram", metavar="PX", default=10000)
+    argparser.add_argument("-e", "--execute", dest="statements", type=str,
+                           default=[], action="append", metavar="STATEMENT",
+                           help="execute python statement to set config"
+                           " variables")
     args = argparser.parse_args()
+
+    if args.statements:
+        for e in args.statements:
+            exec(e)
 
     if args.outfile:
         sys.stdout = open(args.outfile, 'w')

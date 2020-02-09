@@ -87,3 +87,11 @@ Dependencies
 * python >= 3.7
 
 If you are on Windows, make sure that graphviz, python and ctags are in your PATH.
+
+Configuration
+-------------
+
+Open gitk's preferences dialog. At the bottom there is an input field which accepts python code. Copy any settings from [config.py](classdiff/config.py) in there and change the values.
+
+Unfortunately, due to gitk's saving mechanism, the configuration is lost every time you start the original gitk without the extension.
+

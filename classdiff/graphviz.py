@@ -1,27 +1,7 @@
 import html
 import re
 from classdiff.tag_model import RelType
-
-
-show_attr_type = True
-show_op_return_type = False
-show_visibility = True
-show_single_scope_file_border = False
-font = "Roboto, Verdana, Arial"
-font_size_classname = 18
-font_size_other = 11
-bg_removed = "#ffaaaa"
-bg_added = "#aaffaa"
-bg_changed = "#ddf3ff"
-bg_neutral = "#fff3d0"
-fg_removed = "#dd0000"
-fg_added = "#00dd00"
-# Higher maxiter produces better layouts, but also takes more time.
-maxiter = 600
-# Big graphs are slow because of splines=compound. Don't use it if graphs are
-# bigger than X.
-splines_threshold = 5000
-dpi = 96
+from classdiff.config import Config
 
 
 class Gv:
@@ -36,19 +16,19 @@ class Gv:
 
     def bgcolor(diffsym, attr_name="bgcolor"):
         if diffsym == "-":
-            return f" {attr_name}=\"{bg_removed}\""
+            return f" {attr_name}=\"{Config.bg_removed}\""
         elif diffsym == "+":
-            return f" {attr_name}=\"{bg_added}\""
+            return f" {attr_name}=\"{Config.bg_added}\""
         elif diffsym == "~":
-            return f" {attr_name}=\"{bg_changed}\""
+            return f" {attr_name}=\"{Config.bg_changed}\""
         else:
             return ""
 
     def fgcolor(diffsym, attr_name="color"):
         if diffsym == "-":
-            return f" {attr_name}=\"{fg_removed}\""
+            return f" {attr_name}=\"{Config.fg_removed}\""
         elif diffsym == "+":
-            return f" {attr_name}=\"{fg_added}\""
+            return f" {attr_name}=\"{Config.fg_added}\""
         else:
             return ""
 
@@ -61,7 +41,7 @@ class Gv:
                 f"gitk:scroll_to_file {{{Gv.htmlesc(file)}}}\"")
 
     def px_to_inches(s):
-        return str(float(s) / dpi)
+        return str(float(s) / Config.dpi)
 
 
 class GvBuilder:
@@ -86,12 +66,15 @@ class GvBuilder:
         return self
 
     def digraph(self, name):
-        return self.text(f"digraph {name} {{", "}\n")
+        return self.text(f"""digraph {name} {{
+    bgcolor="{Config.graph_bg}";""", "}\n")
 
-    def cluster(self, name, attr):
+    def cluster(self, name):
         return self.text(f"""subgraph {Gv.clustername(name)} {{
-    style=dotted;
-    {attr};
+""", "}\n")
+
+    def subgraph(self, name):
+        return self.text(f"""subgraph {Gv.nodename(name)} {{
 """, "}\n")
 
     def node(self, name, attr):
@@ -140,9 +123,13 @@ class GvGraph:
         self.height_inches = Gv.px_to_inches(height_inches)
         self.files = []
         self.rels = []
+        self.package_files = {}
 
     def add_file(self, f):
         self.files.append(f)
+        if f.package not in self.package_files:
+            self.package_files[f.package] = []
+        self.package_files[f.package].append(f)
 
     def add_rel(self, rel):
         self.rels.append(rel)
@@ -152,20 +139,20 @@ class GvGraph:
 
     def _splines(self):
         if len(self.rels)**2 * len(self.files) \
-                > splines_threshold:
+                > Config.splines_threshold:
             return "curved"
         return "compound"
 
     def print(self):
         with GvBuilder().digraph("cl") as b:
             b.text(f"""
-    size=\"{self.width_inches},{self.height_inches}\";
-    dpi={dpi};
+    size="{self.width_inches},{self.height_inches}";
+    dpi={Config.dpi};
     outputorder=edgesfirst;
-    maxiter={maxiter};
+    maxiter={Config.maxiter};
     splines={self._splines()};
-    node [shape=none margin=0 style=filled fillcolor="{bg_neutral}"
-        fontname="{font}" fontsize={font_size_other}];
+    node [shape=none margin=0 style=filled fillcolor="{Config.bg_neutral}"
+        fontname="{Config.font}" fontsize={Config.font_size_other}];
     edge [arrowhead=open]""")
             b.text("\n")
             self._print_files(b)
@@ -173,8 +160,26 @@ class GvGraph:
         print(b.build())
 
     def _print_files(self, b):
-        for f in self.files:
-            f.print(b)
+        for p, files in self.package_files.items():
+            draw_package = Config.cluster_packages and \
+                not (len(files) == 1 and Config.hide_single_file_packages)
+            if draw_package:
+                with b.cluster("p_" + p):
+                    with b.text("    label=<", ">;\n"):
+                        with b.table("cellspacing=\"0\" cellpadding=\"0\""
+                                     " border=\"0\""):
+                            with b.tr():
+                                with b.td(Gv.search_href(p)):
+                                    b.htmltext(p)
+                    b.text(f"    bgcolor=\"{Config.package_bg}\";")
+                    b.text(f"    color=\"{Config.package_border}\";")
+                    b.text(f"    penwidth=5;")
+                    for f in files:
+                        f.print(b, cut_directory=True)
+            else:
+                with b.subgraph("p_" + p):
+                    for f in files:
+                        f.print(b)
 
     def _print_rels(self, b):
         assocs = self.get_rels(RelType.ASSOC)
@@ -196,23 +201,31 @@ class GvFile:
     def __init__(self, file):
         self.classes = []
         self.name = file.name
+        self.package = file.package
 
     def add_class(self, cl):
         self.classes.append(cl)
 
-    def print(self, b):
-        with b.cluster(self.name,  Gv.file_href(self.name)):
+    def print(self, b, cut_directory=False):
+        label = self.name.rsplit("/", 1)[-1] if cut_directory else self.name
+        with b.cluster(self.name):
+            b.text("style=dotted;")
+            b.text("penwidth=1;")
+            b.text("color=black;")
+            b.text(Gv.file_href(self.name))
+            b.text(f"    bgcolor=\"{Config.file_bg}\";")
             with b.text("    label=<", ">;\n"):
                 with b.table("cellspacing=\"0\" cellpadding=\"0\""
                              " border=\"0\""):
                     with b.tr():
                         with b.td(Gv.search_href(self.name)):
-                            b.htmltext(self.name)
-            if not show_single_scope_file_border and len(self.classes) == 1:
+                            b.htmltext(label)
+            if not Config.show_single_scope_file_border \
+                    and len(self.classes) == 1:
                 b.text("    style=invis;\n")
                 b.text("    label=\"\";\n")
             for cl in self.classes:
-                cl.print(b)
+                cl.print(b, cut_directory)
 
 
 class GvClass:
@@ -225,44 +238,44 @@ class GvClass:
         self.stereotype = scope.stereotype
         self.fake = scope.is_global_scope()
 
-    def print(self, b):
+    def print(self, b, cut_directory):
         fillcolor = Gv.bgcolor(self.diffsym, "fillcolor")
         style = " style=\"dashed\"" if self.fake else ""
         with b.node(self.qualified_name, fillcolor):
             with b.table("cellspacing=\"0\" cellpadding=\"1\"" + style):
                 with b.tr():
                     with b.td(Gv.search_href(self.label) + " sides=\"b\""):
-                        self._print_name(b)
+                        self._print_name(b, cut_directory)
                 self._print_attrs(b)
                 with b.tr():
                     with b.td("sides=\"b\""):
                         pass
                 self._print_ops(b)
 
-    def _print_name(self, b):
+    def _print_name(self, b, cut_directory):
         if self.stereotype:
-            with b.font(f"point-size=\"{font_size_other!s}\""):
+            with b.font(f"point-size=\"{Config.font_size_other!s}\""):
                 b.htmltext(f"<<{self.stereotype}>>")
                 b.text("<br/>")
         split = self.label.rsplit("/", 1)
         name = split[-1]
         dir = split[0] + "/" if len(split) == 2 else ""
-        if dir:
-            with b.font(f"point-size=\"{font_size_other!s}\""):
+        if dir and not cut_directory:
+            with b.font(f"point-size=\"{Config.font_size_other!s}\""):
                 with b.html("sup"):
                     b.htmltext(dir)
                 b.text("<br/>")
-        with b.font(f"point-size=\"{font_size_classname!s}\""):
+        with b.font(f"point-size=\"{Config.font_size_classname!s}\""):
             with b.b():
                 b.htmltext(name)
 
     def _print_attrs(self, b):
         tags = self._limit(self.attrs)
-        self._print_tags(tags, show_attr_type, b)
+        self._print_tags(tags, Config.show_attr_type, b)
 
     def _print_ops(self, b):
         tags = self._limit(self.ops)
-        self._print_tags(tags, show_op_return_type, b, "()")
+        self._print_tags(tags, Config.show_op_return_type, b, "()")
 
     def _limit(self, tags, limit=10):
         if len(tags) > limit:
@@ -286,7 +299,7 @@ class GvClass:
                     with b.td("border=\"0\" align=\"left\""):
                         b.text("...")
                 break
-            text = tag.visibility if show_visibility else ""
+            text = tag.visibility if Config.show_visibility else ""
             text += tag.name
             text += suffix
             bgcolor = Gv.bgcolor(tag.diffsym)

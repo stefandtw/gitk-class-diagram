@@ -4,10 +4,7 @@ import sys
 from dataclasses import dataclass
 from enum import IntEnum
 from classdiff.tag_language import TagLanguage
-
-
-show_nested_classes = False
-find_rel_scope_using_line_numbers = True
+from classdiff.config import Config
 
 
 class Model(dict):
@@ -55,6 +52,7 @@ class File:
         self.name = name
         self._scopes = {}
         self._diff_ranges = []
+        self.package = name.rsplit("/", 1)[0] if "/" in name else ""
 
     def add_scope(self, scope):
         self._scopes[scope.name] = scope
@@ -65,7 +63,8 @@ class File:
             scope = self._scopes[tag.scope]
         elif tag.scope == "-" or tag.scope == "":
             scope = self.get_global_scope()
-        elif show_nested_classes or tag.language.only_works_with_nesting():
+        elif (Config.show_nested_classes or
+              tag.language.only_works_with_nesting()):
             local_name = tag.language.local_name(tag.scope)
             if self.has(local_name):
                 scope = self._scopes[local_name]
@@ -268,7 +267,8 @@ class ModelFactory:
                     if inherits != "" and inherits != "-":
                         for i in language.split_inherits(inherits):
                             t.add_inherit(i)
-                    if not show_nested_classes and language.is_nested(scope) \
+                    if not Config.show_nested_classes \
+                            and language.is_nested(scope) \
                             and not language.only_works_with_nesting():
                         continue
                 elif language.is_attr(kind, roles, access, name):
@@ -351,8 +351,9 @@ class ModelFactory:
         if (scope.is_global_scope() and scope.is_empty()
                 and file.get_scope_count() == 2):
             return file.get_real_scopes()[0]
-        if (find_rel_scope_using_line_numbers and scope.is_global_scope() and
-                line_range):
+        if (Config.find_rel_scope_using_line_numbers
+                and scope.is_global_scope()
+                and line_range):
             for s in file.get_scopes():
                 if s.touches(line_range):
                     return s

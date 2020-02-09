@@ -1,4 +1,5 @@
 digraph cl {
+    bgcolor="white";
     size="104.16666666666667,104.16666666666667";
     dpi=96;
     outputorder=edgesfirst;
@@ -7,11 +8,12 @@ digraph cl {
     node [shape=none margin=0 style=filled fillcolor="#fff3d0"
         fontname="Roboto, Verdana, Arial" fontsize=11];
     edge [arrowhead=open]
-subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java {
-    style=dotted;
-    href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java}";
+subgraph cluster_p_src_main_java_org_mockito_internal_creation_bytebuddy {
     label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java</td></tr></table>>;
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy}">src/main/java/org/mockito/internal/creation/bytebuddy</td></tr></table>>;
+    bgcolor="white";    color="#777777";    penwidth=5;subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java {
+style=dotted;penwidth=1;color=black;href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassBytecodeGenerator.java}">SubclassBytecodeGenerator.java</td></tr></table>>;
     style=invis;
     label="";
 src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator [label=<<table cellspacing="0" cellpadding="1">
@@ -41,10 +43,8 @@ src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_
 <tr><td border="0" align="left">...</td></tr></table>> ]
 }
 subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java {
-    style=dotted;
-    href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassInjectionLoader.java}">SubclassInjectionLoader.java</td></tr></table>>;
     style=invis;
     label="";
 src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java_SubclassInjectionLoader [label=<<table cellspacing="0" cellpadding="1">
@@ -58,10 +58,8 @@ src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_ja
 <tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
 }
 subgraph cluster_src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java {
-    style=dotted;
-    href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java}">src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java:gitk:scroll_to_file {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {src/main/java/org/mockito/internal/creation/bytebuddy/SubclassLoader.java}">SubclassLoader.java</td></tr></table>>;
     style=invis;
     label="";
 src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader [label=<<table cellspacing="0" cellpadding="1">
@@ -70,10 +68,10 @@ src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_Subcla
 <tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {isDisrespectingOpenness}">+isDisrespectingOpenness()</td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
 }
+}
+subgraph p_subprojects_android_src_main_java_org_mockito_android_internal_creation {
 subgraph cluster_subprojects_android_src_main_java_org_mockito_android_internal_creation_AndroidLoadingStrategy_java {
-    style=dotted;
-    href="filename:subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java:gitk:scroll_to_file {subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
+style=dotted;penwidth=1;color=black;href="filename:subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java:gitk:scroll_to_file {subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
 <tr><td href="gitk:search_next {subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java}">subprojects/android/src/main/java/org/mockito/android/internal/creation/AndroidLoadingStrategy.java</td></tr></table>>;
     style=invis;
     label="";
@@ -83,11 +81,13 @@ subprojects_android_src_main_java_org_mockito_android_internal_creation_AndroidL
 <tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {isDisrespectingOpenness}">+isDisrespectingOpenness()</td></tr>
 <tr><td border="0" align="left" href="gitk:search_next {resolveStrategy}">+resolveStrategy()</td></tr></table>> ]
 }
-subgraph cluster_subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleModule_java {
-    style=dotted;
-    href="filename:subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java:gitk:scroll_to_file {subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java}";
+}
+subgraph cluster_p_subprojects_module_test_src_test_java_org_mockito_moduletest {
     label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java}">subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java</td></tr></table>>;
+<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest}">subprojects/module-test/src/test/java/org/mockito/moduletest</td></tr></table>>;
+    bgcolor="white";    color="#777777";    penwidth=5;subgraph cluster_subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleModule_java {
+style=dotted;penwidth=1;color=black;href="filename:subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java:gitk:scroll_to_file {subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/CanLoadWithSimpleModule.java}">CanLoadWithSimpleModule.java</td></tr></table>>;
     style=invis;
     label="";
 subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleModule_java_CanLoadWithSimpleModule [label=<<table cellspacing="0" cellpadding="1">
@@ -105,10 +105,8 @@ subprojects_module_test_src_test_java_org_mockito_moduletest_CanLoadWithSimpleMo
 <tr><td border="0" align="left" bgcolor="#ffaaaa" href="gitk:search_next {layer}">-layer()</td></tr></table>>  fillcolor="#ffaaaa"]
 }
 subgraph cluster_subprojects_module_test_src_test_java_org_mockito_moduletest_ModuleHandlingTest_java {
-    style=dotted;
-    href="filename:subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java:gitk:scroll_to_file {subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java}";
-    label=<<table cellspacing="0" cellpadding="0" border="0">
-<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java}">subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java</td></tr></table>>;
+style=dotted;penwidth=1;color=black;href="filename:subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java:gitk:scroll_to_file {subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java}"    bgcolor="white";    label=<<table cellspacing="0" cellpadding="0" border="0">
+<tr><td href="gitk:search_next {subprojects/module-test/src/test/java/org/mockito/moduletest/ModuleHandlingTest.java}">ModuleHandlingTest.java</td></tr></table>>;
     style=invis;
     label="";
 subprojects_module_test_src_test_java_org_mockito_moduletest_ModuleHandlingTest_java_ModuleHandlingTest [label=<<table cellspacing="0" cellpadding="1">
@@ -124,6 +122,7 @@ subprojects_module_test_src_test_java_org_mockito_moduletest_ModuleHandlingTest_
 <tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {type}">-type()</td></tr>
 <tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {moduleInfo}">-moduleInfo()</td></tr>
 <tr><td border="0" align="left" bgcolor="#aaffaa" href="gitk:search_next {layer}">-layer()</td></tr></table>>  fillcolor="#aaffaa"]
+}
 }
 src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassLoader_java_SubclassLoader []
 src_main_java_org_mockito_internal_creation_bytebuddy_SubclassBytecodeGenerator_java_SubclassBytecodeGenerator -> src_main_java_org_mockito_internal_creation_bytebuddy_SubclassInjectionLoader_java_SubclassInjectionLoader []
