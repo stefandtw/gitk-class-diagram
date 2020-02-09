@@ -231,11 +231,12 @@ proc put_files {diffid dir} {
     }
 
     # Ignore files that don't exist in this version, otherwise git archive will fail
-    set cmd "git -C $worktree ls-tree --name-only --full-tree -r $diffid -- $files_esc"
+    set cmd "git -C $worktree ls-tree --name-only --full-tree -zr $diffid -- $files_esc"
     set files [exec_sync $cmd] 
+    set files [string trimright $files \0]
     if {$files ne {}} {
 	# Copy from commit
-	set files_esc [shell_escape [split $files "\n"]]
+	set files_esc [shell_escape [split $files "\0"]]
 	set cmd "git -C $worktree archive $diffid $files_esc | tar xC $dir"
 	exec_sync $cmd
     }
