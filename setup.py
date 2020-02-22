@@ -1,7 +1,7 @@
 
 from setuptools import setup
 
-version = "0.1.0"
+version = "1.0.0"
 
 setup(
     name="gitk-class-diagram",

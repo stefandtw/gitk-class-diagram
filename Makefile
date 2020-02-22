@@ -3,6 +3,7 @@ GV:=fdp
 GITK:=gitk
 CTAGS:=ctags
 PY:=python3
+PIP:=pip
 
 help:
 	@echo "make check-depends"
@@ -53,26 +54,26 @@ test-update-expected: tests/*.actual.gv
 	$(foreach file,$^,cp $(file) $(patsubst %.actual.gv,%.expected.gv,$(file));)
 
 install:
-	pip install .
+	$(PIP) install .
 
 install-editable:
-	pip install -e .
+	$(PIP) install -e .
 	rm -f /usr/bin/gitk-cl
 	ln -s $$(readlink -f gitk-cl) /usr/bin/gitk-cl
 
 install-from-pypi:
-	pip install gitk-class-diagram
+	$(PIP) install gitk-class-diagram
 
 uninstall:
-	pip uninstall gitk-class-diagram
+	$(PIP) uninstall gitk-class-diagram
 
 lint:
 	flake8
 
 package:
-	python3 setup.py sdist bdist_wheel
+	$(PY) setup.py sdist bdist_wheel
 
 clean-setup:
-	python3 setup.py clean
+	$(PY) setup.py clean
 
 .PHONY: check-depends test-python clean-test-python test-images clean-test-images install uninstall lint package clean-setup
