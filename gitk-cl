@@ -34,7 +34,11 @@ proc addtocflist {ids} {
 
 proc make_diagram {} {
     global latest_imgpath latest_dirs
+    global showdiagram
 
+    if {!$showdiagram} {
+	return
+    }
     nowbusy gitk-cl
     set dirs [put_src_files]
     set dir1 [lindex $dirs 0]
@@ -69,6 +73,7 @@ proc clear_ctext {{first 1.0}} {
 proc create_ui {} {
     global NS ctxbut
     global brightdiagram zoomlevel
+    global showflist showdiagram
 
     if {[info exists brightdiagram]} {
 	return
@@ -79,8 +84,12 @@ proc create_ui {} {
     canvas $canvas
     pack $canvas -anchor nw
     pack forget .bright.cfiles
-    pack .bright.diagram -side right -fill both -expand 1
-    pack .bright.cfiles -side left -fill y -expand 0
+    if {$showdiagram} {
+	pack .bright.diagram -side right -fill both -expand 1
+    }
+    if {$showflist} {
+	pack .bright.cfiles -side left -fill both -expand 1
+    }
 
     set diagram_menu .diagramctxmenu
     makemenu $diagram_menu {
@@ -111,6 +120,40 @@ proc create_ui {} {
     bind .bright.diagram.canvas <Button-4> {zoom $orig_image $scaled_image -1 %x %y}
     bind .bright.diagram.canvas <Button-5> {zoom $orig_image $scaled_image 1 %x %y}
     bind .bright.diagram.canvas <MouseWheel> {zoom $orig_image $scaled_image %D %x %y}
+
+    ${NS}::checkbutton .bright.mode.checkflist -text [mc "Files"] \
+	-command mod_ui -variable showflist
+    ${NS}::checkbutton .bright.mode.checkdiagram -text [mc "Diagram"] \
+	-command mod_ui -variable showdiagram
+    grid forget .bright.mode.patch .bright.mode.tree
+    grid .bright.mode.patch .bright.mode.tree .bright.mode.checkflist .bright.mode.checkdiagram - -sticky ew -padx 4
+}
+
+proc register_config {var default_val} {
+    global config_variables
+    global $var
+    if {![info exists $var]} {
+	set $var $default_val
+    }
+    lappend config_variables $var
+    config_init_trace $var
+    trace add variable $var write config_variable_change_cb
+}
+
+register_config showdiagram 1
+register_config showflist 1
+proc mod_ui {} {
+    global showflist showdiagram
+
+    pack forget .bright.cfiles
+    pack forget .bright.diagram
+    if {$showdiagram} {
+	pack .bright.diagram -side right -fill both -expand 1
+    }
+    if {$showflist} {
+	pack .bright.cfiles -side left -fill both -expand 1
+    }
+    make_diagram
 }
 
 proc mouse_left {x y} {
@@ -293,12 +336,19 @@ proc generate_img {tags1 tags2 imgpath} {
 }
 
 proc load_img {imgpath} {
-    global imap scaled_image orig_image
+    global imap scaled_image orig_image showflist
 
     set orig_image [image create photo diagram_img -file "$imgpath.png"]
     set scaled_image [image create photo scaled_img]
     scaled_img copy $orig_image
-    set max_width [expr {round(([winfo width .bright.diagram]+[winfo width .bright.cfiles])*0.85)}]
+    set factor 0.85
+    if {!$showflist} {
+	set factor 1.0
+    }
+    set max_width [expr {
+	round(([winfo width .bright.diagram]
+	    + [winfo width .bright.cfiles]) * $factor)
+    }]
     set max_height [winfo height .bright.diagram]
     set img_width [image width $scaled_image]
     set img_height [image height $scaled_image]
@@ -607,12 +657,7 @@ proc zoom {srcimg destimg direction x y} {
     draw_file_rectangle 0
 }
 
-if {![info exists clconfig]} {
-    set clconfig "# Copy and change settings from config.py\n# Example:\n#Config.cluster_packages = False"
-}
-lappend config_variables clconfig
-config_init_trace clconfig
-trace add variable clconfig write config_variable_change_cb
+register_config clconfig "# Copy and change settings from config.py\n# Example:\n#Config.cluster_packages = False"
 # prefspage_general : Replace gitk's original
 rename prefspage_general orig_prefspage_general
 proc prefspage_general {notebook} {
