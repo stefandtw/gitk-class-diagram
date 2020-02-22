@@ -257,6 +257,8 @@ class ModelFactory:
                 language = TagLanguage(cols[9])
                 name = language.name(cols[3])
                 scope = language.scope(cols[5])
+                if language.is_blacklisted():
+                    continue
                 if fname not in model:
                     model[fname] = File(fname)
                 if language.is_scope(kind, roles, access, name):

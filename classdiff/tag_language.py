@@ -5,6 +5,9 @@ class TagLanguage:
     def __init__(self, lang):
         self.lang = lang
 
+    def is_blacklisted(self):
+        return self.lang in ("XML", "Maven2", "Iniconf")
+
     def is_scope(self, kind, roles, access, name):
         if roles != "def":
             return False
@@ -29,8 +32,6 @@ class TagLanguage:
             return kind == "target"
         if self.lang == "Python":
             return kind == "variable"
-        if self.lang == "XML":
-            return kind == "id"
         if self.lang == "YACC":
             return kind == "label"
         return kind in ("field", "member", "enumerator")
@@ -44,6 +45,8 @@ class TagLanguage:
         if self.lang == "JavaScript":
             return kind in ("function", "method") \
                 and not name.startswith("AnonymousFunction")
+        if self.lang == "XSLT":
+            return kind in ("namedTemplate", "matchedTemplate")
         return kind in ("function", "func", "method", "procedure",
                         "subroutine")
 
