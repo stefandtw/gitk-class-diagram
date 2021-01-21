@@ -2,7 +2,7 @@
 # This regex matches up to three words per line.
 
 --kinddef-java=w,word,Word
---_roledef-java=w.pascalcase,Word in Pascal case
+--_roledef-java.w=pascalcase,Word in Pascal case
 --regex-java=/.*\<([A-Z]+[a-z]+[a-zA-Z0-9_]*)\>/\1/w/{_role=pascalcase}
 --regex-java=/.*\<([A-Z]+[a-z]+[a-zA-Z0-9_]*)\>.*\<[A-Z]+[a-z]+[a-zA-Z0-9_]*\>/\1/w/{_role=pascalcase}
 --regex-java=/.*\<([A-Z]+[a-z]+[a-zA-Z0-9_]*)\>.*\<[A-Z]+[a-z]+[a-zA-Z0-9_]*\>.*\<[A-Z]+[a-z]+[a-zA-Z0-9_]*\>/\1/w/{_role=pascalcase}
